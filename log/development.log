@@ -3610,3 +3610,11 @@ Processing by Devise::SessionsController#new as HTML
   Rendered devise/shared/_links.html.erb (9.8ms)
   Rendered devise/sessions/new.html.erb within layouts/application (98.1ms)
 Completed 200 OK in 216ms (Views: 197.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2017-08-18 01:32:30 -0400
+  [1m[35mActiveRecord::SchemaMigration Load (3.0ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (9.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (1251.7ms)
+Completed 200 OK in 1400ms (Views: 1371.3ms | ActiveRecord: 0.6ms)
