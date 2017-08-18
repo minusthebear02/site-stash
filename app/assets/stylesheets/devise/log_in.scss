@@ -1,0 +1,50 @@
+.log_in {
+  align-content: center;
+  width: 500px;
+  margin: auto;
+  padding: 50px;
+}
+
+.log_in h2{
+  margin-bottom: 15px;
+  color: #FF7684;
+  font-size: 60px;
+  font-weight: 300;
+}
+
+.new_user {
+  margin: auto;
+}
+
+.log_in input {
+  margin: auto;
+  border-radius: 7px;
+  border: 2px solid lightgrey;
+  height: 30px;
+  width: 400px;
+  margin-bottom: 15px;
+}
+
+.log_in input:focus {
+  border-radius: 7px;
+  border: 2px solid #A6EEE8;
+  outline: none;
+}
+
+.log_in .btn {
+  width: 80px;
+  height: 40px;
+  border: none;
+  background-color: #D3D4D5;
+}
+
+.log_in .btn:hover {
+  background-color: #FF7684;
+  color: white;
+}
+
+#user_remember_me {
+  width: 15px;
+  height: 15px;
+  margin-bottom: 20px;
+}
