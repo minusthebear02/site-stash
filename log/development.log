@@ -3618,3 +3618,448 @@ Processing by Devise::SessionsController#new as HTML
   Rendered devise/shared/_links.html.erb (9.4ms)
   Rendered devise/sessions/new.html.erb within layouts/application (1251.7ms)
 Completed 200 OK in 1400ms (Views: 1371.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2017-08-18 11:22:01 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 635ms (Views: 618.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2017-08-18 11:22:12 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (33.1ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (1213.4ms)
+Completed 200 OK in 1318ms (Views: 1296.9ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2017-08-18 11:22:24 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"p/dyB4bOEahhmhOBOtCp37EWx8st9I+KaAaSgrLm/XqrXUbzLVCoo2lwMlrLN/D63C0WbdyoC8iqJ4PTx9ziaQ==", "user"=>{"email"=>"mfroeh2@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["email", "mfroeh2@gmail.com"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  UPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["last_sign_in_at", "2017-08-18 02:49:04.544491"], ["current_sign_in_at", "2017-08-18 15:22:24.971813"], ["sign_in_count", 4], ["updated_at", "2017-08-18 15:22:24.973414"], ["id", 1]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 240ms (ActiveRecord: 3.1ms)
+
+
+Started GET "/" for ::1 at 2017-08-18 11:22:25 -0400
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.1ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 47ms (Views: 45.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2017-08-18 11:48:04 -0400
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 50ms (Views: 48.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/edit" for ::1 at 2017-08-18 11:48:09 -0400
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[35mUser Load (6.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered devise/registrations/edit.html.erb within layouts/application (15.8ms)
+Completed 200 OK in 79ms (Views: 70.3ms | ActiveRecord: 6.1ms)
+
+
+Started GET "/users/edit" for ::1 at 2017-08-18 11:49:13 -0400
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered devise/registrations/edit.html.erb within layouts/application (13.7ms)
+Completed 200 OK in 69ms (Views: 66.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/users/edit" for ::1 at 2017-08-18 11:51:56 -0400
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered devise/registrations/edit.html.erb within layouts/application (13.9ms)
+Completed 200 OK in 3161ms (Views: 3159.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/devise/edit_profile.self-2d35aab2a9503abb994963e7742e3a98292f3f067f9d2a7141470a53c53789dc.css?body=1" for ::1 at 2017-08-18 11:51:59 -0400
+
+
+Started GET "/users/edit" for ::1 at 2017-08-18 11:53:11 -0400
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered devise/registrations/edit.html.erb within layouts/application (14.1ms)
+Completed 200 OK in 72ms (Views: 69.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/edit" for ::1 at 2017-08-18 11:54:11 -0400
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered devise/registrations/edit.html.erb within layouts/application (16.3ms)
+Completed 200 OK in 83ms (Views: 80.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/edit" for ::1 at 2017-08-18 11:54:36 -0400
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered devise/registrations/edit.html.erb within layouts/application (16.1ms)
+Completed 200 OK in 83ms (Views: 81.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/edit" for ::1 at 2017-08-18 11:54:56 -0400
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered devise/registrations/edit.html.erb within layouts/application (14.3ms)
+Completed 200 OK in 77ms (Views: 74.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/edit" for ::1 at 2017-08-18 11:55:14 -0400
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered devise/registrations/edit.html.erb within layouts/application (16.3ms)
+Completed 200 OK in 169ms (Views: 159.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/edit" for ::1 at 2017-08-18 11:55:42 -0400
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered devise/registrations/edit.html.erb within layouts/application (13.4ms)
+Completed 200 OK in 2945ms (Views: 2926.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/devise/edit_profile.self-ba86dcbc85a72e7c370fd5e5a0b3761062484a8a41271c6c9a67912e64e38bfb.css?body=1" for ::1 at 2017-08-18 11:55:45 -0400
+
+
+Started GET "/users/edit" for ::1 at 2017-08-18 11:55:54 -0400
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered devise/registrations/edit.html.erb within layouts/application (20.4ms)
+Completed 200 OK in 3136ms (Views: 3133.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/devise/edit_profile.self-318efdfa04dca53365ec6adc085b0334daac105508fe21b08a7a12d86f75e329.css?body=1" for ::1 at 2017-08-18 11:55:57 -0400
+
+
+Started GET "/users/edit" for ::1 at 2017-08-18 11:56:03 -0400
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered devise/registrations/edit.html.erb within layouts/application (21.3ms)
+Completed 200 OK in 3018ms (Views: 3015.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/devise/edit_profile.self-7d0aea796187a5ea00cdc31831060d16160cdbd721bacf81699a850f02cf3cd4.css?body=1" for ::1 at 2017-08-18 11:56:06 -0400
+
+
+Started GET "/users/edit" for ::1 at 2017-08-18 11:56:22 -0400
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered devise/registrations/edit.html.erb within layouts/application (12.3ms)
+Completed 200 OK in 3289ms (Views: 3286.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/devise/edit_profile.self-91579b4efd65536e65264054a730c32d056cc11ed2c7718c7cd96066582ea850.css?body=1" for ::1 at 2017-08-18 11:56:25 -0400
+
+
+Started GET "/users/edit" for ::1 at 2017-08-18 11:56:36 -0400
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[35mUser Load (2.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered devise/registrations/edit.html.erb within layouts/application (11.1ms)
+Completed 200 OK in 2834ms (Views: 2828.5ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/devise/edit_profile.self-867833ea7b5058c34a1930a8424c7eca73d9cd7a7bd6aed6d1efeef7d8e013a4.css?body=1" for ::1 at 2017-08-18 11:56:39 -0400
+
+
+Started GET "/users/edit" for ::1 at 2017-08-18 11:56:50 -0400
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered devise/registrations/edit.html.erb within layouts/application (28.4ms)
+Completed 200 OK in 3615ms (Views: 3612.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/devise/edit_profile.self-4c0f01394951485054766770c1c61983c73ff8eba3ea015a5b7b12f0b0c97c1f.css?body=1" for ::1 at 2017-08-18 11:56:53 -0400
+
+
+Started GET "/users/edit" for ::1 at 2017-08-18 11:57:15 -0400
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered devise/registrations/edit.html.erb within layouts/application (14.1ms)
+Completed 200 OK in 2933ms (Views: 2922.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/devise/edit_profile.self-584a939269ad4ec9235d60a55f98ba981f84f2f0113ffb3ddb114e1f2a7133b1.css?body=1" for ::1 at 2017-08-18 11:57:18 -0400
+
+
+Started DELETE "/users/sign_out" for ::1 at 2017-08-18 11:58:30 -0400
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"SKv4zHiN99/in1jbGTGVMrwvDIQSS1LOQfS9r+p8rL15DQLwCU/rQNGlkIGL6/QPKU2KUCk4+plItF/y/sFqsg=="}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 10ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2017-08-18 11:58:30 -0400
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 43ms (Views: 42.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2017-08-18 11:58:37 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (8.6ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (24.8ms)
+Completed 200 OK in 97ms (Views: 95.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2017-08-18 11:58:39 -0400
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.html.erb (4.7ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (28.6ms)
+Completed 200 OK in 100ms (Views: 97.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2017-08-18 11:58:41 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (8.6ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (19.1ms)
+Completed 200 OK in 137ms (Views: 135.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2017-08-18 11:59:06 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"G+8f1QCyjPkVYTylItJlzFgsTB6IWn2/sP+Z5SXSrWdgkzIBL7S80zAX35rcHUHKad9vKpP9PqkhctHxIghIzg==", "user"=>{"email"=>"mfroeh2@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["email", "mfroeh2@gmail.com"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.3ms)[0m  UPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["last_sign_in_at", "2017-08-18 15:22:24.971813"], ["current_sign_in_at", "2017-08-18 15:59:06.316563"], ["sign_in_count", 5], ["updated_at", "2017-08-18 15:59:06.318066"], ["id", 1]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 207ms (ActiveRecord: 2.7ms)
+
+
+Started GET "/" for ::1 at 2017-08-18 11:59:06 -0400
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.1ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 90ms (Views: 89.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/edit" for ::1 at 2017-08-18 11:59:10 -0400
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered devise/registrations/edit.html.erb within layouts/application (11.1ms)
+Completed 200 OK in 83ms (Views: 71.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/edit" for ::1 at 2017-08-18 12:01:02 -0400
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered devise/registrations/edit.html.erb within layouts/application (18.3ms)
+Completed 200 OK in 92ms (Views: 88.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/edit" for ::1 at 2017-08-18 12:02:26 -0400
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered devise/registrations/edit.html.erb within layouts/application (2.7ms)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.1ms)
+
+SyntaxError (/Users/mfroeh2/Desktop/bloc/site-stash/app/views/devise/registrations/edit.html.erb:18: syntax error, unexpected '>'
+/Users/mfroeh2/Desktop/bloc/site-stash/app/views/devise/registrations/edit.html.erb:24: syntax error, unexpected '<', expecting ')'
+    </div>
+     ^
+/Users/mfroeh2/Desktop/bloc/site-stash/app/views/devise/registrations/edit.html.erb:27: syntax error, unexpected '<'
+...>(to confirm your changes)</i><br />
+...                               ^
+/Users/mfroeh2/Desktop/bloc/site-stash/app/views/devise/registrations/edit.html.erb:29: unknown regexp options - dv
+/Users/mfroeh2/Desktop/bloc/site-stash/app/views/devise/registrations/edit.html.erb:31: syntax error, unexpected '<'
+    <div class="actions">
+     ^
+/Users/mfroeh2/Desktop/bloc/site-stash/app/views/devise/registrations/edit.html.erb:33: syntax error, unexpected '<', expecting ')'
+    </div>
+     ^
+/Users/mfroeh2/Desktop/bloc/site-stash/app/views/devise/registrations/edit.html.erb:36: unknown regexp option - h
+/Users/mfroeh2/Desktop/bloc/site-stash/app/views/devise/registrations/edit.html.erb:36: syntax error, unexpected tINTEGER, expecting ')'
+  <h3>Cancel my account</h3>
+                           ^
+/Users/mfroeh2/Desktop/bloc/site-stash/app/views/devise/registrations/edit.html.erb:38: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+  <p>Unhappy? '.freeze;@output_buffer.append...
+               ^
+/Users/mfroeh2/Desktop/bloc/site-stash/app/views/devise/registrations/edit.html.erb:41: unknown regexp options - dv
+/Users/mfroeh2/Desktop/bloc/site-stash/app/views/devise/registrations/edit.html.erb:42: unterminated string meets end of file
+/Users/mfroeh2/Desktop/bloc/site-stash/app/views/devise/registrations/edit.html.erb:42: syntax error, unexpected end-of-input, expecting ')'):
+  app/views/devise/registrations/edit.html.erb:18: syntax error, unexpected '>'
+  app/views/devise/registrations/edit.html.erb:24: syntax error, unexpected '<', expecting ')'
+  app/views/devise/registrations/edit.html.erb:27: syntax error, unexpected '<'
+  app/views/devise/registrations/edit.html.erb:29: unknown regexp options - dv
+  app/views/devise/registrations/edit.html.erb:31: syntax error, unexpected '<'
+  app/views/devise/registrations/edit.html.erb:33: syntax error, unexpected '<', expecting ')'
+  app/views/devise/registrations/edit.html.erb:36: unknown regexp option - h
+  app/views/devise/registrations/edit.html.erb:36: syntax error, unexpected tINTEGER, expecting ')'
+  app/views/devise/registrations/edit.html.erb:38: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+  app/views/devise/registrations/edit.html.erb:41: unknown regexp options - dv
+  app/views/devise/registrations/edit.html.erb:42: unterminated string meets end of file
+  app/views/devise/registrations/edit.html.erb:42: syntax error, unexpected end-of-input, expecting ')'
+
+
+  Rendered /Users/mfroeh2/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (17.9ms)
+  Rendered /Users/mfroeh2/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (7.9ms)
+  Rendered /Users/mfroeh2/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /Users/mfroeh2/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (138.8ms)
+  Rendered /Users/mfroeh2/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.9ms)
+  Rendered /Users/mfroeh2/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /Users/mfroeh2/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/mfroeh2/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/mfroeh2/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (102.9ms)
+  Rendered /Users/mfroeh2/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/mfroeh2/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/mfroeh2/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (235.3ms)
+
+
+Started GET "/users/edit" for ::1 at 2017-08-18 12:03:16 -0400
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered devise/registrations/edit.html.erb within layouts/application (15.7ms)
+Completed 200 OK in 91ms (Views: 88.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/edit" for ::1 at 2017-08-18 12:04:43 -0400
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered devise/registrations/edit.html.erb within layouts/application (21.0ms)
+Completed 200 OK in 112ms (Views: 106.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users/edit" for ::1 at 2017-08-18 12:05:07 -0400
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered devise/registrations/edit.html.erb within layouts/application (14.8ms)
+Completed 200 OK in 78ms (Views: 75.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/edit" for ::1 at 2017-08-18 13:05:57 -0400
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered devise/registrations/edit.html.erb within layouts/application (12.6ms)
+Completed 200 OK in 77ms (Views: 73.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/edit" for ::1 at 2017-08-18 13:06:05 -0400
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered devise/registrations/edit.html.erb within layouts/application (11.8ms)
+Completed 200 OK in 71ms (Views: 68.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/users/edit" for ::1 at 2017-08-18 13:06:24 -0400
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered devise/registrations/edit.html.erb within layouts/application (13.3ms)
+Completed 200 OK in 79ms (Views: 76.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/edit" for ::1 at 2017-08-18 14:20:27 -0400
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered devise/registrations/edit.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 71ms (Views: 68.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for ::1 at 2017-08-18 14:20:58 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (2.5ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 658ms (Views: 638.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for ::1 at 2017-08-18 14:23:36 -0400
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.1ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 61ms (Views: 60.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2017-08-18 14:24:26 -0400
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 59ms (Views: 56.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for ::1 at 2017-08-18 14:25:29 -0400
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 63ms (Views: 61.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/users/edit" for ::1 at 2017-08-18 14:29:08 -0400
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered devise/registrations/edit.html.erb within layouts/application (1136.2ms)
+Completed 200 OK in 1196ms (Views: 1192.5ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2017-08-18 14:29:13 -0400
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"UGWyLH7IHu5cfKUUvnGcRoxX4zSLlXWSXDGUDh4lzhiBqgGsffPqWGnlTUIxAqdAUWfr0zhPwXz3kGHYuUJpag=="}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 14ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2017-08-18 14:29:13 -0400
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 67ms (Views: 66.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2017-08-18 14:29:17 -0400
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.html.erb (8.7ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (28.5ms)
+Completed 200 OK in 88ms (Views: 87.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2017-08-18 14:29:18 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (11.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (27.6ms)
+Completed 200 OK in 88ms (Views: 81.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2017-08-18 14:29:20 -0400
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.html.erb (4.2ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (13.5ms)
+Completed 200 OK in 66ms (Views: 64.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2017-08-18 14:29:21 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (8.2ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (18.3ms)
+Completed 200 OK in 147ms (Views: 144.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2017-08-18 14:29:22 -0400
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.html.erb (5.3ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (15.8ms)
+Completed 200 OK in 105ms (Views: 103.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2017-08-18 14:29:27 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (12.1ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (76.8ms)
+Completed 200 OK in 139ms (Views: 137.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2017-08-18 14:29:29 -0400
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.html.erb (4.2ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (13.5ms)
+Completed 200 OK in 115ms (Views: 114.2ms | ActiveRecord: 0.0ms)

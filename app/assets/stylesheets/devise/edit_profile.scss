@@ -1,0 +1,47 @@
+.edit_profile {
+  align-content: center;
+  width: 500px;
+  margin: auto;
+  padding: 50px;
+}
+
+.edit_profile h2{
+  margin-bottom: 15px;
+  color: #FF7684;
+  font-size: 60px;
+  font-weight: 300;
+}
+
+.edit_profile input {
+  margin: auto;
+  border-radius: 7px;
+  border: 2px solid lightgrey;
+  height: 30px;
+  width: 400px;
+  margin-bottom: 15px;
+}
+
+.edit_profile input:focus {
+  border-radius: 7px;
+  border: 2px solid #A6EEE8;
+  outline: none;
+}
+
+.edit_profile .btn {
+  width: 80px;
+  height: 40px;
+  border: none;
+  background-color: #D3D4D5;
+}
+
+.edit_profile .btn:hover {
+  background-color: #FF7684;
+  color: white;
+}
+
+.edit_profile .btn-danger {
+  width: 140px;
+  height: 40px;
+  border: none;
+  padding: 10px;
+}
