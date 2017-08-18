@@ -16,3 +16,29 @@
 
  @import "bootstrap-sprockets";
  @import "bootstrap";
+
+.navbar {
+  height: 60px;
+}
+
+.navbar-brand {
+ color: #FF7684 !important;
+ font-family: 'Raleway';
+ font-weight: bold;
+ font-size: 40px;
+ margin-left: 30px;
+ margin-top: 3px;
+}
+
+.navbar-right {
+ margin-right: -60px;
+ margin-top: 3px;
+}
+
+#yield {
+ margin-top: 30px;
+}
+
+#yield .notice {
+ margin: 30px 0 -30px 0;
+}
