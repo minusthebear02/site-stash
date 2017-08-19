@@ -1,0 +1,36 @@
+<div class="topic_index">
+  <h1>Stash Topics</h1>
+
+  <% if current_user %>
+    <div class="col-md-8 col-md-offset-2">
+      <%= form_for @topic do |f| %>
+        <div class="input-group">
+          <%= f.text_field :title, class: 'form-control', placeholder: "Enter New Topic" %>
+          <div class="input-group-btn">
+            <%= f.submit "Save", class: 'btn btn-default' %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  <% end %>
+
+  <% @topics.each do |topic| %>
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+        <h3 class="topic_title"><%= link_to "#" + topic.title, topic %></h3>
+        <br />
+        <% topic.bookmarks.sample(4).each do |bookmark| %>
+          <div class="col-md-3">
+            <div class="media">
+              <div class="media-body">
+                <h5 class="bookmark_url">
+                  <%= link_to bookmark.url, bookmark %>
+                </h5>
+              </div>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  <% end %>
+</div>

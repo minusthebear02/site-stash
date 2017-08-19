@@ -1,0 +1,19 @@
+<div class="topic_index">
+  <h1><%= @topic.title %></h1>
+
+  <% @topic.bookmarks.each do |bookmark| %>
+    <div class="col-md-3">
+      <div class="media">
+        <div class="media-body">
+          <h4 class="bookmark_url">
+            <%= link_to bookmark.url, bookmark %>
+          </h4>
+        </div>
+      </div>
+    </div>
+  <% end %>
+
+  <% if current_user %>
+    <%= link_to "Delete Topic", @topic, method: :delete, class: 'btn btn-danger', data: {confirm: "Are you sure you want to delete this topic?"} %>
+  <% end %>
+</div>

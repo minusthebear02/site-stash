@@ -1,0 +1,43 @@
+.topic_index h1 {
+  text-align: center;
+  color: #4D5061;
+  font-family: "Lobster";
+  margin: 50px auto 30px;
+  font-size: 75px;
+}
+
+.topic_index h3 a {
+  color: #4D5061;
+}
+
+.topic_index a {
+  color: #5C80BC;
+}
+
+.topic_index a:hover {
+  color: #B1EDE8;
+}
+
+.btn-danger {
+  color: white !important;
+}
+
+.input-group-btn .btn {
+  height: 34px;
+  background-color: lightgrey;
+  border: none;
+  color: white;
+  margin-bottom: 30px;
+}
+.input-group-btn .btn:hover {
+  background-color: #FF6978;
+  color: white;
+  border: none;
+}
+
+.topic_index input:focus {
+  border-radius: 7px;
+  border: 2px solid #A6EEE8;
+  outline: none;
+  box-shadow: none;
+}
