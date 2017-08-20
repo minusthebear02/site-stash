@@ -8190,3 +8190,2180 @@ Processing by TopicsController#show as HTML
   [1m[35mBookmark Load (0.1ms)[0m  SELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?  [["topic_id", 6]]
   Rendered topics/show.html.erb within layouts/application (1.6ms)
 Completed 200 OK in 58ms (Views: 54.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2017-08-20 11:27:46 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by TopicsController#index as HTML
+  [1m[35mUser Load (1.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mTopic Load (0.6ms)[0m  [1mSELECT "topics".* FROM "topics"[0m
+  [1m[35mBookmark Load (1.6ms)[0m  SELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?  [["topic_id", 1]]
+  [1m[36mBookmark Load (0.2ms)[0m  [1mSELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?[0m  [["topic_id", 2]]
+  [1m[35mBookmark Load (0.2ms)[0m  SELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?  [["topic_id", 3]]
+  [1m[36mBookmark Load (2.2ms)[0m  [1mSELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?[0m  [["topic_id", 4]]
+  [1m[35mBookmark Load (0.2ms)[0m  SELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?  [["topic_id", 5]]
+  [1m[36mBookmark Load (0.2ms)[0m  [1mSELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?[0m  [["topic_id", 6]]
+  Rendered topics/index.html.erb within layouts/application (156.7ms)
+Completed 200 OK in 1019ms (Views: 973.1ms | ActiveRecord: 8.3ms)
+
+
+Started GET "/topics/6" for ::1 at 2017-08-20 11:28:11 -0400
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mTopic Load (33.0ms)[0m  [1mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mBookmark Load (0.2ms)[0m  SELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?  [["topic_id", 6]]
+  Rendered topics/show.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 161ms (Views: 80.5ms | ActiveRecord: 33.4ms)
+
+
+Started GET "/" for ::1 at 2017-08-20 11:28:22 -0400
+Processing by TopicsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mTopic Load (0.3ms)[0m  SELECT "topics".* FROM "topics"
+  [1m[36mBookmark Load (0.2ms)[0m  [1mSELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?[0m  [["topic_id", 1]]
+  [1m[35mBookmark Load (0.2ms)[0m  SELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?  [["topic_id", 2]]
+  [1m[36mBookmark Load (0.2ms)[0m  [1mSELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?[0m  [["topic_id", 3]]
+  [1m[35mBookmark Load (0.2ms)[0m  SELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?  [["topic_id", 4]]
+  [1m[36mBookmark Load (0.2ms)[0m  [1mSELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?[0m  [["topic_id", 5]]
+  [1m[35mBookmark Load (0.2ms)[0m  SELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?  [["topic_id", 6]]
+  Rendered topics/index.html.erb within layouts/application (57.9ms)
+Completed 200 OK in 232ms (Views: 229.3ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/" for ::1 at 2017-08-20 11:48:28 -0400
+Processing by TopicsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mTopic Load (0.2ms)[0m  SELECT "topics".* FROM "topics"
+  [1m[36mBookmark Load (0.3ms)[0m  [1mSELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?[0m  [["topic_id", 1]]
+  [1m[35mBookmark Load (0.3ms)[0m  SELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?  [["topic_id", 2]]
+  [1m[36mBookmark Load (0.2ms)[0m  [1mSELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?[0m  [["topic_id", 3]]
+  [1m[35mBookmark Load (0.2ms)[0m  SELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?  [["topic_id", 4]]
+  [1m[36mBookmark Load (0.3ms)[0m  [1mSELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?[0m  [["topic_id", 5]]
+  [1m[35mBookmark Load (0.1ms)[0m  SELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?  [["topic_id", 6]]
+  Rendered topics/index.html.erb within layouts/application (57.7ms)
+Completed 200 OK in 164ms (Views: 147.1ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/bookmarks/4" for ::1 at 2017-08-20 11:48:50 -0400
+Processing by BookmarksController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered bookmarks/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 177ms (Views: 130.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2017-08-20 11:53:20 -0400
+Processing by TopicsController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mTopic Load (0.5ms)[0m  [1mSELECT "topics".* FROM "topics"[0m
+  [1m[35mBookmark Load (0.3ms)[0m  SELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?  [["topic_id", 1]]
+  [1m[36mBookmark Load (0.2ms)[0m  [1mSELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?[0m  [["topic_id", 2]]
+  [1m[35mBookmark Load (1.0ms)[0m  SELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?  [["topic_id", 3]]
+  [1m[36mBookmark Load (0.4ms)[0m  [1mSELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?[0m  [["topic_id", 4]]
+  [1m[35mBookmark Load (0.2ms)[0m  SELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?  [["topic_id", 5]]
+  [1m[36mBookmark Load (0.1ms)[0m  [1mSELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?[0m  [["topic_id", 6]]
+  Rendered topics/_topic.html.erb (22.2ms)
+  Rendered topics/_topic.html.erb (6.5ms)
+  Rendered topics/_topic.html.erb (5.3ms)
+  Rendered topics/_topic.html.erb (6.3ms)
+  Rendered topics/_topic.html.erb (7.5ms)
+  Rendered topics/_topic.html.erb (5.5ms)
+  Rendered topics/index.html.erb within layouts/application (87.7ms)
+Completed 200 OK in 215ms (Views: 209.6ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/" for ::1 at 2017-08-20 11:53:25 -0400
+Processing by TopicsController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mTopic Load (0.3ms)[0m  [1mSELECT "topics".* FROM "topics"[0m
+  [1m[35mBookmark Load (0.2ms)[0m  SELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?  [["topic_id", 1]]
+  [1m[36mBookmark Load (0.2ms)[0m  [1mSELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?[0m  [["topic_id", 2]]
+  [1m[35mBookmark Load (0.2ms)[0m  SELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?  [["topic_id", 3]]
+  [1m[36mBookmark Load (0.2ms)[0m  [1mSELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?[0m  [["topic_id", 4]]
+  [1m[35mBookmark Load (0.2ms)[0m  SELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?  [["topic_id", 5]]
+  [1m[36mBookmark Load (0.1ms)[0m  [1mSELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?[0m  [["topic_id", 6]]
+  Rendered topics/_topic.html.erb (16.2ms)
+  Rendered topics/_topic.html.erb (4.0ms)
+  Rendered topics/_topic.html.erb (4.6ms)
+  Rendered topics/_topic.html.erb (3.9ms)
+  Rendered topics/_topic.html.erb (4.6ms)
+  Rendered topics/_topic.html.erb (4.0ms)
+  Rendered topics/index.html.erb within layouts/application (56.1ms)
+Completed 200 OK in 116ms (Views: 113.1ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/" for ::1 at 2017-08-20 11:53:49 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by TopicsController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mTopic Load (0.3ms)[0m  [1mSELECT "topics".* FROM "topics"[0m
+  [1m[35mBookmark Load (0.4ms)[0m  SELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?  [["topic_id", 1]]
+  [1m[36mBookmark Load (0.2ms)[0m  [1mSELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?[0m  [["topic_id", 2]]
+  [1m[35mBookmark Load (0.7ms)[0m  SELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?  [["topic_id", 3]]
+  [1m[36mBookmark Load (0.2ms)[0m  [1mSELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?[0m  [["topic_id", 4]]
+  [1m[35mBookmark Load (0.2ms)[0m  SELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?  [["topic_id", 5]]
+  [1m[36mBookmark Load (0.2ms)[0m  [1mSELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?[0m  [["topic_id", 6]]
+  Rendered topics/_topic.html.erb (88.0ms)
+  Rendered topics/_topic.html.erb (9.3ms)
+  Rendered topics/_topic.html.erb (6.8ms)
+  Rendered topics/_topic.html.erb (9.4ms)
+  Rendered topics/_topic.html.erb (8.3ms)
+  Rendered topics/_topic.html.erb (9.7ms)
+  Rendered topics/index.html.erb within layouts/application (243.9ms)
+Completed 200 OK in 869ms (Views: 804.2ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/" for ::1 at 2017-08-20 11:56:52 -0400
+Processing by TopicsController#index as HTML
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mTopic Load (0.3ms)[0m  [1mSELECT "topics".* FROM "topics"[0m
+  [1m[35mBookmark Load (0.3ms)[0m  SELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?  [["topic_id", 1]]
+  [1m[36mBookmark Load (0.9ms)[0m  [1mSELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?[0m  [["topic_id", 2]]
+  [1m[35mBookmark Load (0.2ms)[0m  SELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?  [["topic_id", 3]]
+  [1m[36mBookmark Load (0.2ms)[0m  [1mSELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?[0m  [["topic_id", 4]]
+  [1m[35mBookmark Load (0.2ms)[0m  SELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?  [["topic_id", 5]]
+  [1m[36mBookmark Load (0.5ms)[0m  [1mSELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?[0m  [["topic_id", 6]]
+  Rendered topics/_topic.html.erb (72.7ms)
+  Rendered topics/_topic.html.erb (5.6ms)
+  Rendered topics/_topic.html.erb (6.8ms)
+  Rendered topics/_topic.html.erb (6.1ms)
+  Rendered topics/_topic.html.erb (6.9ms)
+  Rendered topics/_topic.html.erb (6.0ms)
+  Rendered topics/index.html.erb within layouts/application (169.9ms)
+Completed 200 OK in 331ms (Views: 313.6ms | ActiveRecord: 6.6ms)
+
+
+Started GET "/topics/1" for ::1 at 2017-08-20 11:56:57 -0400
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 500 Internal Server Error in 84ms (ActiveRecord: 0.3ms)
+
+NoMethodError (undefined method `set_wiki' for #<TopicsController:0x007f93b39bc5c8>):
+  activesupport (4.2.5) lib/active_support/callbacks.rb:432:in `block in make_lambda'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:145:in `block in halting_and_conditional'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:504:in `block in call'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:504:in `each'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:504:in `call'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:92:in `__run_callbacks__'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:778:in `_run_process_action_callbacks'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.5) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.5) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.5) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.5) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.5) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.5) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.5) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.5) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.5) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.5) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.5) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.5) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.5) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.5) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.5) lib/action_dispatch/routing/route_set.rb:76:in `dispatch'
+  actionpack (4.2.5) lib/action_dispatch/routing/route_set.rb:45:in `serve'
+  actionpack (4.2.5) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.5) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.5) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.5) lib/action_dispatch/routing/route_set.rb:817:in `call'
+  warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+  warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+  warden (1.2.7) lib/warden/manager.rb:35:in `call'
+  rack (1.6.8) lib/rack/etag.rb:24:in `call'
+  rack (1.6.8) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.8) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.8) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.8) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.5) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.5) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.5) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.8) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.8) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.8) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  rack (1.6.8) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.8) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/mfroeh2/.rvm/rubies/ruby-2.3.3/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /Users/mfroeh2/.rvm/rubies/ruby-2.3.3/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /Users/mfroeh2/.rvm/rubies/ruby-2.3.3/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /Users/mfroeh2/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (15.5ms)
+  Rendered /Users/mfroeh2/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (7.1ms)
+  Rendered /Users/mfroeh2/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (6.6ms)
+  Rendered /Users/mfroeh2/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (143.3ms)
+  Rendered /Users/mfroeh2/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered /Users/mfroeh2/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/mfroeh2/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.8ms)
+  Rendered /Users/mfroeh2/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.9ms)
+  Rendered /Users/mfroeh2/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (1363.2ms)
+  Rendered /Users/mfroeh2/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/mfroeh2/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/mfroeh2/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (1514.2ms)
+
+
+Started GET "/topics/1" for ::1 at 2017-08-20 11:57:18 -0400
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.3ms)
+
+NoMethodError (undefined method `set_wiki' for #<TopicsController:0x007f93b4bf8d40>):
+  activesupport (4.2.5) lib/active_support/callbacks.rb:432:in `block in make_lambda'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:145:in `block in halting_and_conditional'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:504:in `block in call'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:504:in `each'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:504:in `call'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:92:in `__run_callbacks__'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:778:in `_run_process_action_callbacks'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.5) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.5) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.5) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.5) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.5) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.5) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.5) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.5) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.5) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.5) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.5) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.5) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.5) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.5) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.5) lib/action_dispatch/routing/route_set.rb:76:in `dispatch'
+  actionpack (4.2.5) lib/action_dispatch/routing/route_set.rb:45:in `serve'
+  actionpack (4.2.5) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.5) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.5) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.5) lib/action_dispatch/routing/route_set.rb:817:in `call'
+  warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+  warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+  warden (1.2.7) lib/warden/manager.rb:35:in `call'
+  rack (1.6.8) lib/rack/etag.rb:24:in `call'
+  rack (1.6.8) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.8) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.8) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.8) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.5) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.5) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.5) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.8) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.8) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.8) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  rack (1.6.8) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.8) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/mfroeh2/.rvm/rubies/ruby-2.3.3/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /Users/mfroeh2/.rvm/rubies/ruby-2.3.3/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /Users/mfroeh2/.rvm/rubies/ruby-2.3.3/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /Users/mfroeh2/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.6ms)
+  Rendered /Users/mfroeh2/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.2ms)
+  Rendered /Users/mfroeh2/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /Users/mfroeh2/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (121.9ms)
+  Rendered /Users/mfroeh2/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /Users/mfroeh2/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/mfroeh2/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/mfroeh2/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/mfroeh2/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (106.7ms)
+  Rendered /Users/mfroeh2/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/mfroeh2/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/mfroeh2/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (229.3ms)
+
+
+Started GET "/" for ::1 at 2017-08-20 11:58:41 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by TopicsController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mTopic Load (0.3ms)[0m  [1mSELECT "topics".* FROM "topics"[0m
+  [1m[35mBookmark Load (0.3ms)[0m  SELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?  [["topic_id", 1]]
+  [1m[36mBookmark Load (0.7ms)[0m  [1mSELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?[0m  [["topic_id", 2]]
+  [1m[35mBookmark Load (0.2ms)[0m  SELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?  [["topic_id", 3]]
+  [1m[36mBookmark Load (0.2ms)[0m  [1mSELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?[0m  [["topic_id", 4]]
+  [1m[35mBookmark Load (0.2ms)[0m  SELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?  [["topic_id", 5]]
+  [1m[36mBookmark Load (0.2ms)[0m  [1mSELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?[0m  [["topic_id", 6]]
+  Rendered topics/_topic.html.erb (91.5ms)
+  Rendered topics/_topic.html.erb (7.3ms)
+  Rendered topics/_topic.html.erb (5.8ms)
+  Rendered topics/_topic.html.erb (7.4ms)
+  Rendered topics/_topic.html.erb (16.8ms)
+  Rendered topics/_topic.html.erb (6.5ms)
+  Rendered topics/index.html.erb within layouts/application (236.5ms)
+Completed 200 OK in 906ms (Views: 854.5ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/topics/1" for ::1 at 2017-08-20 11:58:46 -0400
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 500 Internal Server Error in 86ms (ActiveRecord: 0.2ms)
+
+NoMethodError (undefined method `set_wiki' for #<TopicsController:0x007fb470b18380>):
+  activesupport (4.2.5) lib/active_support/callbacks.rb:432:in `block in make_lambda'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:145:in `block in halting_and_conditional'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:504:in `block in call'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:504:in `each'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:504:in `call'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:92:in `__run_callbacks__'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:778:in `_run_process_action_callbacks'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.5) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.5) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.5) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.5) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.5) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.5) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.5) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.5) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.5) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.5) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.5) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.5) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.5) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.5) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.5) lib/action_dispatch/routing/route_set.rb:76:in `dispatch'
+  actionpack (4.2.5) lib/action_dispatch/routing/route_set.rb:45:in `serve'
+  actionpack (4.2.5) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.5) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.5) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.5) lib/action_dispatch/routing/route_set.rb:817:in `call'
+  warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+  warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+  warden (1.2.7) lib/warden/manager.rb:35:in `call'
+  rack (1.6.8) lib/rack/etag.rb:24:in `call'
+  rack (1.6.8) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.8) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.8) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.8) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.5) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.5) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.5) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.8) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.8) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.8) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  rack (1.6.8) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.8) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/mfroeh2/.rvm/rubies/ruby-2.3.3/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /Users/mfroeh2/.rvm/rubies/ruby-2.3.3/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /Users/mfroeh2/.rvm/rubies/ruby-2.3.3/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /Users/mfroeh2/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.5ms)
+  Rendered /Users/mfroeh2/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.2ms)
+  Rendered /Users/mfroeh2/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/mfroeh2/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (143.4ms)
+  Rendered /Users/mfroeh2/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered /Users/mfroeh2/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.8ms)
+  Rendered /Users/mfroeh2/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.2ms)
+  Rendered /Users/mfroeh2/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/mfroeh2/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (1459.6ms)
+  Rendered /Users/mfroeh2/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (9.1ms)
+  Rendered /Users/mfroeh2/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/mfroeh2/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (1647.1ms)
+
+
+Started GET "/" for ::1 at 2017-08-20 12:00:18 -0400
+Processing by TopicsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mTopic Load (0.2ms)[0m  SELECT "topics".* FROM "topics"
+  [1m[36mBookmark Load (0.2ms)[0m  [1mSELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?[0m  [["topic_id", 1]]
+  [1m[35mBookmark Load (0.2ms)[0m  SELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?  [["topic_id", 2]]
+  [1m[36mBookmark Load (0.2ms)[0m  [1mSELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?[0m  [["topic_id", 3]]
+  [1m[35mBookmark Load (0.2ms)[0m  SELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?  [["topic_id", 4]]
+  [1m[36mBookmark Load (0.2ms)[0m  [1mSELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?[0m  [["topic_id", 5]]
+  [1m[35mBookmark Load (0.1ms)[0m  SELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?  [["topic_id", 6]]
+  Rendered topics/_topic.html.erb (21.9ms)
+  Rendered topics/_topic.html.erb (4.5ms)
+  Rendered topics/_topic.html.erb (5.3ms)
+  Rendered topics/_topic.html.erb (3.7ms)
+  Rendered topics/_topic.html.erb (3.8ms)
+  Rendered topics/_topic.html.erb (3.7ms)
+  Rendered topics/index.html.erb within layouts/application (61.5ms)
+Completed 200 OK in 135ms (Views: 132.0ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/topics/1" for ::1 at 2017-08-20 12:00:23 -0400
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 500 Internal Server Error in 79ms (ActiveRecord: 0.2ms)
+
+NoMethodError (undefined method `set_wiki' for #<TopicsController:0x007fb47413eec8>):
+  activesupport (4.2.5) lib/active_support/callbacks.rb:432:in `block in make_lambda'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:145:in `block in halting_and_conditional'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:504:in `block in call'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:504:in `each'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:504:in `call'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:92:in `__run_callbacks__'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:778:in `_run_process_action_callbacks'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.5) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.5) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.5) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.5) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.5) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.5) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.5) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.5) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.5) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.5) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.5) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.5) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.5) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.5) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.5) lib/action_dispatch/routing/route_set.rb:76:in `dispatch'
+  actionpack (4.2.5) lib/action_dispatch/routing/route_set.rb:45:in `serve'
+  actionpack (4.2.5) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.5) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.5) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.5) lib/action_dispatch/routing/route_set.rb:817:in `call'
+  warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+  warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+  warden (1.2.7) lib/warden/manager.rb:35:in `call'
+  rack (1.6.8) lib/rack/etag.rb:24:in `call'
+  rack (1.6.8) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.8) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.8) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.8) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.5) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.5) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.5) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.8) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.8) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.8) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  rack (1.6.8) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.8) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/mfroeh2/.rvm/rubies/ruby-2.3.3/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /Users/mfroeh2/.rvm/rubies/ruby-2.3.3/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /Users/mfroeh2/.rvm/rubies/ruby-2.3.3/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /Users/mfroeh2/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.9ms)
+  Rendered /Users/mfroeh2/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (8.1ms)
+  Rendered /Users/mfroeh2/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/mfroeh2/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (134.3ms)
+  Rendered /Users/mfroeh2/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/mfroeh2/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/mfroeh2/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered /Users/mfroeh2/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/mfroeh2/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (105.8ms)
+  Rendered /Users/mfroeh2/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/mfroeh2/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered /Users/mfroeh2/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (245.5ms)
+
+
+Started GET "/" for ::1 at 2017-08-20 12:01:07 -0400
+Processing by TopicsController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mTopic Load (0.2ms)[0m  [1mSELECT "topics".* FROM "topics"[0m
+  [1m[35mBookmark Load (0.3ms)[0m  SELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?  [["topic_id", 1]]
+  [1m[36mBookmark Load (0.2ms)[0m  [1mSELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?[0m  [["topic_id", 2]]
+  [1m[35mBookmark Load (0.2ms)[0m  SELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?  [["topic_id", 3]]
+  [1m[36mBookmark Load (0.2ms)[0m  [1mSELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?[0m  [["topic_id", 4]]
+  [1m[35mBookmark Load (0.2ms)[0m  SELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?  [["topic_id", 5]]
+  [1m[36mBookmark Load (0.1ms)[0m  [1mSELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?[0m  [["topic_id", 6]]
+  Rendered topics/_topic.html.erb (27.4ms)
+  Rendered topics/_topic.html.erb (4.2ms)
+  Rendered topics/_topic.html.erb (5.5ms)
+  Rendered topics/_topic.html.erb (5.1ms)
+  Rendered topics/_topic.html.erb (3.9ms)
+  Rendered topics/_topic.html.erb (3.9ms)
+  Rendered topics/index.html.erb within layouts/application (87.4ms)
+Completed 200 OK in 171ms (Views: 157.3ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/topics/1" for ::1 at 2017-08-20 12:01:12 -0400
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mTopic Load (0.3ms)[0m  [1mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mBookmark Load (0.2ms)[0m  SELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?  [["topic_id", 1]]
+  Rendered topics/show.html.erb within layouts/application (31.5ms)
+Completed 500 Internal Server Error in 97ms (ActiveRecord: 0.7ms)
+
+ActionView::Template::Error (undefined method `bookmark' for nil:NilClass):
+    2:   <h1><%= @topic.title %></h1>
+    3: 
+    4:   <% @topic.bookmarks.each do |bookmark| %>
+    5:     <%= render @topics.bookmark %>
+    6:   <% end %>
+    7: 
+    8:   <% if current_user %>
+  app/views/topics/show.html.erb:5:in `block in _app_views_topics_show_html_erb__2706390178909328932_70206518361600'
+  app/views/topics/show.html.erb:4:in `_app_views_topics_show_html_erb__2706390178909328932_70206518361600'
+
+
+  Rendered /Users/mfroeh2/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (13.2ms)
+  Rendered /Users/mfroeh2/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (7.8ms)
+  Rendered /Users/mfroeh2/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/mfroeh2/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (136.0ms)
+  Rendered /Users/mfroeh2/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /Users/mfroeh2/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /Users/mfroeh2/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/mfroeh2/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/mfroeh2/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (103.0ms)
+  Rendered /Users/mfroeh2/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/mfroeh2/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/mfroeh2/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (233.4ms)
+
+
+Started GET "/topics/1" for ::1 at 2017-08-20 12:01:47 -0400
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mTopic Load (0.1ms)[0m  SELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mBookmark Load (0.4ms)[0m  [1mSELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?[0m  [["topic_id", 1]]
+  Rendered topics/show.html.erb within layouts/application (11.1ms)
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 0.7ms)
+
+ActionView::Template::Error (Missing partial bookmarks/_bookmark with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :coffee]}. Searched in:
+  * "/Users/mfroeh2/Desktop/bloc/site-stash/app/views"
+  * "/Users/mfroeh2/.rvm/gems/ruby-2.3.3/gems/devise-4.3.0/app/views"
+):
+    2:   <h1><%= @topic.title %></h1>
+    3: 
+    4:   <% @topic.bookmarks.each do |bookmark| %>
+    5:     <%= render @topic.bookmarks %>
+    6:   <% end %>
+    7: 
+    8:   <% if current_user %>
+  app/views/topics/show.html.erb:5:in `block in _app_views_topics_show_html_erb__2706390178909328932_70206521153240'
+  app/views/topics/show.html.erb:4:in `_app_views_topics_show_html_erb__2706390178909328932_70206521153240'
+
+
+  Rendered /Users/mfroeh2/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (12.5ms)
+  Rendered /Users/mfroeh2/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.5ms)
+  Rendered /Users/mfroeh2/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered /Users/mfroeh2/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (146.1ms)
+  Rendered /Users/mfroeh2/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (1.8ms)
+  Rendered /Users/mfroeh2/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/mfroeh2/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/mfroeh2/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/mfroeh2/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (112.8ms)
+  Rendered /Users/mfroeh2/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/mfroeh2/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered /Users/mfroeh2/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (316.8ms)
+
+
+Started GET "/" for ::1 at 2017-08-20 12:02:08 -0400
+Processing by TopicsController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mTopic Load (0.2ms)[0m  [1mSELECT "topics".* FROM "topics"[0m
+  [1m[35mBookmark Load (0.2ms)[0m  SELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?  [["topic_id", 1]]
+  [1m[36mBookmark Load (0.2ms)[0m  [1mSELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?[0m  [["topic_id", 2]]
+  [1m[35mBookmark Load (0.2ms)[0m  SELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?  [["topic_id", 3]]
+  [1m[36mBookmark Load (0.2ms)[0m  [1mSELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?[0m  [["topic_id", 4]]
+  [1m[35mBookmark Load (0.6ms)[0m  SELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?  [["topic_id", 5]]
+  [1m[36mBookmark Load (0.1ms)[0m  [1mSELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?[0m  [["topic_id", 6]]
+  Rendered topics/_topic.html.erb (26.8ms)
+  Rendered topics/_topic.html.erb (4.8ms)
+  Rendered topics/_topic.html.erb (7.4ms)
+  Rendered topics/_topic.html.erb (4.6ms)
+  Rendered topics/_topic.html.erb (5.7ms)
+  Rendered topics/_topic.html.erb (6.4ms)
+  Rendered topics/index.html.erb within layouts/application (76.5ms)
+Completed 200 OK in 175ms (Views: 171.9ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/topics/1" for ::1 at 2017-08-20 12:02:20 -0400
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mTopic Load (0.1ms)[0m  [1mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mBookmark Load (0.2ms)[0m  SELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?  [["topic_id", 1]]
+  Rendered bookmarks/_bookmark.html.erb (23.2ms)
+  Rendered bookmarks/_bookmark.html.erb (1.4ms)
+  Rendered bookmarks/_bookmark.html.erb (2.4ms)
+  Rendered bookmarks/_bookmark.html.erb (1.8ms)
+  Rendered bookmarks/_bookmark.html.erb (1.5ms)
+  Rendered bookmarks/_bookmark.html.erb (1.4ms)
+  Rendered bookmarks/_bookmark.html.erb (7.7ms)
+  Rendered bookmarks/_bookmark.html.erb (8.7ms)
+  Rendered bookmarks/_bookmark.html.erb (1.9ms)
+  Rendered bookmarks/_bookmark.html.erb (1.3ms)
+  Rendered bookmarks/_bookmark.html.erb (1.3ms)
+  Rendered topics/show.html.erb within layouts/application (85.2ms)
+Completed 200 OK in 158ms (Views: 154.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2017-08-20 12:02:25 -0400
+Processing by TopicsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mTopic Load (0.2ms)[0m  SELECT "topics".* FROM "topics"
+  [1m[36mBookmark Load (0.2ms)[0m  [1mSELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?[0m  [["topic_id", 1]]
+  [1m[35mBookmark Load (0.7ms)[0m  SELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?  [["topic_id", 2]]
+  [1m[36mBookmark Load (0.8ms)[0m  [1mSELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?[0m  [["topic_id", 3]]
+  [1m[35mBookmark Load (0.2ms)[0m  SELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?  [["topic_id", 4]]
+  [1m[36mBookmark Load (0.6ms)[0m  [1mSELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?[0m  [["topic_id", 5]]
+  [1m[35mBookmark Load (0.1ms)[0m  SELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?  [["topic_id", 6]]
+  Rendered topics/_topic.html.erb (77.1ms)
+  Rendered topics/_topic.html.erb (7.9ms)
+  Rendered topics/_topic.html.erb (6.2ms)
+  Rendered topics/_topic.html.erb (9.3ms)
+  Rendered topics/_topic.html.erb (4.7ms)
+  Rendered topics/_topic.html.erb (23.8ms)
+  Rendered topics/index.html.erb within layouts/application (163.8ms)
+Completed 200 OK in 299ms (Views: 290.2ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/topics/2" for ::1 at 2017-08-20 12:02:27 -0400
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mTopic Load (0.2ms)[0m  SELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mBookmark Load (0.3ms)[0m  [1mSELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?[0m  [["topic_id", 2]]
+  Rendered bookmarks/_bookmark.html.erb (1.3ms)
+  Rendered bookmarks/_bookmark.html.erb (1.8ms)
+  Rendered bookmarks/_bookmark.html.erb (1.0ms)
+  Rendered bookmarks/_bookmark.html.erb (1.0ms)
+  Rendered bookmarks/_bookmark.html.erb (0.9ms)
+  Rendered bookmarks/_bookmark.html.erb (0.9ms)
+  Rendered bookmarks/_bookmark.html.erb (0.8ms)
+  Rendered bookmarks/_bookmark.html.erb (1.6ms)
+  Rendered topics/show.html.erb within layouts/application (78.3ms)
+Completed 200 OK in 151ms (Views: 136.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2017-08-20 12:03:04 -0400
+Processing by TopicsController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mTopic Load (0.2ms)[0m  [1mSELECT "topics".* FROM "topics"[0m
+  [1m[35mBookmark Load (0.2ms)[0m  SELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?  [["topic_id", 1]]
+  [1m[36mBookmark Load (0.2ms)[0m  [1mSELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?[0m  [["topic_id", 2]]
+  [1m[35mBookmark Load (0.2ms)[0m  SELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?  [["topic_id", 3]]
+  [1m[36mBookmark Load (0.2ms)[0m  [1mSELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?[0m  [["topic_id", 4]]
+  [1m[35mBookmark Load (0.2ms)[0m  SELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?  [["topic_id", 5]]
+  [1m[36mBookmark Load (0.1ms)[0m  [1mSELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?[0m  [["topic_id", 6]]
+  Rendered topics/_topic.html.erb (48.8ms)
+  Rendered topics/_topic.html.erb (58.2ms)
+  Rendered topics/_topic.html.erb (4.3ms)
+  Rendered topics/_topic.html.erb (4.2ms)
+  Rendered topics/_topic.html.erb (3.7ms)
+  Rendered topics/_topic.html.erb (3.7ms)
+  Rendered topics/index.html.erb within layouts/application (148.1ms)
+Completed 200 OK in 231ms (Views: 228.8ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/topics/1" for ::1 at 2017-08-20 12:03:05 -0400
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mTopic Load (0.7ms)[0m  [1mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mBookmark Load (0.2ms)[0m  SELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?  [["topic_id", 1]]
+  Rendered bookmarks/_bookmark.html.erb (1.6ms)
+  Rendered bookmarks/_bookmark.html.erb (1.4ms)
+  Rendered bookmarks/_bookmark.html.erb (1.6ms)
+  Rendered bookmarks/_bookmark.html.erb (1.4ms)
+  Rendered bookmarks/_bookmark.html.erb (1.4ms)
+  Rendered bookmarks/_bookmark.html.erb (1.3ms)
+  Rendered bookmarks/_bookmark.html.erb (1.7ms)
+  Rendered bookmarks/_bookmark.html.erb (1.4ms)
+  Rendered bookmarks/_bookmark.html.erb (1.6ms)
+  Rendered bookmarks/_bookmark.html.erb (1.4ms)
+  Rendered bookmarks/_bookmark.html.erb (1.9ms)
+  Rendered topics/show.html.erb within layouts/application (121.9ms)
+Completed 200 OK in 285ms (Views: 237.7ms | ActiveRecord: 1.7ms)
+  [1m[36m (3.3ms)[0m  [1mCREATE TABLE "bookmarks" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "url" varchar, "topic_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.4ms)[0m  select sqlite_version(*)
+  [1m[36m (1.0ms)[0m  [1mCREATE  INDEX "index_bookmarks_on_topic_id" ON "bookmarks" ("topic_id")[0m
+  [1m[35m (1.1ms)[0m  CREATE TABLE "topics" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "user_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (1.3ms)[0m  [1mCREATE  INDEX "index_topics_on_user_id" ON "topics" ("user_id")[0m
+  [1m[35m (1.5ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar, "last_sign_in_ip" varchar, "confirmation_token" varchar, "confirmed_at" datetime, "confirmation_sent_at" datetime, "unconfirmed_email" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (1.4ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_confirmation_token" ON "users" ("confirmation_token")[0m
+  [1m[35m (0.6ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_confirmation_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_confirmation_token' AND type='index'
+
+  [1m[36m (1.3ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_confirmation_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_confirmation_token' AND type='index'
+[0m
+  [1m[35m (1.4ms)[0m  CREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")
+  [1m[36m (1.1ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.9ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.2ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (1.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20170818183703')
+  [1m[36m (0.9ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20170817020151')[0m
+  [1m[35m (0.9ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20170818183347')
+  [1m[36m (1.4ms)[0m  [1mCREATE TABLE "bookmarks" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "url" varchar, "topic_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (1.3ms)[0m  [1mCREATE  INDEX "index_bookmarks_on_topic_id" ON "bookmarks" ("topic_id")[0m
+  [1m[35m (1.0ms)[0m  CREATE TABLE "topics" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "user_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (1.0ms)[0m  [1mCREATE  INDEX "index_topics_on_user_id" ON "topics" ("user_id")[0m
+  [1m[35m (1.2ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar, "last_sign_in_ip" varchar, "confirmation_token" varchar, "confirmed_at" datetime, "confirmation_sent_at" datetime, "unconfirmed_email" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (1.4ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_confirmation_token" ON "users" ("confirmation_token")[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_confirmation_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_confirmation_token' AND type='index'
+
+  [1m[36m (1.2ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_confirmation_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_confirmation_token' AND type='index'
+[0m
+  [1m[35m (1.0ms)[0m  CREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")
+  [1m[36m (1.2ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (1.2ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.2ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (0.9ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20170818183703')
+  [1m[36m (1.1ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20170817020151')[0m
+  [1m[35m (1.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20170818183347')
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'lpu@qonbv.imzfpr' LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "users" ("email", "encrypted_password", "confirmed_at", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["email", "lpu@qonbv.imzfpr"], ["encrypted_password", "$2a$11$voqdzvkHz4yLp64uredUjulfk9jTio.Zm3rcwYaHL8V7ZZBwhUoOS"], ["confirmed_at", "2017-08-20 16:08:30.525776"], ["created_at", "2017-08-20 16:08:30.781595"], ["updated_at", "2017-08-20 16:08:30.781595"]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'tbmcda@ckeiz.ebkuszg' LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("email", "encrypted_password", "confirmed_at", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["email", "tbmcda@ckeiz.ebkuszg"], ["encrypted_password", "$2a$11$fiR1MXz1MbHGAxVvkljI8e1hIKacmt3u1R5Du6SfCsLgGNk9/bWLO"], ["confirmed_at", "2017-08-20 16:08:30.787497"], ["created_at", "2017-08-20 16:08:30.980083"], ["updated_at", "2017-08-20 16:08:30.980083"]]
+  [1m[36m (2.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'wafo@elit.vkuyw' LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("email", "encrypted_password", "confirmed_at", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["email", "wafo@elit.vkuyw"], ["encrypted_password", "$2a$11$nXK7D8Mj.cySZDzrGAlt7.MuWcIJs0Ts3XLJGBn1vFLCuAE8JuYse"], ["confirmed_at", "2017-08-20 16:08:30.984869"], ["created_at", "2017-08-20 16:08:31.177239"], ["updated_at", "2017-08-20 16:08:31.177239"]]
+  [1m[36m (3.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'rwusgbfj@zgoripn.qrec' LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("email", "encrypted_password", "confirmed_at", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["email", "rwusgbfj@zgoripn.qrec"], ["encrypted_password", "$2a$11$ehuwd6vnIsLj5bDsqjdFk.FYVJVVGDJNdCPfJaIgeDAd2rlBqLgju"], ["confirmed_at", "2017-08-20 16:08:31.182633"], ["created_at", "2017-08-20 16:08:31.368822"], ["updated_at", "2017-08-20 16:08:31.368822"]]
+  [1m[36m (2.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'bfyv@olzw.ghyme' LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("email", "encrypted_password", "confirmed_at", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["email", "bfyv@olzw.ghyme"], ["encrypted_password", "$2a$11$qCZlhxIfw60AjtufzUB5nOqNTNtiB6pfzcVcFIlbh69p5mOfQcc0S"], ["confirmed_at", "2017-08-20 16:08:31.373628"], ["created_at", "2017-08-20 16:08:31.564007"], ["updated_at", "2017-08-20 16:08:31.564007"]]
+  [1m[36m (2.1ms)[0m  [1mcommit transaction[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "topics" ("title", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "mrne"], ["user_id", 1], ["created_at", "2017-08-20 16:08:31.597117"], ["updated_at", "2017-08-20 16:08:31.597117"]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mUPDATE "topics" SET "created_at" = ?, "updated_at" = ? WHERE "topics"."id" = ?[0m  [["created_at", "2017-05-09 00:22:51.600328"], ["updated_at", "2017-08-20 16:08:31.600962"], ["id", 1]]
+  [1m[35m (1.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "topics" ("title", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "yhrxaewd"], ["user_id", 1], ["created_at", "2017-08-20 16:08:31.612343"], ["updated_at", "2017-08-20 16:08:31.612343"]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "topics" SET "created_at" = ?, "updated_at" = ? WHERE "topics"."id" = ?[0m  [["created_at", "2017-04-05 06:27:13.615204"], ["updated_at", "2017-08-20 16:08:31.615830"], ["id", 2]]
+  [1m[35m (1.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "topics" ("title", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "uxsr"], ["user_id", 2], ["created_at", "2017-08-20 16:08:31.619587"], ["updated_at", "2017-08-20 16:08:31.619587"]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "topics" SET "created_at" = ?, "updated_at" = ? WHERE "topics"."id" = ?[0m  [["created_at", "2017-06-23 11:34:06.622913"], ["updated_at", "2017-08-20 16:08:31.623739"], ["id", 3]]
+  [1m[35m (5.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "topics" ("title", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "myeqtzsv"], ["user_id", 2], ["created_at", "2017-08-20 16:08:31.631680"], ["updated_at", "2017-08-20 16:08:31.631680"]]
+  [1m[36m (3.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.4ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "topics" SET "created_at" = ?, "updated_at" = ? WHERE "topics"."id" = ?[0m  [["created_at", "2017-01-14 08:35:27.637480"], ["updated_at", "2017-08-20 16:08:31.638624"], ["id", 4]]
+  [1m[35m (1.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "topics" ("title", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "mxtbfa"], ["user_id", 1], ["created_at", "2017-08-20 16:08:31.642203"], ["updated_at", "2017-08-20 16:08:31.642203"]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "topics" SET "created_at" = ?, "updated_at" = ? WHERE "topics"."id" = ?[0m  [["created_at", "2017-02-01 08:29:21.645738"], ["updated_at", "2017-08-20 16:08:31.646406"], ["id", 5]]
+  [1m[35m (4.6ms)[0m  commit transaction
+  [1m[36mTopic Load (0.3ms)[0m  [1mSELECT "topics".* FROM "topics"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "bookmarks" ("url", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["url", "www.ogci.irqn"], ["topic_id", 2], ["created_at", "2017-08-20 16:08:31.669611"], ["updated_at", "2017-08-20 16:08:31.669611"]]
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "bookmarks" SET "created_at" = ?, "updated_at" = ? WHERE "bookmarks"."id" = ?  [["created_at", "2017-01-09 06:10:30.673266"], ["updated_at", "2017-08-20 16:08:31.673874"], ["id", 1]]
+  [1m[36m (5.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "bookmarks" ("url", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["url", "www.tnqjk.aws"], ["topic_id", 2], ["created_at", "2017-08-20 16:08:31.682453"], ["updated_at", "2017-08-20 16:08:31.682453"]]
+  [1m[35m (2.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "bookmarks" SET "created_at" = ?, "updated_at" = ? WHERE "bookmarks"."id" = ?  [["created_at", "2016-09-05 04:36:02.687404"], ["updated_at", "2017-08-20 16:08:31.688056"], ["id", 2]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "bookmarks" ("url", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["url", "www.bfkjvth.mqc"], ["topic_id", 1], ["created_at", "2017-08-20 16:08:31.692524"], ["updated_at", "2017-08-20 16:08:31.692524"]]
+  [1m[35m (2.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "bookmarks" SET "created_at" = ?, "updated_at" = ? WHERE "bookmarks"."id" = ?  [["created_at", "2017-06-23 18:10:44.696687"], ["updated_at", "2017-08-20 16:08:31.697320"], ["id", 3]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "bookmarks" ("url", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["url", "www.fzxdoyv.hatw"], ["topic_id", 2], ["created_at", "2017-08-20 16:08:31.700567"], ["updated_at", "2017-08-20 16:08:31.700567"]]
+  [1m[35m (1.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "bookmarks" SET "created_at" = ?, "updated_at" = ? WHERE "bookmarks"."id" = ?  [["created_at", "2017-04-16 19:01:46.704078"], ["updated_at", "2017-08-20 16:08:31.705148"], ["id", 4]]
+  [1m[36m (1.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "bookmarks" ("url", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["url", "www.ptjebqu.hbnsmiet"], ["topic_id", 1], ["created_at", "2017-08-20 16:08:31.709528"], ["updated_at", "2017-08-20 16:08:31.709528"]]
+  [1m[35m (1.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "bookmarks" SET "created_at" = ?, "updated_at" = ? WHERE "bookmarks"."id" = ?  [["created_at", "2017-07-03 23:50:40.713000"], ["updated_at", "2017-08-20 16:08:31.714322"], ["id", 5]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "bookmarks" ("url", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["url", "www.jtkfd.tivs"], ["topic_id", 3], ["created_at", "2017-08-20 16:08:31.718276"], ["updated_at", "2017-08-20 16:08:31.718276"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "bookmarks" SET "created_at" = ?, "updated_at" = ? WHERE "bookmarks"."id" = ?  [["created_at", "2016-09-27 03:01:53.721747"], ["updated_at", "2017-08-20 16:08:31.722969"], ["id", 6]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "bookmarks" ("url", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["url", "www.nqtd.jcia"], ["topic_id", 2], ["created_at", "2017-08-20 16:08:31.727654"], ["updated_at", "2017-08-20 16:08:31.727654"]]
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "bookmarks" SET "created_at" = ?, "updated_at" = ? WHERE "bookmarks"."id" = ?  [["created_at", "2017-04-22 16:07:15.731168"], ["updated_at", "2017-08-20 16:08:31.731827"], ["id", 7]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "bookmarks" ("url", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["url", "www.zldv.roexc"], ["topic_id", 4], ["created_at", "2017-08-20 16:08:31.736117"], ["updated_at", "2017-08-20 16:08:31.736117"]]
+  [1m[35m (1.0ms)[0m  commit transaction
+  [1m[36m (0.5ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  UPDATE "bookmarks" SET "created_at" = ?, "updated_at" = ? WHERE "bookmarks"."id" = ?  [["created_at", "2017-08-10 21:27:21.739690"], ["updated_at", "2017-08-20 16:08:31.740769"], ["id", 8]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "bookmarks" ("url", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["url", "www.getpwzk.rezxtson"], ["topic_id", 3], ["created_at", "2017-08-20 16:08:31.744662"], ["updated_at", "2017-08-20 16:08:31.744662"]]
+  [1m[35m (1.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "bookmarks" SET "created_at" = ?, "updated_at" = ? WHERE "bookmarks"."id" = ?  [["created_at", "2017-07-18 16:56:24.747749"], ["updated_at", "2017-08-20 16:08:31.748460"], ["id", 9]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (2.3ms)[0m  [1mINSERT INTO "bookmarks" ("url", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["url", "www.wlvjita.zbdoxk"], ["topic_id", 4], ["created_at", "2017-08-20 16:08:31.752698"], ["updated_at", "2017-08-20 16:08:31.752698"]]
+  [1m[35m (1.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  UPDATE "bookmarks" SET "created_at" = ?, "updated_at" = ? WHERE "bookmarks"."id" = ?  [["created_at", "2017-03-26 20:42:34.757759"], ["updated_at", "2017-08-20 16:08:31.758457"], ["id", 10]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "bookmarks" ("url", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["url", "www.zpa.rchivxby"], ["topic_id", 4], ["created_at", "2017-08-20 16:08:31.762503"], ["updated_at", "2017-08-20 16:08:31.762503"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "bookmarks" SET "created_at" = ?, "updated_at" = ? WHERE "bookmarks"."id" = ?  [["created_at", "2017-05-16 03:35:25.765422"], ["updated_at", "2017-08-20 16:08:31.766231"], ["id", 11]]
+  [1m[36m (4.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "bookmarks" ("url", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["url", "www.zdhtwcsq.hps"], ["topic_id", 4], ["created_at", "2017-08-20 16:08:31.774273"], ["updated_at", "2017-08-20 16:08:31.774273"]]
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "bookmarks" SET "created_at" = ?, "updated_at" = ? WHERE "bookmarks"."id" = ?  [["created_at", "2017-08-03 05:15:49.777894"], ["updated_at", "2017-08-20 16:08:31.778493"], ["id", 12]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "bookmarks" ("url", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["url", "www.oghwqrlm.ybi"], ["topic_id", 4], ["created_at", "2017-08-20 16:08:31.782835"], ["updated_at", "2017-08-20 16:08:31.782835"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "bookmarks" SET "created_at" = ?, "updated_at" = ? WHERE "bookmarks"."id" = ?  [["created_at", "2017-01-07 00:59:06.785889"], ["updated_at", "2017-08-20 16:08:31.786492"], ["id", 13]]
+  [1m[36m (5.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "bookmarks" ("url", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["url", "www.mshuypt.hbqgev"], ["topic_id", 1], ["created_at", "2017-08-20 16:08:31.795271"], ["updated_at", "2017-08-20 16:08:31.795271"]]
+  [1m[35m (3.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "bookmarks" SET "created_at" = ?, "updated_at" = ? WHERE "bookmarks"."id" = ?  [["created_at", "2017-07-24 16:27:00.800751"], ["updated_at", "2017-08-20 16:08:31.802005"], ["id", 14]]
+  [1m[36m (5.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "bookmarks" ("url", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["url", "www.lfqnm.smpgqkn"], ["topic_id", 1], ["created_at", "2017-08-20 16:08:31.810378"], ["updated_at", "2017-08-20 16:08:31.810378"]]
+  [1m[35m (4.4ms)[0m  commit transaction
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "bookmarks" SET "created_at" = ?, "updated_at" = ? WHERE "bookmarks"."id" = ?  [["created_at", "2016-09-19 20:53:56.817360"], ["updated_at", "2017-08-20 16:08:31.818840"], ["id", 15]]
+  [1m[36m (4.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "bookmarks" ("url", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["url", "www.ojqwgk.rdfws"], ["topic_id", 4], ["created_at", "2017-08-20 16:08:31.826703"], ["updated_at", "2017-08-20 16:08:31.826703"]]
+  [1m[35m (2.9ms)[0m  commit transaction
+  [1m[36m (0.6ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "bookmarks" SET "created_at" = ?, "updated_at" = ? WHERE "bookmarks"."id" = ?  [["created_at", "2017-08-08 15:25:22.831797"], ["updated_at", "2017-08-20 16:08:31.833063"], ["id", 16]]
+  [1m[36m (2.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "bookmarks" ("url", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["url", "www.bjflpei.bjhda"], ["topic_id", 1], ["created_at", "2017-08-20 16:08:31.838043"], ["updated_at", "2017-08-20 16:08:31.838043"]]
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "bookmarks" SET "created_at" = ?, "updated_at" = ? WHERE "bookmarks"."id" = ?  [["created_at", "2017-08-17 19:50:32.841829"], ["updated_at", "2017-08-20 16:08:31.843172"], ["id", 17]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "bookmarks" ("url", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["url", "www.cmhrltf.nfktmb"], ["topic_id", 5], ["created_at", "2017-08-20 16:08:31.847125"], ["updated_at", "2017-08-20 16:08:31.847125"]]
+  [1m[35m (1.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "bookmarks" SET "created_at" = ?, "updated_at" = ? WHERE "bookmarks"."id" = ?  [["created_at", "2017-05-03 23:30:36.850406"], ["updated_at", "2017-08-20 16:08:31.850975"], ["id", 18]]
+  [1m[36m (5.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "bookmarks" ("url", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["url", "www.zrhx.hwvnmi"], ["topic_id", 4], ["created_at", "2017-08-20 16:08:31.860117"], ["updated_at", "2017-08-20 16:08:31.860117"]]
+  [1m[35m (3.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "bookmarks" SET "created_at" = ?, "updated_at" = ? WHERE "bookmarks"."id" = ?  [["created_at", "2017-06-26 15:36:50.866206"], ["updated_at", "2017-08-20 16:08:31.866854"], ["id", 19]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "bookmarks" ("url", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["url", "www.gumlo.sxftcizl"], ["topic_id", 1], ["created_at", "2017-08-20 16:08:31.871478"], ["updated_at", "2017-08-20 16:08:31.871478"]]
+  [1m[35m (3.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "bookmarks" SET "created_at" = ?, "updated_at" = ? WHERE "bookmarks"."id" = ?  [["created_at", "2016-10-18 14:21:04.877746"], ["updated_at", "2017-08-20 16:08:31.878390"], ["id", 20]]
+  [1m[36m (5.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "bookmarks" ("url", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["url", "www.fdwv.sipmb"], ["topic_id", 4], ["created_at", "2017-08-20 16:08:31.887142"], ["updated_at", "2017-08-20 16:08:31.887142"]]
+  [1m[35m (3.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "bookmarks" SET "created_at" = ?, "updated_at" = ? WHERE "bookmarks"."id" = ?  [["created_at", "2016-12-20 22:27:56.892586"], ["updated_at", "2017-08-20 16:08:31.894094"], ["id", 21]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "bookmarks" ("url", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["url", "www.xeoga.rthnf"], ["topic_id", 2], ["created_at", "2017-08-20 16:08:31.897909"], ["updated_at", "2017-08-20 16:08:31.897909"]]
+  [1m[35m (3.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "bookmarks" SET "created_at" = ?, "updated_at" = ? WHERE "bookmarks"."id" = ?  [["created_at", "2016-11-03 19:14:11.903613"], ["updated_at", "2017-08-20 16:08:31.904300"], ["id", 22]]
+  [1m[36m (5.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "bookmarks" ("url", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["url", "www.ikvdrcs.eblog"], ["topic_id", 2], ["created_at", "2017-08-20 16:08:31.913144"], ["updated_at", "2017-08-20 16:08:31.913144"]]
+  [1m[35m (3.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "bookmarks" SET "created_at" = ?, "updated_at" = ? WHERE "bookmarks"."id" = ?  [["created_at", "2017-06-01 14:44:09.918684"], ["updated_at", "2017-08-20 16:08:31.919374"], ["id", 23]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "bookmarks" ("url", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["url", "www.qjetbm.ond"], ["topic_id", 4], ["created_at", "2017-08-20 16:08:31.923170"], ["updated_at", "2017-08-20 16:08:31.923170"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "bookmarks" SET "created_at" = ?, "updated_at" = ? WHERE "bookmarks"."id" = ?  [["created_at", "2017-03-27 11:46:28.926893"], ["updated_at", "2017-08-20 16:08:31.927641"], ["id", 24]]
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "bookmarks" ("url", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["url", "www.iymakfn.zfpnhdwv"], ["topic_id", 4], ["created_at", "2017-08-20 16:08:31.932257"], ["updated_at", "2017-08-20 16:08:31.932257"]]
+  [1m[35m (1.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "bookmarks" SET "created_at" = ?, "updated_at" = ? WHERE "bookmarks"."id" = ?  [["created_at", "2017-04-25 21:46:51.935893"], ["updated_at", "2017-08-20 16:08:31.936526"], ["id", 25]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "bookmarks" ("url", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["url", "www.wiudrkg.rzmfp"], ["topic_id", 2], ["created_at", "2017-08-20 16:08:31.941414"], ["updated_at", "2017-08-20 16:08:31.941414"]]
+  [1m[35m (1.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "bookmarks" SET "created_at" = ?, "updated_at" = ? WHERE "bookmarks"."id" = ?  [["created_at", "2017-04-15 21:53:19.944495"], ["updated_at", "2017-08-20 16:08:31.945054"], ["id", 26]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "bookmarks" ("url", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["url", "www.kmalgitc.nbdlzo"], ["topic_id", 3], ["created_at", "2017-08-20 16:08:31.949130"], ["updated_at", "2017-08-20 16:08:31.949130"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "bookmarks" SET "created_at" = ?, "updated_at" = ? WHERE "bookmarks"."id" = ?  [["created_at", "2016-11-24 06:32:26.952225"], ["updated_at", "2017-08-20 16:08:31.953330"], ["id", 27]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "bookmarks" ("url", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["url", "www.vqidepjn.dgmkvnw"], ["topic_id", 2], ["created_at", "2017-08-20 16:08:31.957691"], ["updated_at", "2017-08-20 16:08:31.957691"]]
+  [1m[35m (1.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "bookmarks" SET "created_at" = ?, "updated_at" = ? WHERE "bookmarks"."id" = ?  [["created_at", "2017-06-27 02:41:24.960921"], ["updated_at", "2017-08-20 16:08:31.961476"], ["id", 28]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "bookmarks" ("url", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["url", "www.kguda.njiz"], ["topic_id", 4], ["created_at", "2017-08-20 16:08:31.965575"], ["updated_at", "2017-08-20 16:08:31.965575"]]
+  [1m[35m (1.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "bookmarks" SET "created_at" = ?, "updated_at" = ? WHERE "bookmarks"."id" = ?  [["created_at", "2017-07-18 20:52:36.968523"], ["updated_at", "2017-08-20 16:08:31.969280"], ["id", 29]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "bookmarks" ("url", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["url", "www.odz.gkorqty"], ["topic_id", 2], ["created_at", "2017-08-20 16:08:31.973517"], ["updated_at", "2017-08-20 16:08:31.973517"]]
+  [1m[35m (1.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "bookmarks" SET "created_at" = ?, "updated_at" = ? WHERE "bookmarks"."id" = ?  [["created_at", "2017-04-14 12:38:39.977043"], ["updated_at", "2017-08-20 16:08:31.977598"], ["id", 30]]
+  [1m[36m (2.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "bookmarks" ("url", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["url", "www.kwpmthg.gxi"], ["topic_id", 4], ["created_at", "2017-08-20 16:08:31.982531"], ["updated_at", "2017-08-20 16:08:31.982531"]]
+  [1m[35m (1.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "bookmarks" SET "created_at" = ?, "updated_at" = ? WHERE "bookmarks"."id" = ?  [["created_at", "2017-04-21 16:48:39.999933"], ["updated_at", "2017-08-20 16:08:32.000473"], ["id", 31]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "bookmarks" ("url", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["url", "www.unrh.nilq"], ["topic_id", 1], ["created_at", "2017-08-20 16:08:32.003853"], ["updated_at", "2017-08-20 16:08:32.003853"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  UPDATE "bookmarks" SET "created_at" = ?, "updated_at" = ? WHERE "bookmarks"."id" = ?  [["created_at", "2017-02-04 04:25:08.006643"], ["updated_at", "2017-08-20 16:08:32.007300"], ["id", 32]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "bookmarks" ("url", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["url", "www.ewspaqor.zcayvrd"], ["topic_id", 4], ["created_at", "2017-08-20 16:08:32.010836"], ["updated_at", "2017-08-20 16:08:32.010836"]]
+  [1m[35m (1.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "bookmarks" SET "created_at" = ?, "updated_at" = ? WHERE "bookmarks"."id" = ?  [["created_at", "2017-06-02 10:38:40.013461"], ["updated_at", "2017-08-20 16:08:32.014020"], ["id", 33]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "bookmarks" ("url", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["url", "www.pslxhy.tsiqb"], ["topic_id", 3], ["created_at", "2017-08-20 16:08:32.017385"], ["updated_at", "2017-08-20 16:08:32.017385"]]
+  [1m[35m (1.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "bookmarks" SET "created_at" = ?, "updated_at" = ? WHERE "bookmarks"."id" = ?  [["created_at", "2017-06-10 01:46:01.020491"], ["updated_at", "2017-08-20 16:08:32.021312"], ["id", 34]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "bookmarks" ("url", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["url", "www.lqyw.ewduli"], ["topic_id", 2], ["created_at", "2017-08-20 16:08:32.024594"], ["updated_at", "2017-08-20 16:08:32.024594"]]
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "bookmarks" SET "created_at" = ?, "updated_at" = ? WHERE "bookmarks"."id" = ?  [["created_at", "2017-05-22 14:27:14.027502"], ["updated_at", "2017-08-20 16:08:32.028075"], ["id", 35]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "bookmarks" ("url", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["url", "www.bhkpt.uli"], ["topic_id", 1], ["created_at", "2017-08-20 16:08:32.031614"], ["updated_at", "2017-08-20 16:08:32.031614"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "bookmarks" SET "created_at" = ?, "updated_at" = ? WHERE "bookmarks"."id" = ?  [["created_at", "2017-03-18 02:44:35.034437"], ["updated_at", "2017-08-20 16:08:32.035056"], ["id", 36]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "bookmarks" ("url", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["url", "www.blwvdxg.kfxdi"], ["topic_id", 4], ["created_at", "2017-08-20 16:08:32.038136"], ["updated_at", "2017-08-20 16:08:32.038136"]]
+  [1m[35m (1.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "bookmarks" SET "created_at" = ?, "updated_at" = ? WHERE "bookmarks"."id" = ?  [["created_at", "2017-05-18 11:02:16.041284"], ["updated_at", "2017-08-20 16:08:32.041889"], ["id", 37]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "bookmarks" ("url", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["url", "www.wuhfjctk.itlysdpa"], ["topic_id", 3], ["created_at", "2017-08-20 16:08:32.045240"], ["updated_at", "2017-08-20 16:08:32.045240"]]
+  [1m[35m (1.1ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "bookmarks" SET "created_at" = ?, "updated_at" = ? WHERE "bookmarks"."id" = ?  [["created_at", "2016-12-19 17:17:04.047905"], ["updated_at", "2017-08-20 16:08:32.048402"], ["id", 38]]
+  [1m[36m (1.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "bookmarks" ("url", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["url", "www.itkzhuwb.zrs"], ["topic_id", 4], ["created_at", "2017-08-20 16:08:32.052802"], ["updated_at", "2017-08-20 16:08:32.052802"]]
+  [1m[35m (3.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "bookmarks" SET "created_at" = ?, "updated_at" = ? WHERE "bookmarks"."id" = ?  [["created_at", "2017-07-01 14:51:14.058068"], ["updated_at", "2017-08-20 16:08:32.058775"], ["id", 39]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "bookmarks" ("url", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["url", "www.pwcv.xumdjg"], ["topic_id", 5], ["created_at", "2017-08-20 16:08:32.062473"], ["updated_at", "2017-08-20 16:08:32.062473"]]
+  [1m[35m (1.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "bookmarks" SET "created_at" = ?, "updated_at" = ? WHERE "bookmarks"."id" = ?  [["created_at", "2017-05-14 06:05:24.065204"], ["updated_at", "2017-08-20 16:08:32.065711"], ["id", 40]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "bookmarks" ("url", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["url", "www.bafryu.kiz"], ["topic_id", 5], ["created_at", "2017-08-20 16:08:32.069351"], ["updated_at", "2017-08-20 16:08:32.069351"]]
+  [1m[35m (1.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "bookmarks" SET "created_at" = ?, "updated_at" = ? WHERE "bookmarks"."id" = ?  [["created_at", "2017-03-03 17:52:34.072171"], ["updated_at", "2017-08-20 16:08:32.072718"], ["id", 41]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "bookmarks" ("url", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["url", "www.ribadpsj.adixty"], ["topic_id", 2], ["created_at", "2017-08-20 16:08:32.076351"], ["updated_at", "2017-08-20 16:08:32.076351"]]
+  [1m[35m (1.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "bookmarks" SET "created_at" = ?, "updated_at" = ? WHERE "bookmarks"."id" = ?  [["created_at", "2017-02-20 02:09:26.078910"], ["updated_at", "2017-08-20 16:08:32.079958"], ["id", 42]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "bookmarks" ("url", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["url", "www.qnhga.nrkbujc"], ["topic_id", 1], ["created_at", "2017-08-20 16:08:32.083022"], ["updated_at", "2017-08-20 16:08:32.083022"]]
+  [1m[35m (1.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "bookmarks" SET "created_at" = ?, "updated_at" = ? WHERE "bookmarks"."id" = ?  [["created_at", "2017-05-22 11:54:30.085677"], ["updated_at", "2017-08-20 16:08:32.086319"], ["id", 43]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "bookmarks" ("url", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["url", "www.hnyirow.uyr"], ["topic_id", 1], ["created_at", "2017-08-20 16:08:32.089497"], ["updated_at", "2017-08-20 16:08:32.089497"]]
+  [1m[35m (1.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "bookmarks" SET "created_at" = ?, "updated_at" = ? WHERE "bookmarks"."id" = ?  [["created_at", "2016-12-18 16:54:20.092798"], ["updated_at", "2017-08-20 16:08:32.093433"], ["id", 44]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "bookmarks" ("url", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["url", "www.lxhd.zwyqf"], ["topic_id", 3], ["created_at", "2017-08-20 16:08:32.096879"], ["updated_at", "2017-08-20 16:08:32.096879"]]
+  [1m[35m (1.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "bookmarks" SET "created_at" = ?, "updated_at" = ? WHERE "bookmarks"."id" = ?  [["created_at", "2016-11-03 06:47:03.100103"], ["updated_at", "2017-08-20 16:08:32.100644"], ["id", 45]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "bookmarks" ("url", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["url", "www.ywsbgc.htpj"], ["topic_id", 3], ["created_at", "2017-08-20 16:08:32.103737"], ["updated_at", "2017-08-20 16:08:32.103737"]]
+  [1m[35m (1.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "bookmarks" SET "created_at" = ?, "updated_at" = ? WHERE "bookmarks"."id" = ?  [["created_at", "2017-07-06 13:53:14.106380"], ["updated_at", "2017-08-20 16:08:32.106886"], ["id", 46]]
+  [1m[36m (1.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "bookmarks" ("url", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["url", "www.giuzva.mduatr"], ["topic_id", 4], ["created_at", "2017-08-20 16:08:32.111386"], ["updated_at", "2017-08-20 16:08:32.111386"]]
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "bookmarks" SET "created_at" = ?, "updated_at" = ? WHERE "bookmarks"."id" = ?  [["created_at", "2016-12-27 09:57:06.114432"], ["updated_at", "2017-08-20 16:08:32.115068"], ["id", 47]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "bookmarks" ("url", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["url", "www.lbc.vneds"], ["topic_id", 2], ["created_at", "2017-08-20 16:08:32.118333"], ["updated_at", "2017-08-20 16:08:32.118333"]]
+  [1m[35m (1.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "bookmarks" SET "created_at" = ?, "updated_at" = ? WHERE "bookmarks"."id" = ?  [["created_at", "2017-01-07 10:36:26.121476"], ["updated_at", "2017-08-20 16:08:32.122112"], ["id", 48]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "bookmarks" ("url", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["url", "www.rvwco.zqfig"], ["topic_id", 3], ["created_at", "2017-08-20 16:08:32.126043"], ["updated_at", "2017-08-20 16:08:32.126043"]]
+  [1m[35m (1.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "bookmarks" SET "created_at" = ?, "updated_at" = ? WHERE "bookmarks"."id" = ?  [["created_at", "2017-03-29 21:14:08.129149"], ["updated_at", "2017-08-20 16:08:32.129655"], ["id", 49]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "bookmarks" ("url", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["url", "www.uqsxydz.pwv"], ["topic_id", 3], ["created_at", "2017-08-20 16:08:32.133055"], ["updated_at", "2017-08-20 16:08:32.133055"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  UPDATE "bookmarks" SET "created_at" = ?, "updated_at" = ? WHERE "bookmarks"."id" = ?  [["created_at", "2016-12-25 13:22:06.135660"], ["updated_at", "2017-08-20 16:08:32.136214"], ["id", 50]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "users"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "topics"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "bookmarks"
+
+
+Started GET "/" for ::1 at 2017-08-20 12:08:37 -0400
+Processing by TopicsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mTopic Load (0.3ms)[0m  SELECT "topics".* FROM "topics"
+  [1m[36mBookmark Load (0.2ms)[0m  [1mSELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?[0m  [["topic_id", 1]]
+  [1m[35mBookmark Load (0.2ms)[0m  SELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?  [["topic_id", 2]]
+  [1m[36mBookmark Load (0.2ms)[0m  [1mSELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?[0m  [["topic_id", 3]]
+  [1m[35mBookmark Load (0.2ms)[0m  SELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?  [["topic_id", 4]]
+  [1m[36mBookmark Load (0.2ms)[0m  [1mSELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?[0m  [["topic_id", 5]]
+  [1m[35mBookmark Load (0.1ms)[0m  SELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?  [["topic_id", 6]]
+  Rendered topics/_topic.html.erb (74.1ms)
+  Rendered topics/_topic.html.erb (6.0ms)
+  Rendered topics/_topic.html.erb (4.9ms)
+  Rendered topics/_topic.html.erb (11.9ms)
+  Rendered topics/_topic.html.erb (22.6ms)
+  Rendered topics/_topic.html.erb (7.1ms)
+  Rendered topics/index.html.erb within layouts/application (229.2ms)
+Completed 200 OK in 412ms (Views: 409.2ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/topics/6" for ::1 at 2017-08-20 12:08:57 -0400
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mTopic Load (0.1ms)[0m  SELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mBookmark Load (0.1ms)[0m  [1mSELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?[0m  [["topic_id", 6]]
+  Rendered topics/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 135ms (Views: 84.3ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/topics/6" for ::1 at 2017-08-20 12:09:00 -0400
+Processing by TopicsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"QLN6+2JzDN0uhn8AWAUZvBx1duB7QqYPVTCdJeKrWhGTEqFmMKNdE9zahGiy9Ah6TvFdYgDhcqdCWYmQ8oGTIg==", "id"=>"6"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mTopic Load (0.1ms)[0m  [1mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (1.8ms)[0m  [1mDELETE FROM "topics" WHERE "topics"."id" = ?[0m  [["id", 6]]
+  [1m[35m (0.1ms)[0m  rollback transaction
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 2.2ms)
+
+ActiveRecord::StatementInvalid (SQLite3::ReadOnlyException: attempt to write a readonly database: DELETE FROM "topics" WHERE "topics"."id" = ?):
+  app/controllers/topics_controller.rb:36:in `destroy'
+
+
+  Rendered /Users/mfroeh2/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (14.0ms)
+  Rendered /Users/mfroeh2/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.1ms)
+  Rendered /Users/mfroeh2/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.9ms)
+  Rendered /Users/mfroeh2/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (136.2ms)
+  Rendered /Users/mfroeh2/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /Users/mfroeh2/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /Users/mfroeh2/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/mfroeh2/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/mfroeh2/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (112.2ms)
+  Rendered /Users/mfroeh2/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/mfroeh2/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.6ms)
+  Rendered /Users/mfroeh2/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (253.8ms)
+
+
+Started GET "/" for ::1 at 2017-08-20 12:12:07 -0400
+Processing by TopicsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mTopic Load (0.3ms)[0m  SELECT "topics".* FROM "topics"
+  [1m[36mBookmark Load (0.2ms)[0m  [1mSELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?[0m  [["topic_id", 1]]
+  [1m[35mBookmark Load (0.2ms)[0m  SELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?  [["topic_id", 2]]
+  [1m[36mBookmark Load (0.2ms)[0m  [1mSELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?[0m  [["topic_id", 3]]
+  [1m[35mBookmark Load (0.2ms)[0m  SELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?  [["topic_id", 4]]
+  [1m[36mBookmark Load (0.2ms)[0m  [1mSELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?[0m  [["topic_id", 5]]
+  [1m[35mBookmark Load (0.1ms)[0m  SELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?  [["topic_id", 6]]
+  Rendered topics/_topic.html.erb (19.9ms)
+  Rendered topics/_topic.html.erb (4.6ms)
+  Rendered topics/_topic.html.erb (4.8ms)
+  Rendered topics/_topic.html.erb (4.5ms)
+  Rendered topics/_topic.html.erb (4.2ms)
+  Rendered topics/_topic.html.erb (4.1ms)
+  Rendered topics/index.html.erb within layouts/application (67.8ms)
+Completed 200 OK in 142ms (Views: 139.7ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/" for ::1 at 2017-08-20 12:12:29 -0400
+
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+	bin/rake db:migrate RAILS_ENV=development
+
+):
+  activerecord (4.2.5) lib/active_record/migration.rb:392:in `check_pending!'
+  activerecord (4.2.5) lib/active_record/migration.rb:373:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.5) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.8) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.8) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.8) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  rack (1.6.8) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.8) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/mfroeh2/.rvm/rubies/ruby-2.3.3/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /Users/mfroeh2/.rvm/rubies/ruby-2.3.3/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /Users/mfroeh2/.rvm/rubies/ruby-2.3.3/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /Users/mfroeh2/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.4ms)
+  Rendered /Users/mfroeh2/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.4ms)
+  Rendered /Users/mfroeh2/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /Users/mfroeh2/.rvm/gems/ruby-2.3.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (169.1ms)
+  Rendered /Users/mfroeh2/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.8ms)
+  Rendered /Users/mfroeh2/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/mfroeh2/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/mfroeh2/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/mfroeh2/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (1106.2ms)
+  Rendered /Users/mfroeh2/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/mfroeh2/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.8ms)
+  Rendered /Users/mfroeh2/.rvm/gems/ruby-2.3.3/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (1259.7ms)
+  [1m[36m (4.3ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (1.5ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to DeviseCreateUsers (20170817020151)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar, "last_sign_in_ip" varchar, "confirmation_token" varchar, "confirmed_at" datetime, "confirmation_sent_at" datetime, "unconfirmed_email" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.2ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (0.2ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  CREATE UNIQUE INDEX "index_users_on_confirmation_token" ON "users" ("confirmation_token")
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170817020151"]]
+  [1m[35m (2.2ms)[0m  commit transaction
+Migrating to CreateTopics (20170818183347)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  CREATE TABLE "topics" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "user_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.2ms)[0m  [1mCREATE  INDEX "index_topics_on_user_id" ON "topics" ("user_id")[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20170818183347"]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+Migrating to CreateBookmarks (20170818183703)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.8ms)[0m  [1mCREATE TABLE "bookmarks" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "url" varchar, "topic_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  CREATE  INDEX "index_bookmarks_on_topic_id" ON "bookmarks" ("topic_id")
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170818183703"]]
+  [1m[35m (1.2ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_bookmarks_on_topic_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_bookmarks_on_topic_id' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_topics_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_topics_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.3ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_confirmation_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_confirmation_token' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+
+
+
+Started GET "/" for ::1 at 2017-08-20 12:12:51 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by TopicsController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mTopic Load (0.3ms)[0m  [1mSELECT "topics".* FROM "topics"[0m
+  Rendered topics/index.html.erb within layouts/application (22.6ms)
+Completed 200 OK in 670ms (Views: 634.9ms | ActiveRecord: 1.5ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.5ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'rbwxypha@bnmprqu.qmp' LIMIT 1[0m
+  [1m[35mSQL (1.3ms)[0m  INSERT INTO "users" ("email", "encrypted_password", "confirmed_at", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["email", "rbwxypha@bnmprqu.qmp"], ["encrypted_password", "$2a$11$ZYGIFkmDNe1hhA4zAK7N/eNyIjZO1luzxL4SROzDBXbNOUTOp0hvi"], ["confirmed_at", "2017-08-20 16:13:17.795732"], ["created_at", "2017-08-20 16:13:18.057084"], ["updated_at", "2017-08-20 16:13:18.057084"]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'ysfhzow@ncqi.upsjv' LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("email", "encrypted_password", "confirmed_at", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["email", "ysfhzow@ncqi.upsjv"], ["encrypted_password", "$2a$11$zJzugbctiPn9nIsZJuh5ou1VLzq7CB70fyrDZdhGMq9thWQSae9KS"], ["confirmed_at", "2017-08-20 16:13:18.062123"], ["created_at", "2017-08-20 16:13:18.250168"], ["updated_at", "2017-08-20 16:13:18.250168"]]
+  [1m[36m (4.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'eyxvzmho@ckmidtgw.rdoiegtu' LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("email", "encrypted_password", "confirmed_at", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["email", "eyxvzmho@ckmidtgw.rdoiegtu"], ["encrypted_password", "$2a$11$WWFoUw6mg05GsTB5F/EGSeN/fPpninT9cRSQfkD/1HX9yxJdodAmG"], ["confirmed_at", "2017-08-20 16:13:18.257114"], ["created_at", "2017-08-20 16:13:18.440098"], ["updated_at", "2017-08-20 16:13:18.440098"]]
+  [1m[36m (4.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'zrqmclk@ihktuj.baln' LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "users" ("email", "encrypted_password", "confirmed_at", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["email", "zrqmclk@ihktuj.baln"], ["encrypted_password", "$2a$11$P3uhYAfmEMlxNfTFlXgOleaX3polswZ/.GVUB80JMh1cS4FSMfoSW"], ["confirmed_at", "2017-08-20 16:13:18.447329"], ["created_at", "2017-08-20 16:13:18.630540"], ["updated_at", "2017-08-20 16:13:18.630540"]]
+  [1m[36m (4.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'vcklqeu@pfotvqz.zxaqo' LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("email", "encrypted_password", "confirmed_at", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["email", "vcklqeu@pfotvqz.zxaqo"], ["encrypted_password", "$2a$11$iITrVycy8jpT0cbSt4maAe6kyZmZX5q1tbWv6M1anFtbZ.eeW5olq"], ["confirmed_at", "2017-08-20 16:13:18.636821"], ["created_at", "2017-08-20 16:13:18.819058"], ["updated_at", "2017-08-20 16:13:18.819058"]]
+  [1m[36m (3.6ms)[0m  [1mcommit transaction[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "topics" ("title", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "pmwsetdc"], ["user_id", 4], ["created_at", "2017-08-20 16:13:18.853381"], ["updated_at", "2017-08-20 16:13:18.853381"]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "topics" SET "created_at" = ?, "updated_at" = ? WHERE "topics"."id" = ?[0m  [["created_at", "2017-06-18 19:08:40.856983"], ["updated_at", "2017-08-20 16:13:18.858073"], ["id", 1]]
+  [1m[35m (1.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "topics" ("title", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "tqowpcd"], ["user_id", 3], ["created_at", "2017-08-20 16:13:18.869555"], ["updated_at", "2017-08-20 16:13:18.869555"]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.7ms)[0m  [1mUPDATE "topics" SET "created_at" = ?, "updated_at" = ? WHERE "topics"."id" = ?[0m  [["created_at", "2017-04-16 08:14:41.872647"], ["updated_at", "2017-08-20 16:13:18.873253"], ["id", 2]]
+  [1m[35m (0.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "topics" ("title", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "xvu"], ["user_id", 5], ["created_at", "2017-08-20 16:13:18.877602"], ["updated_at", "2017-08-20 16:13:18.877602"]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "topics" SET "created_at" = ?, "updated_at" = ? WHERE "topics"."id" = ?[0m  [["created_at", "2017-01-25 00:48:28.880704"], ["updated_at", "2017-08-20 16:13:18.881281"], ["id", 3]]
+  [1m[35m (1.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "topics" ("title", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "jqdmpvcb"], ["user_id", 3], ["created_at", "2017-08-20 16:13:18.884630"], ["updated_at", "2017-08-20 16:13:18.884630"]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mUPDATE "topics" SET "created_at" = ?, "updated_at" = ? WHERE "topics"."id" = ?[0m  [["created_at", "2016-11-01 01:04:33.887334"], ["updated_at", "2017-08-20 16:13:18.887900"], ["id", 4]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "topics" ("title", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "iehpqf"], ["user_id", 1], ["created_at", "2017-08-20 16:13:18.891990"], ["updated_at", "2017-08-20 16:13:18.891990"]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "topics" SET "created_at" = ?, "updated_at" = ? WHERE "topics"."id" = ?[0m  [["created_at", "2016-10-03 02:15:37.895302"], ["updated_at", "2017-08-20 16:13:18.895897"], ["id", 5]]
+  [1m[35m (1.1ms)[0m  commit transaction
+  [1m[36mTopic Load (0.3ms)[0m  [1mSELECT "topics".* FROM "topics"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "bookmarks" ("url", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["url", "www.lowia.hfxmqkwt"], ["topic_id", 5], ["created_at", "2017-08-20 16:13:18.910797"], ["updated_at", "2017-08-20 16:13:18.910797"]]
+  [1m[35m (1.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "bookmarks" SET "created_at" = ?, "updated_at" = ? WHERE "bookmarks"."id" = ?  [["created_at", "2017-04-17 03:46:49.914585"], ["updated_at", "2017-08-20 16:13:18.915203"], ["id", 1]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "bookmarks" ("url", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["url", "www.cmvf.uafycqj"], ["topic_id", 3], ["created_at", "2017-08-20 16:13:18.919175"], ["updated_at", "2017-08-20 16:13:18.919175"]]
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  UPDATE "bookmarks" SET "created_at" = ?, "updated_at" = ? WHERE "bookmarks"."id" = ?  [["created_at", "2016-12-02 05:18:52.922448"], ["updated_at", "2017-08-20 16:13:18.923090"], ["id", 2]]
+  [1m[36m (5.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "bookmarks" ("url", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["url", "www.dbqwke.yoquve"], ["topic_id", 4], ["created_at", "2017-08-20 16:13:18.931558"], ["updated_at", "2017-08-20 16:13:18.931558"]]
+  [1m[35m (3.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "bookmarks" SET "created_at" = ?, "updated_at" = ? WHERE "bookmarks"."id" = ?  [["created_at", "2017-08-16 17:02:24.937538"], ["updated_at", "2017-08-20 16:13:18.938640"], ["id", 3]]
+  [1m[36m (2.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "bookmarks" ("url", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["url", "www.rfqaumc.vax"], ["topic_id", 5], ["created_at", "2017-08-20 16:13:18.944706"], ["updated_at", "2017-08-20 16:13:18.944706"]]
+  [1m[35m (1.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "bookmarks" SET "created_at" = ?, "updated_at" = ? WHERE "bookmarks"."id" = ?  [["created_at", "2017-02-27 01:00:08.948471"], ["updated_at", "2017-08-20 16:13:18.949504"], ["id", 4]]
+  [1m[36m (4.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "bookmarks" ("url", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["url", "www.eujavih.nkwtvel"], ["topic_id", 4], ["created_at", "2017-08-20 16:13:18.956691"], ["updated_at", "2017-08-20 16:13:18.956691"]]
+  [1m[35m (1.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "bookmarks" SET "created_at" = ?, "updated_at" = ? WHERE "bookmarks"."id" = ?  [["created_at", "2017-05-15 22:30:57.960791"], ["updated_at", "2017-08-20 16:13:18.961460"], ["id", 5]]
+  [1m[36m (5.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "bookmarks" ("url", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["url", "www.hvrg.cnx"], ["topic_id", 2], ["created_at", "2017-08-20 16:13:18.969793"], ["updated_at", "2017-08-20 16:13:18.969793"]]
+  [1m[35m (2.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "bookmarks" SET "created_at" = ?, "updated_at" = ? WHERE "bookmarks"."id" = ?  [["created_at", "2017-06-29 17:54:19.975066"], ["updated_at", "2017-08-20 16:13:18.975776"], ["id", 6]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.5ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "bookmarks" ("url", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["url", "www.nhsudji.bpkzwe"], ["topic_id", 1], ["created_at", "2017-08-20 16:13:18.980551"], ["updated_at", "2017-08-20 16:13:18.980551"]]
+  [1m[35m (2.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "bookmarks" SET "created_at" = ?, "updated_at" = ? WHERE "bookmarks"."id" = ?  [["created_at", "2016-11-11 08:45:36.984568"], ["updated_at", "2017-08-20 16:13:18.985147"], ["id", 7]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "bookmarks" ("url", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["url", "www.oxhsezw.oaphdgj"], ["topic_id", 2], ["created_at", "2017-08-20 16:13:18.989318"], ["updated_at", "2017-08-20 16:13:18.989318"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "bookmarks" SET "created_at" = ?, "updated_at" = ? WHERE "bookmarks"."id" = ?  [["created_at", "2017-03-06 22:38:21.992579"], ["updated_at", "2017-08-20 16:13:18.993208"], ["id", 8]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "bookmarks" ("url", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["url", "www.ikbnfpm.jdabrgk"], ["topic_id", 5], ["created_at", "2017-08-20 16:13:18.997262"], ["updated_at", "2017-08-20 16:13:18.997262"]]
+  [1m[35m (1.2ms)[0m  commit transaction
+  [1m[36m (0.5ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "bookmarks" SET "created_at" = ?, "updated_at" = ? WHERE "bookmarks"."id" = ?  [["created_at", "2016-11-24 16:03:29.001395"], ["updated_at", "2017-08-20 16:13:19.002429"], ["id", 9]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "bookmarks" ("url", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["url", "www.ftgudv.ctqf"], ["topic_id", 4], ["created_at", "2017-08-20 16:13:19.007692"], ["updated_at", "2017-08-20 16:13:19.007692"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "bookmarks" SET "created_at" = ?, "updated_at" = ? WHERE "bookmarks"."id" = ?  [["created_at", "2017-01-27 15:27:02.011752"], ["updated_at", "2017-08-20 16:13:19.012988"], ["id", 10]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "bookmarks" ("url", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["url", "www.eogurwib.ekxj"], ["topic_id", 3], ["created_at", "2017-08-20 16:13:19.016992"], ["updated_at", "2017-08-20 16:13:19.016992"]]
+  [1m[35m (1.1ms)[0m  commit transaction
+  [1m[36m (0.8ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  UPDATE "bookmarks" SET "created_at" = ?, "updated_at" = ? WHERE "bookmarks"."id" = ?  [["created_at", "2017-04-05 19:45:29.020026"], ["updated_at", "2017-08-20 16:13:19.021385"], ["id", 11]]
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "bookmarks" ("url", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["url", "www.ktcpd.smteagjz"], ["topic_id", 1], ["created_at", "2017-08-20 16:13:19.025472"], ["updated_at", "2017-08-20 16:13:19.025472"]]
+  [1m[35m (1.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "bookmarks" SET "created_at" = ?, "updated_at" = ? WHERE "bookmarks"."id" = ?  [["created_at", "2016-09-16 03:45:43.029200"], ["updated_at", "2017-08-20 16:13:19.030275"], ["id", 12]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "bookmarks" ("url", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["url", "www.gqinrux.wfmi"], ["topic_id", 3], ["created_at", "2017-08-20 16:13:19.034293"], ["updated_at", "2017-08-20 16:13:19.034293"]]
+  [1m[35m (1.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "bookmarks" SET "created_at" = ?, "updated_at" = ? WHERE "bookmarks"."id" = ?  [["created_at", "2017-05-18 11:16:50.037547"], ["updated_at", "2017-08-20 16:13:19.038088"], ["id", 13]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (1.1ms)[0m  [1mINSERT INTO "bookmarks" ("url", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["url", "www.mbw.lvkjehpw"], ["topic_id", 2], ["created_at", "2017-08-20 16:13:19.042448"], ["updated_at", "2017-08-20 16:13:19.042448"]]
+  [1m[35m (1.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "bookmarks" SET "created_at" = ?, "updated_at" = ? WHERE "bookmarks"."id" = ?  [["created_at", "2016-10-11 18:59:18.046101"], ["updated_at", "2017-08-20 16:13:19.046710"], ["id", 14]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "bookmarks" ("url", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["url", "www.jasmv.jsikd"], ["topic_id", 4], ["created_at", "2017-08-20 16:13:19.050908"], ["updated_at", "2017-08-20 16:13:19.050908"]]
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "bookmarks" SET "created_at" = ?, "updated_at" = ? WHERE "bookmarks"."id" = ?  [["created_at", "2016-10-05 19:55:21.054595"], ["updated_at", "2017-08-20 16:13:19.055348"], ["id", 15]]
+  [1m[36m (4.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "bookmarks" ("url", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["url", "www.qyi.kva"], ["topic_id", 2], ["created_at", "2017-08-20 16:13:19.062794"], ["updated_at", "2017-08-20 16:13:19.062794"]]
+  [1m[35m (1.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "bookmarks" SET "created_at" = ?, "updated_at" = ? WHERE "bookmarks"."id" = ?  [["created_at", "2016-09-02 10:42:38.066270"], ["updated_at", "2017-08-20 16:13:19.066979"], ["id", 16]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "bookmarks" ("url", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["url", "www.qljiamz.hizdj"], ["topic_id", 1], ["created_at", "2017-08-20 16:13:19.071609"], ["updated_at", "2017-08-20 16:13:19.071609"]]
+  [1m[35m (1.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "bookmarks" SET "created_at" = ?, "updated_at" = ? WHERE "bookmarks"."id" = ?  [["created_at", "2017-01-07 04:31:55.075213"], ["updated_at", "2017-08-20 16:13:19.075848"], ["id", 17]]
+  [1m[36m (5.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "bookmarks" ("url", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["url", "www.quw.jgsna"], ["topic_id", 4], ["created_at", "2017-08-20 16:13:19.084331"], ["updated_at", "2017-08-20 16:13:19.084331"]]
+  [1m[35m (3.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  UPDATE "bookmarks" SET "created_at" = ?, "updated_at" = ? WHERE "bookmarks"."id" = ?  [["created_at", "2017-05-10 00:08:35.090113"], ["updated_at", "2017-08-20 16:13:19.091285"], ["id", 18]]
+  [1m[36m (5.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "bookmarks" ("url", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["url", "www.bzrg.zypj"], ["topic_id", 5], ["created_at", "2017-08-20 16:13:19.100543"], ["updated_at", "2017-08-20 16:13:19.100543"]]
+  [1m[35m (3.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "bookmarks" SET "created_at" = ?, "updated_at" = ? WHERE "bookmarks"."id" = ?  [["created_at", "2017-07-23 16:23:19.106416"], ["updated_at", "2017-08-20 16:13:19.107073"], ["id", 19]]
+  [1m[36m (4.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "bookmarks" ("url", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["url", "www.drt.obiqde"], ["topic_id", 2], ["created_at", "2017-08-20 16:13:19.115696"], ["updated_at", "2017-08-20 16:13:19.115696"]]
+  [1m[35m (3.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "bookmarks" SET "created_at" = ?, "updated_at" = ? WHERE "bookmarks"."id" = ?  [["created_at", "2017-03-10 14:10:53.121044"], ["updated_at", "2017-08-20 16:13:19.121818"], ["id", 20]]
+  [1m[36m (1.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "bookmarks" ("url", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["url", "www.vtmbclx.vad"], ["topic_id", 1], ["created_at", "2017-08-20 16:13:19.129148"], ["updated_at", "2017-08-20 16:13:19.129148"]]
+  [1m[35m (1.1ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "bookmarks" SET "created_at" = ?, "updated_at" = ? WHERE "bookmarks"."id" = ?  [["created_at", "2017-06-09 07:39:49.132391"], ["updated_at", "2017-08-20 16:13:19.133818"], ["id", 21]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "bookmarks" ("url", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["url", "www.dgewjf.mpn"], ["topic_id", 2], ["created_at", "2017-08-20 16:13:19.137628"], ["updated_at", "2017-08-20 16:13:19.137628"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "bookmarks" SET "created_at" = ?, "updated_at" = ? WHERE "bookmarks"."id" = ?  [["created_at", "2016-10-31 02:04:21.140873"], ["updated_at", "2017-08-20 16:13:19.141642"], ["id", 22]]
+  [1m[36m (5.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "bookmarks" ("url", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["url", "www.oyjvs.njwpg"], ["topic_id", 5], ["created_at", "2017-08-20 16:13:19.149871"], ["updated_at", "2017-08-20 16:13:19.149871"]]
+  [1m[35m (3.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "bookmarks" SET "created_at" = ?, "updated_at" = ? WHERE "bookmarks"."id" = ?  [["created_at", "2016-12-25 21:47:49.155640"], ["updated_at", "2017-08-20 16:13:19.157200"], ["id", 23]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "bookmarks" ("url", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["url", "www.mby.puzs"], ["topic_id", 5], ["created_at", "2017-08-20 16:13:19.161047"], ["updated_at", "2017-08-20 16:13:19.161047"]]
+  [1m[35m (3.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "bookmarks" SET "created_at" = ?, "updated_at" = ? WHERE "bookmarks"."id" = ?  [["created_at", "2017-06-11 02:57:01.167011"], ["updated_at", "2017-08-20 16:13:19.168387"], ["id", 24]]
+  [1m[36m (4.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "bookmarks" ("url", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["url", "www.mseruaky.mqz"], ["topic_id", 3], ["created_at", "2017-08-20 16:13:19.176184"], ["updated_at", "2017-08-20 16:13:19.176184"]]
+  [1m[35m (3.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "bookmarks" SET "created_at" = ?, "updated_at" = ? WHERE "bookmarks"."id" = ?  [["created_at", "2016-11-11 11:28:34.181867"], ["updated_at", "2017-08-20 16:13:19.182943"], ["id", 25]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "bookmarks" ("url", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["url", "www.rpbuxli.nzodval"], ["topic_id", 4], ["created_at", "2017-08-20 16:13:19.187068"], ["updated_at", "2017-08-20 16:13:19.187068"]]
+  [1m[35m (3.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "bookmarks" SET "created_at" = ?, "updated_at" = ? WHERE "bookmarks"."id" = ?  [["created_at", "2016-12-26 10:24:33.192915"], ["updated_at", "2017-08-20 16:13:19.193703"], ["id", 26]]
+  [1m[36m (5.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "bookmarks" ("url", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["url", "www.oxqyn.netgzvul"], ["topic_id", 2], ["created_at", "2017-08-20 16:13:19.203114"], ["updated_at", "2017-08-20 16:13:19.203114"]]
+  [1m[35m (2.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "bookmarks" SET "created_at" = ?, "updated_at" = ? WHERE "bookmarks"."id" = ?  [["created_at", "2017-06-24 18:12:21.208038"], ["updated_at", "2017-08-20 16:13:19.208904"], ["id", 27]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "bookmarks" ("url", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["url", "www.hpfirc.tufgoq"], ["topic_id", 3], ["created_at", "2017-08-20 16:13:19.213249"], ["updated_at", "2017-08-20 16:13:19.213249"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "bookmarks" SET "created_at" = ?, "updated_at" = ? WHERE "bookmarks"."id" = ?  [["created_at", "2017-07-01 00:27:45.217161"], ["updated_at", "2017-08-20 16:13:19.218115"], ["id", 28]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "bookmarks" ("url", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["url", "www.kxcw.dpjvn"], ["topic_id", 5], ["created_at", "2017-08-20 16:13:19.222644"], ["updated_at", "2017-08-20 16:13:19.222644"]]
+  [1m[35m (1.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "bookmarks" SET "created_at" = ?, "updated_at" = ? WHERE "bookmarks"."id" = ?  [["created_at", "2017-01-06 10:05:45.227038"], ["updated_at", "2017-08-20 16:13:19.227768"], ["id", 29]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "bookmarks" ("url", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["url", "www.jmltfyu.axr"], ["topic_id", 5], ["created_at", "2017-08-20 16:13:19.234495"], ["updated_at", "2017-08-20 16:13:19.234495"]]
+  [1m[35m (1.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "bookmarks" SET "created_at" = ?, "updated_at" = ? WHERE "bookmarks"."id" = ?  [["created_at", "2016-12-28 05:39:37.237779"], ["updated_at", "2017-08-20 16:13:19.238362"], ["id", 30]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "bookmarks" ("url", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["url", "www.azr.wmvpz"], ["topic_id", 5], ["created_at", "2017-08-20 16:13:19.241854"], ["updated_at", "2017-08-20 16:13:19.241854"]]
+  [1m[35m (1.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "bookmarks" SET "created_at" = ?, "updated_at" = ? WHERE "bookmarks"."id" = ?  [["created_at", "2016-11-13 16:55:47.246964"], ["updated_at", "2017-08-20 16:13:19.247972"], ["id", 31]]
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "bookmarks" ("url", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["url", "www.mjk.vqlbs"], ["topic_id", 1], ["created_at", "2017-08-20 16:13:19.252393"], ["updated_at", "2017-08-20 16:13:19.252393"]]
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "bookmarks" SET "created_at" = ?, "updated_at" = ? WHERE "bookmarks"."id" = ?  [["created_at", "2017-05-04 18:21:52.255914"], ["updated_at", "2017-08-20 16:13:19.256486"], ["id", 32]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "bookmarks" ("url", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["url", "www.yqwjlo.ruzwec"], ["topic_id", 5], ["created_at", "2017-08-20 16:13:19.261378"], ["updated_at", "2017-08-20 16:13:19.261378"]]
+  [1m[35m (1.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "bookmarks" SET "created_at" = ?, "updated_at" = ? WHERE "bookmarks"."id" = ?  [["created_at", "2017-04-16 18:22:53.265138"], ["updated_at", "2017-08-20 16:13:19.265678"], ["id", 33]]
+  [1m[36m (1.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "bookmarks" ("url", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["url", "www.qtniko.ulq"], ["topic_id", 2], ["created_at", "2017-08-20 16:13:19.270376"], ["updated_at", "2017-08-20 16:13:19.270376"]]
+  [1m[35m (1.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "bookmarks" SET "created_at" = ?, "updated_at" = ? WHERE "bookmarks"."id" = ?  [["created_at", "2017-05-25 03:32:32.273674"], ["updated_at", "2017-08-20 16:13:19.274262"], ["id", 34]]
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "bookmarks" ("url", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["url", "www.gkstz.pnrw"], ["topic_id", 1], ["created_at", "2017-08-20 16:13:19.279014"], ["updated_at", "2017-08-20 16:13:19.279014"]]
+  [1m[35m (1.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  UPDATE "bookmarks" SET "created_at" = ?, "updated_at" = ? WHERE "bookmarks"."id" = ?  [["created_at", "2017-04-23 02:53:55.281952"], ["updated_at", "2017-08-20 16:13:19.282817"], ["id", 35]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "bookmarks" ("url", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["url", "www.xdbf.yvrca"], ["topic_id", 3], ["created_at", "2017-08-20 16:13:19.286570"], ["updated_at", "2017-08-20 16:13:19.286570"]]
+  [1m[35m (1.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "bookmarks" SET "created_at" = ?, "updated_at" = ? WHERE "bookmarks"."id" = ?  [["created_at", "2017-02-05 12:37:01.289877"], ["updated_at", "2017-08-20 16:13:19.290962"], ["id", 36]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "bookmarks" ("url", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["url", "www.pneqi.lekzg"], ["topic_id", 5], ["created_at", "2017-08-20 16:13:19.307080"], ["updated_at", "2017-08-20 16:13:19.307080"]]
+  [1m[35m (1.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "bookmarks" SET "created_at" = ?, "updated_at" = ? WHERE "bookmarks"."id" = ?  [["created_at", "2017-01-01 13:26:01.309731"], ["updated_at", "2017-08-20 16:13:19.310422"], ["id", 37]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "bookmarks" ("url", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["url", "www.kwxfqy.kfjhxn"], ["topic_id", 3], ["created_at", "2017-08-20 16:13:19.313983"], ["updated_at", "2017-08-20 16:13:19.313983"]]
+  [1m[35m (1.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "bookmarks" SET "created_at" = ?, "updated_at" = ? WHERE "bookmarks"."id" = ?  [["created_at", "2016-12-17 01:08:50.316902"], ["updated_at", "2017-08-20 16:13:19.317435"], ["id", 38]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "bookmarks" ("url", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["url", "www.nuof.wbg"], ["topic_id", 4], ["created_at", "2017-08-20 16:13:19.320806"], ["updated_at", "2017-08-20 16:13:19.320806"]]
+  [1m[35m (1.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "bookmarks" SET "created_at" = ?, "updated_at" = ? WHERE "bookmarks"."id" = ?  [["created_at", "2017-01-24 11:06:00.323527"], ["updated_at", "2017-08-20 16:13:19.324018"], ["id", 39]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "bookmarks" ("url", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["url", "www.fkrq.ost"], ["topic_id", 2], ["created_at", "2017-08-20 16:13:19.327767"], ["updated_at", "2017-08-20 16:13:19.327767"]]
+  [1m[35m (1.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "bookmarks" SET "created_at" = ?, "updated_at" = ? WHERE "bookmarks"."id" = ?  [["created_at", "2017-02-01 00:16:21.330732"], ["updated_at", "2017-08-20 16:13:19.331378"], ["id", 40]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "bookmarks" ("url", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["url", "www.ewbxo.welat"], ["topic_id", 3], ["created_at", "2017-08-20 16:13:19.334556"], ["updated_at", "2017-08-20 16:13:19.334556"]]
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "bookmarks" SET "created_at" = ?, "updated_at" = ? WHERE "bookmarks"."id" = ?  [["created_at", "2016-09-09 11:32:03.337641"], ["updated_at", "2017-08-20 16:13:19.338234"], ["id", 41]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "bookmarks" ("url", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["url", "www.agxsynfr.klecywmj"], ["topic_id", 1], ["created_at", "2017-08-20 16:13:19.341164"], ["updated_at", "2017-08-20 16:13:19.341164"]]
+  [1m[35m (1.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "bookmarks" SET "created_at" = ?, "updated_at" = ? WHERE "bookmarks"."id" = ?  [["created_at", "2017-07-22 21:14:30.347051"], ["updated_at", "2017-08-20 16:13:19.348015"], ["id", 42]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "bookmarks" ("url", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["url", "www.konbg.zeybjowl"], ["topic_id", 3], ["created_at", "2017-08-20 16:13:19.351626"], ["updated_at", "2017-08-20 16:13:19.351626"]]
+  [1m[35m (2.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "bookmarks" SET "created_at" = ?, "updated_at" = ? WHERE "bookmarks"."id" = ?  [["created_at", "2017-01-14 06:21:40.355158"], ["updated_at", "2017-08-20 16:13:19.355727"], ["id", 43]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "bookmarks" ("url", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["url", "www.vfapmr.gjdcex"], ["topic_id", 2], ["created_at", "2017-08-20 16:13:19.358837"], ["updated_at", "2017-08-20 16:13:19.358837"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "bookmarks" SET "created_at" = ?, "updated_at" = ? WHERE "bookmarks"."id" = ?  [["created_at", "2017-05-12 06:16:27.361966"], ["updated_at", "2017-08-20 16:13:19.362553"], ["id", 44]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "bookmarks" ("url", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["url", "www.joyd.whxe"], ["topic_id", 3], ["created_at", "2017-08-20 16:13:19.366061"], ["updated_at", "2017-08-20 16:13:19.366061"]]
+  [1m[35m (1.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "bookmarks" SET "created_at" = ?, "updated_at" = ? WHERE "bookmarks"."id" = ?  [["created_at", "2017-03-05 11:26:11.368908"], ["updated_at", "2017-08-20 16:13:19.369449"], ["id", 45]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "bookmarks" ("url", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["url", "www.lmnudo.xgzw"], ["topic_id", 2], ["created_at", "2017-08-20 16:13:19.373014"], ["updated_at", "2017-08-20 16:13:19.373014"]]
+  [1m[35m (1.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "bookmarks" SET "created_at" = ?, "updated_at" = ? WHERE "bookmarks"."id" = ?  [["created_at", "2017-01-18 21:53:18.375759"], ["updated_at", "2017-08-20 16:13:19.376282"], ["id", 46]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "bookmarks" ("url", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["url", "www.xedo.vlbf"], ["topic_id", 3], ["created_at", "2017-08-20 16:13:19.379769"], ["updated_at", "2017-08-20 16:13:19.379769"]]
+  [1m[35m (1.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "bookmarks" SET "created_at" = ?, "updated_at" = ? WHERE "bookmarks"."id" = ?  [["created_at", "2016-11-26 23:58:07.382911"], ["updated_at", "2017-08-20 16:13:19.383557"], ["id", 47]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "bookmarks" ("url", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["url", "www.bqgzdtsl.crql"], ["topic_id", 5], ["created_at", "2017-08-20 16:13:19.386744"], ["updated_at", "2017-08-20 16:13:19.386744"]]
+  [1m[35m (1.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "bookmarks" SET "created_at" = ?, "updated_at" = ? WHERE "bookmarks"."id" = ?  [["created_at", "2017-06-22 21:08:12.389595"], ["updated_at", "2017-08-20 16:13:19.390145"], ["id", 48]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "bookmarks" ("url", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["url", "www.dzmknh.tdqfjrc"], ["topic_id", 5], ["created_at", "2017-08-20 16:13:19.392912"], ["updated_at", "2017-08-20 16:13:19.392912"]]
+  [1m[35m (1.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "bookmarks" SET "created_at" = ?, "updated_at" = ? WHERE "bookmarks"."id" = ?  [["created_at", "2017-03-17 16:02:29.396949"], ["updated_at", "2017-08-20 16:13:19.397538"], ["id", 49]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "bookmarks" ("url", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["url", "www.civhk.qbh"], ["topic_id", 2], ["created_at", "2017-08-20 16:13:19.400908"], ["updated_at", "2017-08-20 16:13:19.400908"]]
+  [1m[35m (1.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  UPDATE "bookmarks" SET "created_at" = ?, "updated_at" = ? WHERE "bookmarks"."id" = ?  [["created_at", "2017-04-14 00:40:58.403923"], ["updated_at", "2017-08-20 16:13:19.404461"], ["id", 50]]
+  [1m[36m (1.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "users"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "topics"[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "bookmarks"
+
+
+Started GET "/" for ::1 at 2017-08-20 12:13:21 -0400
+Processing by TopicsController#index as HTML
+  [1m[35mTopic Load (0.3ms)[0m  SELECT "topics".* FROM "topics"
+  [1m[36mBookmark Load (0.3ms)[0m  [1mSELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?[0m  [["topic_id", 1]]
+  [1m[35mBookmark Load (0.2ms)[0m  SELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?  [["topic_id", 2]]
+  [1m[36mBookmark Load (0.2ms)[0m  [1mSELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?[0m  [["topic_id", 3]]
+  [1m[35mBookmark Load (0.2ms)[0m  SELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?  [["topic_id", 4]]
+  [1m[36mBookmark Load (0.2ms)[0m  [1mSELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?[0m  [["topic_id", 5]]
+  Rendered topics/_topic.html.erb (51.4ms)
+  Rendered topics/_topic.html.erb (3.5ms)
+  Rendered topics/_topic.html.erb (3.4ms)
+  Rendered topics/_topic.html.erb (3.4ms)
+  Rendered topics/_topic.html.erb (3.8ms)
+  Rendered topics/index.html.erb within layouts/application (80.0ms)
+Completed 200 OK in 147ms (Views: 142.8ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/" for ::1 at 2017-08-20 12:15:57 -0400
+Processing by TopicsController#index as HTML
+  [1m[35mTopic Load (0.3ms)[0m  SELECT "topics".* FROM "topics"
+  [1m[36mBookmark Load (0.2ms)[0m  [1mSELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?[0m  [["topic_id", 1]]
+  [1m[35mBookmark Load (0.2ms)[0m  SELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?  [["topic_id", 2]]
+  [1m[36mBookmark Load (0.3ms)[0m  [1mSELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?[0m  [["topic_id", 3]]
+  [1m[35mBookmark Load (0.2ms)[0m  SELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?  [["topic_id", 4]]
+  [1m[36mBookmark Load (0.2ms)[0m  [1mSELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?[0m  [["topic_id", 5]]
+  Rendered topics/_topic.html.erb (35.7ms)
+  Rendered topics/index.html.erb within layouts/application (40.6ms)
+Completed 200 OK in 118ms (Views: 115.3ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/" for ::1 at 2017-08-20 12:16:27 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by TopicsController#index as HTML
+  [1m[35mTopic Load (0.3ms)[0m  SELECT "topics".* FROM "topics"
+  [1m[36mBookmark Load (0.3ms)[0m  [1mSELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?[0m  [["topic_id", 1]]
+  [1m[35mBookmark Load (0.2ms)[0m  SELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?  [["topic_id", 2]]
+  [1m[36mBookmark Load (0.2ms)[0m  [1mSELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?[0m  [["topic_id", 3]]
+  [1m[35mBookmark Load (0.2ms)[0m  SELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?  [["topic_id", 4]]
+  [1m[36mBookmark Load (0.2ms)[0m  [1mSELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?[0m  [["topic_id", 5]]
+  Rendered topics/_topic.html.erb (130.1ms)
+  Rendered topics/index.html.erb within layouts/application (166.0ms)
+Completed 200 OK in 882ms (Views: 811.2ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/" for ::1 at 2017-08-20 12:23:16 -0400
+Processing by TopicsController#index as HTML
+  [1m[35mTopic Load (0.6ms)[0m  SELECT "topics".* FROM "topics"
+  [1m[36mBookmark Load (0.2ms)[0m  [1mSELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?[0m  [["topic_id", 1]]
+  [1m[35mBookmark Load (0.2ms)[0m  SELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?  [["topic_id", 2]]
+  [1m[36mBookmark Load (0.3ms)[0m  [1mSELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?[0m  [["topic_id", 3]]
+  [1m[35mBookmark Load (0.2ms)[0m  SELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?  [["topic_id", 4]]
+  [1m[36mBookmark Load (0.2ms)[0m  [1mSELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?[0m  [["topic_id", 5]]
+  Rendered topics/_topic.html.erb (45.0ms)
+  Rendered topics/index.html.erb within layouts/application (51.4ms)
+Completed 200 OK in 146ms (Views: 140.9ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/" for ::1 at 2017-08-20 12:26:55 -0400
+Processing by TopicsController#index as HTML
+  [1m[35mTopic Load (0.2ms)[0m  SELECT "topics".* FROM "topics"
+  [1m[36mBookmark Load (0.2ms)[0m  [1mSELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?[0m  [["topic_id", 1]]
+  [1m[35mBookmark Load (0.5ms)[0m  SELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?  [["topic_id", 2]]
+  [1m[36mBookmark Load (0.4ms)[0m  [1mSELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?[0m  [["topic_id", 3]]
+  [1m[35mBookmark Load (0.2ms)[0m  SELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?  [["topic_id", 4]]
+  [1m[36mBookmark Load (0.3ms)[0m  [1mSELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?[0m  [["topic_id", 5]]
+  Rendered topics/_topic.html.erb (25.4ms)
+  Rendered topics/_topic.html.erb (5.5ms)
+  Rendered topics/_topic.html.erb (4.8ms)
+  Rendered topics/_topic.html.erb (6.3ms)
+  Rendered topics/_topic.html.erb (9.3ms)
+  Rendered topics/index.html.erb within layouts/application (75.4ms)
+Completed 200 OK in 184ms (Views: 180.6ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/" for ::1 at 2017-08-20 12:30:00 -0400
+Processing by TopicsController#index as HTML
+  [1m[35mTopic Load (0.2ms)[0m  SELECT "topics".* FROM "topics"
+  Rendered topics/_topic.html.erb (17.3ms)
+  Rendered topics/_topic.html.erb (104.7ms)
+  Rendered topics/_topic.html.erb (3.8ms)
+  Rendered topics/_topic.html.erb (2.3ms)
+  Rendered topics/_topic.html.erb (2.4ms)
+  Rendered topics/index.html.erb within layouts/application (146.4ms)
+Completed 200 OK in 293ms (Views: 291.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2017-08-20 12:31:33 -0400
+Processing by TopicsController#index as HTML
+  [1m[36mTopic Load (0.2ms)[0m  [1mSELECT "topics".* FROM "topics"[0m
+  [1m[35mBookmark Load (0.2ms)[0m  SELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?  [["topic_id", 1]]
+  [1m[36mBookmark Load (0.3ms)[0m  [1mSELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?[0m  [["topic_id", 2]]
+  [1m[35mBookmark Load (0.2ms)[0m  SELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?  [["topic_id", 3]]
+  [1m[36mBookmark Load (0.1ms)[0m  [1mSELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?[0m  [["topic_id", 4]]
+  [1m[35mBookmark Load (0.3ms)[0m  SELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?  [["topic_id", 5]]
+  Rendered topics/_topic.html.erb (15.5ms)
+  Rendered topics/_topic.html.erb (11.2ms)
+  Rendered topics/_topic.html.erb (3.8ms)
+  Rendered topics/_topic.html.erb (4.6ms)
+  Rendered topics/_topic.html.erb (4.2ms)
+  Rendered topics/index.html.erb within layouts/application (53.6ms)
+Completed 200 OK in 164ms (Views: 161.1ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/" for ::1 at 2017-08-20 12:32:39 -0400
+Processing by TopicsController#index as HTML
+  [1m[36mTopic Load (0.2ms)[0m  [1mSELECT "topics".* FROM "topics"[0m
+  [1m[35mBookmark Load (1.0ms)[0m  SELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?  [["topic_id", 1]]
+  [1m[36mBookmark Load (0.2ms)[0m  [1mSELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?[0m  [["topic_id", 2]]
+  [1m[35mBookmark Load (0.2ms)[0m  SELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?  [["topic_id", 3]]
+  [1m[36mBookmark Load (0.2ms)[0m  [1mSELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?[0m  [["topic_id", 4]]
+  [1m[35mBookmark Load (0.2ms)[0m  SELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?  [["topic_id", 5]]
+  Rendered topics/_topic.html.erb (18.7ms)
+  Rendered topics/_topic.html.erb (7.0ms)
+  Rendered topics/_topic.html.erb (6.6ms)
+  Rendered topics/_topic.html.erb (7.9ms)
+  Rendered topics/_topic.html.erb (8.0ms)
+  Rendered topics/index.html.erb within layouts/application (61.5ms)
+Completed 200 OK in 165ms (Views: 161.5ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/" for ::1 at 2017-08-20 12:33:17 -0400
+Processing by TopicsController#index as HTML
+  [1m[36mTopic Load (0.3ms)[0m  [1mSELECT "topics".* FROM "topics"[0m
+  [1m[35mBookmark Load (0.2ms)[0m  SELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?  [["topic_id", 1]]
+  [1m[36mBookmark Load (0.2ms)[0m  [1mSELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?[0m  [["topic_id", 2]]
+  [1m[35mBookmark Load (0.2ms)[0m  SELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?  [["topic_id", 3]]
+  [1m[36mBookmark Load (0.2ms)[0m  [1mSELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?[0m  [["topic_id", 4]]
+  [1m[35mBookmark Load (0.2ms)[0m  SELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?  [["topic_id", 5]]
+  Rendered topics/_topic.html.erb (21.0ms)
+  Rendered topics/_topic.html.erb (8.3ms)
+  Rendered topics/_topic.html.erb (5.7ms)
+  Rendered topics/_topic.html.erb (3.5ms)
+  Rendered topics/_topic.html.erb (3.5ms)
+  Rendered topics/index.html.erb within layouts/application (58.0ms)
+Completed 200 OK in 128ms (Views: 123.9ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for ::1 at 2017-08-20 12:35:59 -0400
+Processing by TopicsController#index as HTML
+  [1m[36mTopic Load (0.2ms)[0m  [1mSELECT "topics".* FROM "topics"[0m
+  [1m[35mBookmark Load (0.2ms)[0m  SELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?  [["topic_id", 1]]
+  [1m[36mBookmark Load (0.2ms)[0m  [1mSELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?[0m  [["topic_id", 2]]
+  [1m[35mBookmark Load (0.3ms)[0m  SELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?  [["topic_id", 3]]
+  [1m[36mBookmark Load (0.2ms)[0m  [1mSELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?[0m  [["topic_id", 4]]
+  [1m[35mBookmark Load (0.2ms)[0m  SELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?  [["topic_id", 5]]
+  Rendered topics/_topic.html.erb (13.0ms)
+  Rendered topics/_topic.html.erb (3.5ms)
+  Rendered topics/_topic.html.erb (3.9ms)
+  Rendered topics/_topic.html.erb (6.3ms)
+  Rendered topics/_topic.html.erb (3.6ms)
+  Rendered topics/index.html.erb within layouts/application (42.8ms)
+Completed 200 OK in 99ms (Views: 96.9ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/topics/2" for ::1 at 2017-08-20 12:36:43 -0400
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"2"}
+Completed 401 Unauthorized in 14ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2017-08-20 12:36:44 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (24.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (83.7ms)
+Completed 200 OK in 211ms (Views: 188.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2017-08-20 12:36:47 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (8.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (30.1ms)
+Completed 200 OK in 118ms (Views: 113.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2017-08-20 12:36:49 -0400
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.html.erb (4.8ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (20.2ms)
+Completed 200 OK in 96ms (Views: 94.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2017-08-20 12:36:59 -0400
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IB3YKm2uJWznp+eVaMMe4TxwQYyYdiYzO7Vj3/aKfRPzvAO3P350ohX7HP2CMg8nbvRqDuPV8pss3Hdq5qC0IA==", "user"=>{"email"=>"mfroeh2@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'mfroeh2@gmail.com' LIMIT 1
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "confirmation_token", "confirmation_sent_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["email", "mfroeh2@gmail.com"], ["encrypted_password", "$2a$11$7pmHdpElFs.vmYo3SZ1GVepuJXZNDjPMXzNaquWI7yflwTXWL7jLu"], ["created_at", "2017-08-20 16:36:59.982675"], ["updated_at", "2017-08-20 16:36:59.982675"], ["confirmation_token", "3nryA_4Nnh4FaTrd_hm6"], ["confirmation_sent_at", "2017-08-20 16:36:59.983332"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+  Rendered devise/mailer/confirmation_instructions.html.erb (11.5ms)
+
+Devise::Mailer#confirmation_instructions: processed outbound mail in 377.5ms
+
+Sent mail to mfroeh2@gmail.com (1217.1ms)
+Date: Sun, 20 Aug 2017 12:37:00 -0400
+From: mfroeh2@gmail.com
+Reply-To: mfroeh2@gmail.com
+To: mfroeh2@gmail.com
+Message-ID: <5999baac6592a_13273fc63ac844e471477@MarkFrolichsMBP.home.mail>
+Subject: Confirmation instructions
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<p>Welcome mfroeh2@gmail.com!</p>
+
+<p>You can confirm your account email through the link below:</p>
+
+<p><a href="http://localhost:3000/users/confirmation?confirmation_token=3nryA_4Nnh4FaTrd_hm6">Confirm my account</a></p>
+
+Redirected to http://localhost:3000/
+Completed 302 Found in 1941ms (ActiveRecord: 2.1ms)
+
+
+Started GET "/" for ::1 at 2017-08-20 12:37:01 -0400
+Processing by TopicsController#index as HTML
+  [1m[36mTopic Load (0.3ms)[0m  [1mSELECT "topics".* FROM "topics"[0m
+  [1m[35mBookmark Load (0.2ms)[0m  SELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?  [["topic_id", 1]]
+  [1m[36mBookmark Load (0.2ms)[0m  [1mSELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?[0m  [["topic_id", 2]]
+  [1m[35mBookmark Load (0.2ms)[0m  SELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?  [["topic_id", 3]]
+  [1m[36mBookmark Load (0.2ms)[0m  [1mSELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?[0m  [["topic_id", 4]]
+  [1m[35mBookmark Load (0.2ms)[0m  SELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?  [["topic_id", 5]]
+  Rendered topics/_topic.html.erb (13.7ms)
+  Rendered topics/_topic.html.erb (3.6ms)
+  Rendered topics/_topic.html.erb (3.4ms)
+  Rendered topics/_topic.html.erb (3.1ms)
+  Rendered topics/_topic.html.erb (8.4ms)
+  Rendered topics/index.html.erb within layouts/application (44.8ms)
+Completed 200 OK in 101ms (Views: 99.1ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/users/confirmation?confirmation_token=3nryA_4Nnh4FaTrd_hm6" for ::1 at 2017-08-20 12:40:44 -0400
+Processing by Devise::ConfirmationsController#show as HTML
+  Parameters: {"confirmation_token"=>"3nryA_4Nnh4FaTrd_hm6"}
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."confirmation_token" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["confirmation_token", "3nryA_4Nnh4FaTrd_hm6"]]
+  [1m[35m (0.7ms)[0m  begin transaction
+  [1m[36mSQL (1.4ms)[0m  [1mUPDATE "users" SET "confirmed_at" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["confirmed_at", "2017-08-20 16:40:44.577912"], ["updated_at", "2017-08-20 16:40:44.580392"], ["id", 6]]
+  [1m[35m (1.1ms)[0m  commit transaction
+Redirected to http://localhost:3000/users/sign_in
+Completed 302 Found in 40ms (ActiveRecord: 4.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2017-08-20 12:40:44 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (9.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (80.6ms)
+Completed 200 OK in 174ms (Views: 172.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2017-08-20 12:40:53 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (10.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (21.7ms)
+Completed 200 OK in 163ms (Views: 159.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2017-08-20 12:40:59 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mAYrF5Dve3AiWXq43mVn5J33b3rA0Pu8o6o4GOPyIY9Lp/CKwj8qvtAFgdA0lHYiz3NE+LtzLxS0wyyt89jovA==", "user"=>{"email"=>"mfroeh2@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"1"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["email", "mfroeh2@gmail.com"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mUPDATE "users" SET "remember_created_at" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["remember_created_at", "2017-08-20 16:41:00.140128"], ["updated_at", "2017-08-20 16:41:00.141641"], ["id", 6]]
+  [1m[35m (2.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  UPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "last_sign_in_ip" = ?, "current_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["last_sign_in_at", "2017-08-20 16:41:00.153358"], ["current_sign_in_at", "2017-08-20 16:41:00.153358"], ["last_sign_in_ip", "::1"], ["current_sign_in_ip", "::1"], ["sign_in_count", 1], ["updated_at", "2017-08-20 16:41:00.156145"], ["id", 6]]
+  [1m[36m (1.8ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/topics/2
+Completed 302 Found in 270ms (ActiveRecord: 6.2ms)
+
+
+Started GET "/topics/2" for ::1 at 2017-08-20 12:41:00 -0400
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mUser Load (0.9ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 6]]
+  [1m[36mTopic Load (0.3ms)[0m  [1mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mBookmark Load (0.3ms)[0m  SELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?  [["topic_id", 2]]
+  Rendered bookmarks/_bookmark.html.erb (2.6ms)
+  Rendered bookmarks/_bookmark.html.erb (1.3ms)
+  Rendered bookmarks/_bookmark.html.erb (2.1ms)
+  Rendered bookmarks/_bookmark.html.erb (3.6ms)
+  Rendered bookmarks/_bookmark.html.erb (1.8ms)
+  Rendered bookmarks/_bookmark.html.erb (2.6ms)
+  Rendered bookmarks/_bookmark.html.erb (1.6ms)
+  Rendered bookmarks/_bookmark.html.erb (1.6ms)
+  Rendered bookmarks/_bookmark.html.erb (1.9ms)
+  Rendered bookmarks/_bookmark.html.erb (1.4ms)
+  Rendered bookmarks/_bookmark.html.erb (1.9ms)
+  Rendered bookmarks/_bookmark.html.erb (3.4ms)
+  Rendered topics/show.html.erb within layouts/application (71.8ms)
+Completed 200 OK in 156ms (Views: 149.8ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/" for ::1 at 2017-08-20 12:41:07 -0400
+Processing by TopicsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 6]]
+  [1m[35mTopic Load (0.2ms)[0m  SELECT "topics".* FROM "topics"
+  [1m[36mBookmark Load (0.2ms)[0m  [1mSELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?[0m  [["topic_id", 1]]
+  [1m[35mBookmark Load (0.2ms)[0m  SELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?  [["topic_id", 2]]
+  [1m[36mBookmark Load (0.2ms)[0m  [1mSELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?[0m  [["topic_id", 3]]
+  [1m[35mBookmark Load (0.1ms)[0m  SELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?  [["topic_id", 4]]
+  [1m[36mBookmark Load (0.2ms)[0m  [1mSELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?[0m  [["topic_id", 5]]
+  Rendered topics/_topic.html.erb (12.0ms)
+  Rendered topics/_topic.html.erb (3.8ms)
+  Rendered topics/_topic.html.erb (3.7ms)
+  Rendered topics/_topic.html.erb (4.4ms)
+  Rendered topics/_topic.html.erb (4.7ms)
+  Rendered topics/index.html.erb within layouts/application (43.1ms)
+Completed 200 OK in 194ms (Views: 191.6ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for ::1 at 2017-08-20 12:45:32 -0400
+Processing by TopicsController#index as HTML
+  [1m[35mUser Load (0.9ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 6]]
+  [1m[36mTopic Load (0.2ms)[0m  [1mSELECT "topics".* FROM "topics"[0m
+  [1m[35mBookmark Load (0.2ms)[0m  SELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?  [["topic_id", 1]]
+  [1m[36mBookmark Load (0.2ms)[0m  [1mSELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?[0m  [["topic_id", 2]]
+  [1m[35mBookmark Load (0.2ms)[0m  SELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?  [["topic_id", 3]]
+  [1m[36mBookmark Load (0.2ms)[0m  [1mSELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?[0m  [["topic_id", 4]]
+  [1m[35mBookmark Load (0.2ms)[0m  SELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?  [["topic_id", 5]]
+  Rendered topics/index.html.erb within layouts/application (31.7ms)
+Completed 200 OK in 109ms (Views: 105.5ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/topics/1" for ::1 at 2017-08-20 12:46:00 -0400
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (7.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 6]]
+  [1m[35mTopic Load (0.1ms)[0m  SELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mBookmark Load (0.8ms)[0m  [1mSELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?[0m  [["topic_id", 1]]
+  Rendered bookmarks/_bookmark.html.erb (1.3ms)
+  Rendered bookmarks/_bookmark.html.erb (1.2ms)
+  Rendered bookmarks/_bookmark.html.erb (1.1ms)
+  Rendered bookmarks/_bookmark.html.erb (1.1ms)
+  Rendered bookmarks/_bookmark.html.erb (1.1ms)
+  Rendered bookmarks/_bookmark.html.erb (1.1ms)
+  Rendered bookmarks/_bookmark.html.erb (0.9ms)
+  Rendered topics/show.html.erb within layouts/application (35.0ms)
+Completed 200 OK in 122ms (Views: 109.7ms | ActiveRecord: 8.2ms)
+
+
+Started GET "/topics/1" for ::1 at 2017-08-20 12:47:10 -0400
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 6]]
+  [1m[36mTopic Load (0.1ms)[0m  [1mSELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mBookmark Load (0.2ms)[0m  SELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?  [["topic_id", 1]]
+  Rendered topics/show.html.erb within layouts/application (8.8ms)
+Completed 200 OK in 71ms (Views: 65.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2017-08-20 12:47:15 -0400
+Processing by TopicsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 6]]
+  [1m[35mTopic Load (0.2ms)[0m  SELECT "topics".* FROM "topics"
+  [1m[36mBookmark Load (0.2ms)[0m  [1mSELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?[0m  [["topic_id", 1]]
+  [1m[35mBookmark Load (0.2ms)[0m  SELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?  [["topic_id", 2]]
+  [1m[36mBookmark Load (0.2ms)[0m  [1mSELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?[0m  [["topic_id", 3]]
+  [1m[35mBookmark Load (0.1ms)[0m  SELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?  [["topic_id", 4]]
+  [1m[36mBookmark Load (0.2ms)[0m  [1mSELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?[0m  [["topic_id", 5]]
+  Rendered topics/index.html.erb within layouts/application (14.2ms)
+Completed 200 OK in 120ms (Views: 67.4ms | ActiveRecord: 1.2ms)

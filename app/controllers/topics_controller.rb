@@ -1,5 +1,6 @@
 class TopicsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index]
+  before_action :set_topic, except: [:index, :new, :create]
 
   def index
     @topics = Topic.all
@@ -7,7 +8,6 @@ class TopicsController < ApplicationController
   end
 
   def show
-    @topic = Topic.find(params[:id])
   end
 
   def new
@@ -26,11 +26,12 @@ class TopicsController < ApplicationController
   end
 
   def edit
-    @topic = Topic.find(params[:id])
+  end
+
+  def update
   end
 
   def destroy
-    @topic = Topic.find(params[:id])
 
     if @topic.destroy
       flash[:notice] = "#{@topic.title} was deleted successfully."
@@ -45,5 +46,9 @@ class TopicsController < ApplicationController
   private
   def topic_params
     params.require(:topic).permit(:title)
+  end
+
+  def set_topic
+    @topic = Topic.find(params[:id])
   end
 end
