@@ -35,6 +35,13 @@
  margin-top: 3px;
 }
 
+#yield input:focus {
+  border-radius: 7px !important;
+  border: 2px solid #A6EEE8 !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
 #yield {
  margin-top: 30px;
 }

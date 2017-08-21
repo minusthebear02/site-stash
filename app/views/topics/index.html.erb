@@ -14,17 +14,19 @@
     </div>
   <% end %>
 
-  <% @topics.each do |topic| %>
+  <% @topics.reverse.each do |topic| %>
     <div class="row">
-      <div class="col-md-8 col-md-offset-2">
+      <div class="col-md-10 col-md-offset-1">
         <h3 class="topic_title"><%= link_to "#" + topic.title, topic %></h3>
         <br />
         <% topic.bookmarks.sample(4).each do |bookmark| %>
           <div class="col-md-3">
             <div class="media">
               <div class="media-body">
+                <%= link_to image_tag('http://via.placeholder.com/130x130'), "http://#{bookmark.url}", class: "thumbnail" %>
                 <h5 class="bookmark_url">
-                  <%= link_to bookmark.url, bookmark %>
+                  <%= link_to image_tag('https://www.google.com/s2/favicons?domain=' + bookmark.url), "http://#{bookmark.url}" %>
+                  <%= link_to bookmark.url, "http://#{bookmark.url}" %>
                 </h5>
               </div>
             </div>

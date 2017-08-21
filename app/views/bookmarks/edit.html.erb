@@ -1,8 +1,8 @@
 <div class="bookmark">
-  <h1>Add Site</h1>
+  <h1>Edit Site</h1>
 
   <div class="col-md-6 col-md-offset-3">
-    <%= form_for [@topic, @bookmark] do |f| %>
+    <%= form_for [@bookmark.topic, @bookmark] do |f| %>
       <div class="input-group">
         <%= f.text_field :url, class: 'form-control', placeholder: "Enter New Site URL" %>
         <div class="input-group-btn">
