@@ -13,7 +13,7 @@ users = User.all
 #Create Topics
 5.times do
   topic = Topic.create!(
-    title: RandomData.random_word,
+    title: Faker::GameOfThrones.house,
     user: users.sample
   )
 
@@ -24,7 +24,7 @@ topics = Topic.all
 #Create Bookmarks
 50.times do
   bookmark = Bookmark.create!(
-  url: RandomData.random_url,
+  url: Faker::Internet.domain_word + "." + Faker::Internet.domain_suffix,
   topic: topics.sample
   )
 

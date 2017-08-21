@@ -1,19 +1,28 @@
 <div class="topic_index">
-  <h1><%= @topic.title %></h1>
+  <h1>#<%= @topic.title %></h1>
 
-  <% @topic.bookmarks.each do |bookmark| %>
-    <div class="col-md-3">
-      <div class="media">
-        <div class="media-body">
+  <div class="col-md-10 col-md-offset-1">
+    <% @topic.bookmarks.each do |bookmark| %>
+      <div class="col-md-3">
+        <div class="placeholder_image">
+          <%= link_to image_tag("http://via.placeholder.com/130x130"), "http://#{bookmark.url}", class: "thumbnail" %>
           <h4 class="bookmark_url">
-            <%= link_to bookmark.url, bookmark %>
+            <%= link_to image_tag("https://www.google.com/s2/favicons?domain=" + bookmark.url) + " " + bookmark.url, "http://#{bookmark.url}", class: "favicon" %>
           </h4>
+          <div class="bookmark_links">
+            <% if current_user %>
+              <%= link_to "Edit", edit_topic_bookmark_path(@topic, bookmark), class: 'btn btn-primary' %>
+              <%= link_to "Delete", [bookmark.topic, bookmark], method: :delete, class: 'btn btn-danger', data: {confirm: "Are you sure you want to remove this site?"} %>
+            <% end %>
+          </div>
         </div>
       </div>
-    </div>
-  <% end %>
-
+    <% end %>
+  </div>
+</div>
+<div class="links">
   <% if current_user %>
+    <%= link_to "New Bookmark", new_topic_bookmark_path(@topic), class: 'btn btn-primary' %>
     <%= link_to "Delete Topic", @topic, method: :delete, class: 'btn btn-danger', data: {confirm: "Are you sure you want to delete this topic?"} %>
   <% end %>
 </div>

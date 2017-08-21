@@ -18,8 +18,42 @@
   color: #B1EDE8;
 }
 
-.btn-danger {
+.topic_title {
+  font-size: 40px;
+}
+
+.bookmark_url {
+  text-align: center;
+}
+
+.bookmark_url {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 200px;
+}
+
+.btn-primary {
+  margin-bottom: 50px !important;
   color: white !important;
+  background-color: #5C80BC !important;
+  border: none !important;
+}
+
+.btn-primary:hover {
+  background-color: #B1EDE8 !important;
+  color: white !important;
+}
+
+.btn-danger {
+  background-color: #FF6978 !important;
+  color: white !important;
+  margin-bottom: 50px !important;
+  border: none !important;
+}
+
+.btn-danger:hover {
+  background-color: #FF9999 !important;
 }
 
 .input-group-btn .btn {
@@ -35,9 +69,20 @@
   border: none;
 }
 
-.topic_index input:focus {
-  border-radius: 7px;
-  border: 2px solid #A6EEE8;
-  outline: none;
-  box-shadow: none;
+.topic_index {
+  margin-bottom: 80px;
+}
+
+.links {
+  clear: both;
+  text-align: center;
+  margin: 200px 0 50px;
+}
+
+.thumbnail {
+  border: none !important;
+}
+
+.favicon {
+  display: inline;
 }
