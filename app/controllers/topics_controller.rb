@@ -1,10 +1,7 @@
 class TopicsController < ApplicationController
-<<<<<<< HEAD
-  skip_before_action :authenticate_user!, only: [:index]
+
   before_action :set_topic, except: [:index, :new, :create]
-=======
   skip_before_action :authenticate_user!, only: [:index, :show]
->>>>>>> bookmarks-crud
 
   def index
     @topics = Topic.all

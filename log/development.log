@@ -15989,3 +15989,823 @@ Processing by TopicsController#index as HTML
   Rendered topics/index.html.erb within layouts/application (112.4ms)
 Completed 200 OK in 233ms (Views: 226.6ms | ActiveRecord: 3.3ms)
 >>>>>>> bookmarks-crud
+  [1m[36m (1.3ms)[0m  [1mCREATE TABLE "bookmarks" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "url" varchar, "topic_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (1.1ms)[0m  [1mCREATE  INDEX "index_bookmarks_on_topic_id" ON "bookmarks" ("topic_id")[0m
+  [1m[35m (1.7ms)[0m  CREATE TABLE "topics" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "user_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (1.0ms)[0m  [1mCREATE  INDEX "index_topics_on_user_id" ON "topics" ("user_id")[0m
+  [1m[35m (1.5ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar, "last_sign_in_ip" varchar, "confirmation_token" varchar, "confirmed_at" datetime, "confirmation_sent_at" datetime, "unconfirmed_email" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (1.0ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_confirmation_token" ON "users" ("confirmation_token")[0m
+  [1m[35m (0.7ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_confirmation_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_confirmation_token' AND type='index'
+
+  [1m[36m (0.9ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_confirmation_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_confirmation_token' AND type='index'
+[0m
+  [1m[35m (4.1ms)[0m  CREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")
+  [1m[36m (1.2ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (5.2ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.2ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (1.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20170818183703')
+  [1m[36m (2.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20170817020151')[0m
+  [1m[35m (1.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20170818183347')
+  [1m[36m (1.1ms)[0m  [1mCREATE TABLE "bookmarks" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "url" varchar, "topic_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (0.9ms)[0m  [1mCREATE  INDEX "index_bookmarks_on_topic_id" ON "bookmarks" ("topic_id")[0m
+  [1m[35m (1.0ms)[0m  CREATE TABLE "topics" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "user_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (1.2ms)[0m  [1mCREATE  INDEX "index_topics_on_user_id" ON "topics" ("user_id")[0m
+  [1m[35m (4.4ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar, "last_sign_in_ip" varchar, "confirmation_token" varchar, "confirmed_at" datetime, "confirmation_sent_at" datetime, "unconfirmed_email" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (1.3ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_confirmation_token" ON "users" ("confirmation_token")[0m
+  [1m[35m (0.3ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_confirmation_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_confirmation_token' AND type='index'
+
+  [1m[36m (1.0ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_confirmation_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_confirmation_token' AND type='index'
+[0m
+  [1m[35m (0.9ms)[0m  CREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")
+  [1m[36m (3.3ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (2.3ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.3ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (1.4ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20170818183703')
+  [1m[36m (1.6ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20170817020151')[0m
+  [1m[35m (1.2ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20170818183347')
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'hqtk@xlksfno.cnoxwye' LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "users" ("email", "encrypted_password", "confirmed_at", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["email", "hqtk@xlksfno.cnoxwye"], ["encrypted_password", "$2a$11$hdPFgR/pwd.Tzy81NUIagO8xJR50BzYHYTbc3adLaTgWFeyJiIOWK"], ["confirmed_at", "2017-08-21 15:19:41.133339"], ["created_at", "2017-08-21 15:19:41.374194"], ["updated_at", "2017-08-21 15:19:41.374194"]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'ulhymc@ruitxhv.vozc' LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("email", "encrypted_password", "confirmed_at", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["email", "ulhymc@ruitxhv.vozc"], ["encrypted_password", "$2a$11$Ic0vMQpngRRhXNfnJYcqmeOyyeWJWRx6V.FJy8c.tN4e1/2ZsMXlq"], ["confirmed_at", "2017-08-21 15:19:41.379447"], ["created_at", "2017-08-21 15:19:41.564691"], ["updated_at", "2017-08-21 15:19:41.564691"]]
+  [1m[36m (4.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'wsqtyz@hkx.fxe' LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("email", "encrypted_password", "confirmed_at", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["email", "wsqtyz@hkx.fxe"], ["encrypted_password", "$2a$11$WQzSRskuTtcYy8fAxb262.t26XbG6QwQE4ndL.tdxbLo1bwoNsw9G"], ["confirmed_at", "2017-08-21 15:19:41.572033"], ["created_at", "2017-08-21 15:19:41.766407"], ["updated_at", "2017-08-21 15:19:41.766407"]]
+  [1m[36m (4.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'nldkrec@wmv.lfvdsuj' LIMIT 1[0m
+  [1m[35mSQL (1.8ms)[0m  INSERT INTO "users" ("email", "encrypted_password", "confirmed_at", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["email", "nldkrec@wmv.lfvdsuj"], ["encrypted_password", "$2a$11$wwzOMpNNDScNSbujNztSsuB85uG2sOXiWGt.TqzxY9l/9.Jn.6Rgi"], ["confirmed_at", "2017-08-21 15:19:41.773077"], ["created_at", "2017-08-21 15:19:41.957492"], ["updated_at", "2017-08-21 15:19:41.957492"]]
+  [1m[36m (3.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'pkr@wiur.yba' LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("email", "encrypted_password", "confirmed_at", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["email", "pkr@wiur.yba"], ["encrypted_password", "$2a$11$ub19cJ.LT2T3XfuGKMKCi.zp8dsTyvjSmcdnOfy0A5F1eJDCpmf7S"], ["confirmed_at", "2017-08-21 15:19:41.965539"], ["created_at", "2017-08-21 15:19:42.147582"], ["updated_at", "2017-08-21 15:19:42.147582"]]
+  [1m[36m (2.4ms)[0m  [1mcommit transaction[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.6ms)[0m  INSERT INTO "topics" ("title", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "Estren of Wyndhall"], ["user_id", 1], ["created_at", "2017-08-21 15:19:43.085187"], ["updated_at", "2017-08-21 15:19:43.085187"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (2.3ms)[0m  [1mUPDATE "topics" SET "created_at" = ?, "updated_at" = ? WHERE "topics"."id" = ?[0m  [["created_at", "2017-05-10 19:22:19.089387"], ["updated_at", "2017-08-21 15:19:43.090118"], ["id", 1]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "topics" ("title", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "Trant of Gallowsgrey"], ["user_id", 4], ["created_at", "2017-08-21 15:19:43.102631"], ["updated_at", "2017-08-21 15:19:43.102631"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "topics" SET "created_at" = ?, "updated_at" = ? WHERE "topics"."id" = ?[0m  [["created_at", "2016-12-20 22:07:39.105465"], ["updated_at", "2017-08-21 15:19:43.106341"], ["id", 2]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "topics" ("title", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "Wode"], ["user_id", 1], ["created_at", "2017-08-21 15:19:43.110829"], ["updated_at", "2017-08-21 15:19:43.110829"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "topics" SET "created_at" = ?, "updated_at" = ? WHERE "topics"."id" = ?[0m  [["created_at", "2016-11-15 01:15:46.113838"], ["updated_at", "2017-08-21 15:19:43.114535"], ["id", 3]]
+  [1m[35m (0.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "topics" ("title", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "Ryder of the Rills"], ["user_id", 5], ["created_at", "2017-08-21 15:19:43.119119"], ["updated_at", "2017-08-21 15:19:43.119119"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "topics" SET "created_at" = ?, "updated_at" = ? WHERE "topics"."id" = ?[0m  [["created_at", "2017-07-05 16:42:07.121892"], ["updated_at", "2017-08-21 15:19:43.122564"], ["id", 4]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "topics" ("title", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "Varner"], ["user_id", 1], ["created_at", "2017-08-21 15:19:43.126261"], ["updated_at", "2017-08-21 15:19:43.126261"]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "topics" SET "created_at" = ?, "updated_at" = ? WHERE "topics"."id" = ?[0m  [["created_at", "2017-07-25 08:49:13.129254"], ["updated_at", "2017-08-21 15:19:43.130128"], ["id", 5]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36mTopic Load (0.3ms)[0m  [1mSELECT "topics".* FROM "topics"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "bookmarks" ("url", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["url", "frami.biz"], ["topic_id", 5], ["created_at", "2017-08-21 15:19:43.146833"], ["updated_at", "2017-08-21 15:19:43.146833"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "bookmarks" SET "created_at" = ?, "updated_at" = ? WHERE "bookmarks"."id" = ?  [["created_at", "2017-05-18 17:05:02.149672"], ["updated_at", "2017-08-21 15:19:43.150361"], ["id", 1]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "bookmarks" ("url", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["url", "greenfelder.org"], ["topic_id", 4], ["created_at", "2017-08-21 15:19:43.154129"], ["updated_at", "2017-08-21 15:19:43.154129"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  UPDATE "bookmarks" SET "created_at" = ?, "updated_at" = ? WHERE "bookmarks"."id" = ?  [["created_at", "2017-02-12 12:56:31.156626"], ["updated_at", "2017-08-21 15:19:43.157387"], ["id", 2]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "bookmarks" ("url", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["url", "dachpagac.io"], ["topic_id", 2], ["created_at", "2017-08-21 15:19:43.161082"], ["updated_at", "2017-08-21 15:19:43.161082"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "bookmarks" SET "created_at" = ?, "updated_at" = ? WHERE "bookmarks"."id" = ?  [["created_at", "2016-12-13 11:58:48.163638"], ["updated_at", "2017-08-21 15:19:43.164307"], ["id", 3]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "bookmarks" ("url", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["url", "strosin.org"], ["topic_id", 4], ["created_at", "2017-08-21 15:19:43.167793"], ["updated_at", "2017-08-21 15:19:43.167793"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "bookmarks" SET "created_at" = ?, "updated_at" = ? WHERE "bookmarks"."id" = ?  [["created_at", "2016-09-09 21:41:21.170564"], ["updated_at", "2017-08-21 15:19:43.171236"], ["id", 4]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "bookmarks" ("url", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["url", "vandervortauer.biz"], ["topic_id", 3], ["created_at", "2017-08-21 15:19:43.174906"], ["updated_at", "2017-08-21 15:19:43.174906"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  UPDATE "bookmarks" SET "created_at" = ?, "updated_at" = ? WHERE "bookmarks"."id" = ?  [["created_at", "2016-12-10 13:35:06.177511"], ["updated_at", "2017-08-21 15:19:43.178339"], ["id", 5]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "bookmarks" ("url", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["url", "grady.io"], ["topic_id", 3], ["created_at", "2017-08-21 15:19:43.183105"], ["updated_at", "2017-08-21 15:19:43.183105"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "bookmarks" SET "created_at" = ?, "updated_at" = ? WHERE "bookmarks"."id" = ?  [["created_at", "2017-02-26 13:00:23.185703"], ["updated_at", "2017-08-21 15:19:43.186386"], ["id", 6]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "bookmarks" ("url", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["url", "thompson.co"], ["topic_id", 4], ["created_at", "2017-08-21 15:19:43.190059"], ["updated_at", "2017-08-21 15:19:43.190059"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.9ms)[0m  UPDATE "bookmarks" SET "created_at" = ?, "updated_at" = ? WHERE "bookmarks"."id" = ?  [["created_at", "2017-06-05 07:46:44.192893"], ["updated_at", "2017-08-21 15:19:43.193585"], ["id", 7]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "bookmarks" ("url", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["url", "cummerata.org"], ["topic_id", 3], ["created_at", "2017-08-21 15:19:43.199876"], ["updated_at", "2017-08-21 15:19:43.199876"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "bookmarks" SET "created_at" = ?, "updated_at" = ? WHERE "bookmarks"."id" = ?  [["created_at", "2016-09-26 06:44:17.202407"], ["updated_at", "2017-08-21 15:19:43.203144"], ["id", 8]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "bookmarks" ("url", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["url", "olsonwyman.io"], ["topic_id", 1], ["created_at", "2017-08-21 15:19:43.207014"], ["updated_at", "2017-08-21 15:19:43.207014"]]
+  [1m[35m (2.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "bookmarks" SET "created_at" = ?, "updated_at" = ? WHERE "bookmarks"."id" = ?  [["created_at", "2017-03-31 02:57:54.210909"], ["updated_at", "2017-08-21 15:19:43.213231"], ["id", 9]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "bookmarks" ("url", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["url", "kemmer.io"], ["topic_id", 1], ["created_at", "2017-08-21 15:19:43.229612"], ["updated_at", "2017-08-21 15:19:43.229612"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "bookmarks" SET "created_at" = ?, "updated_at" = ? WHERE "bookmarks"."id" = ?  [["created_at", "2017-07-18 06:20:53.232164"], ["updated_at", "2017-08-21 15:19:43.232836"], ["id", 10]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "bookmarks" ("url", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["url", "waelchi.net"], ["topic_id", 1], ["created_at", "2017-08-21 15:19:43.236672"], ["updated_at", "2017-08-21 15:19:43.236672"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "bookmarks" SET "created_at" = ?, "updated_at" = ? WHERE "bookmarks"."id" = ?  [["created_at", "2017-03-08 18:33:37.239676"], ["updated_at", "2017-08-21 15:19:43.240721"], ["id", 11]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "bookmarks" ("url", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["url", "kshleringutkowski.info"], ["topic_id", 3], ["created_at", "2017-08-21 15:19:43.244862"], ["updated_at", "2017-08-21 15:19:43.244862"]]
+  [1m[35m (2.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "bookmarks" SET "created_at" = ?, "updated_at" = ? WHERE "bookmarks"."id" = ?  [["created_at", "2016-12-19 21:53:11.249210"], ["updated_at", "2017-08-21 15:19:43.250682"], ["id", 12]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "bookmarks" ("url", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["url", "connellybosco.co"], ["topic_id", 3], ["created_at", "2017-08-21 15:19:43.254121"], ["updated_at", "2017-08-21 15:19:43.254121"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "bookmarks" SET "created_at" = ?, "updated_at" = ? WHERE "bookmarks"."id" = ?  [["created_at", "2017-07-26 07:39:38.256633"], ["updated_at", "2017-08-21 15:19:43.257470"], ["id", 13]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "bookmarks" ("url", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["url", "marks.name"], ["topic_id", 2], ["created_at", "2017-08-21 15:19:43.263301"], ["updated_at", "2017-08-21 15:19:43.263301"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "bookmarks" SET "created_at" = ?, "updated_at" = ? WHERE "bookmarks"."id" = ?  [["created_at", "2017-02-23 03:25:32.265865"], ["updated_at", "2017-08-21 15:19:43.266699"], ["id", 14]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "bookmarks" ("url", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["url", "kemmerko.io"], ["topic_id", 2], ["created_at", "2017-08-21 15:19:43.270339"], ["updated_at", "2017-08-21 15:19:43.270339"]]
+  [1m[35m (1.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  UPDATE "bookmarks" SET "created_at" = ?, "updated_at" = ? WHERE "bookmarks"."id" = ?  [["created_at", "2017-08-04 23:52:42.273523"], ["updated_at", "2017-08-21 15:19:43.274303"], ["id", 15]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "bookmarks" ("url", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["url", "eichmann.org"], ["topic_id", 5], ["created_at", "2017-08-21 15:19:43.278167"], ["updated_at", "2017-08-21 15:19:43.278167"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "bookmarks" SET "created_at" = ?, "updated_at" = ? WHERE "bookmarks"."id" = ?  [["created_at", "2017-08-09 14:49:01.280702"], ["updated_at", "2017-08-21 15:19:43.281622"], ["id", 16]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "bookmarks" ("url", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["url", "hoppe.name"], ["topic_id", 4], ["created_at", "2017-08-21 15:19:43.285270"], ["updated_at", "2017-08-21 15:19:43.285270"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "bookmarks" SET "created_at" = ?, "updated_at" = ? WHERE "bookmarks"."id" = ?  [["created_at", "2017-04-14 00:13:39.288064"], ["updated_at", "2017-08-21 15:19:43.288739"], ["id", 17]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "bookmarks" ("url", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["url", "rutherfordbatz.io"], ["topic_id", 2], ["created_at", "2017-08-21 15:19:43.292419"], ["updated_at", "2017-08-21 15:19:43.292419"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "bookmarks" SET "created_at" = ?, "updated_at" = ? WHERE "bookmarks"."id" = ?  [["created_at", "2016-12-14 01:04:06.295055"], ["updated_at", "2017-08-21 15:19:43.295782"], ["id", 18]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "bookmarks" ("url", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["url", "conn.biz"], ["topic_id", 1], ["created_at", "2017-08-21 15:19:43.299508"], ["updated_at", "2017-08-21 15:19:43.299508"]]
+  [1m[35m (1.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "bookmarks" SET "created_at" = ?, "updated_at" = ? WHERE "bookmarks"."id" = ?  [["created_at", "2017-04-29 02:25:26.302877"], ["updated_at", "2017-08-21 15:19:43.303733"], ["id", 19]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "bookmarks" ("url", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["url", "ward.info"], ["topic_id", 1], ["created_at", "2017-08-21 15:19:43.307497"], ["updated_at", "2017-08-21 15:19:43.307497"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.8ms)[0m  UPDATE "bookmarks" SET "created_at" = ?, "updated_at" = ? WHERE "bookmarks"."id" = ?  [["created_at", "2016-10-10 21:29:29.310617"], ["updated_at", "2017-08-21 15:19:43.311445"], ["id", 20]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "bookmarks" ("url", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["url", "franeckiledner.io"], ["topic_id", 3], ["created_at", "2017-08-21 15:19:43.317413"], ["updated_at", "2017-08-21 15:19:43.317413"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "bookmarks" SET "created_at" = ?, "updated_at" = ? WHERE "bookmarks"."id" = ?  [["created_at", "2017-07-13 17:12:25.320034"], ["updated_at", "2017-08-21 15:19:43.320980"], ["id", 21]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (1.6ms)[0m  [1mINSERT INTO "bookmarks" ("url", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["url", "gutkowski.name"], ["topic_id", 5], ["created_at", "2017-08-21 15:19:43.324643"], ["updated_at", "2017-08-21 15:19:43.324643"]]
+  [1m[35m (1.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "bookmarks" SET "created_at" = ?, "updated_at" = ? WHERE "bookmarks"."id" = ?  [["created_at", "2017-01-25 07:08:12.328655"], ["updated_at", "2017-08-21 15:19:43.329469"], ["id", 22]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "bookmarks" ("url", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["url", "hand.biz"], ["topic_id", 2], ["created_at", "2017-08-21 15:19:43.333784"], ["updated_at", "2017-08-21 15:19:43.333784"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "bookmarks" SET "created_at" = ?, "updated_at" = ? WHERE "bookmarks"."id" = ?  [["created_at", "2016-11-11 11:05:09.336547"], ["updated_at", "2017-08-21 15:19:43.337278"], ["id", 23]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "bookmarks" ("url", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["url", "bartongreen.io"], ["topic_id", 3], ["created_at", "2017-08-21 15:19:43.341026"], ["updated_at", "2017-08-21 15:19:43.341026"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (2.1ms)[0m  UPDATE "bookmarks" SET "created_at" = ?, "updated_at" = ? WHERE "bookmarks"."id" = ?  [["created_at", "2017-08-17 02:09:13.343620"], ["updated_at", "2017-08-21 15:19:43.344403"], ["id", 24]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "bookmarks" ("url", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["url", "ankundingritchie.com"], ["topic_id", 3], ["created_at", "2017-08-21 15:19:43.351181"], ["updated_at", "2017-08-21 15:19:43.351181"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "bookmarks" SET "created_at" = ?, "updated_at" = ? WHERE "bookmarks"."id" = ?  [["created_at", "2017-08-15 20:51:11.353830"], ["updated_at", "2017-08-21 15:19:43.354612"], ["id", 25]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (1.9ms)[0m  [1mINSERT INTO "bookmarks" ("url", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["url", "jaskolski.info"], ["topic_id", 1], ["created_at", "2017-08-21 15:19:43.358304"], ["updated_at", "2017-08-21 15:19:43.358304"]]
+  [1m[35m (1.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "bookmarks" SET "created_at" = ?, "updated_at" = ? WHERE "bookmarks"."id" = ?  [["created_at", "2016-12-19 12:24:28.362660"], ["updated_at", "2017-08-21 15:19:43.363328"], ["id", 26]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "bookmarks" ("url", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["url", "walker.com"], ["topic_id", 2], ["created_at", "2017-08-21 15:19:43.367062"], ["updated_at", "2017-08-21 15:19:43.367062"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "bookmarks" SET "created_at" = ?, "updated_at" = ? WHERE "bookmarks"."id" = ?  [["created_at", "2017-06-01 21:44:09.369579"], ["updated_at", "2017-08-21 15:19:43.370298"], ["id", 27]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "bookmarks" ("url", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["url", "schulist.co"], ["topic_id", 4], ["created_at", "2017-08-21 15:19:43.374055"], ["updated_at", "2017-08-21 15:19:43.374055"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "bookmarks" SET "created_at" = ?, "updated_at" = ? WHERE "bookmarks"."id" = ?  [["created_at", "2017-01-05 15:37:05.376849"], ["updated_at", "2017-08-21 15:19:43.377573"], ["id", 28]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "bookmarks" ("url", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["url", "ruel.info"], ["topic_id", 3], ["created_at", "2017-08-21 15:19:43.381035"], ["updated_at", "2017-08-21 15:19:43.381035"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "bookmarks" SET "created_at" = ?, "updated_at" = ? WHERE "bookmarks"."id" = ?  [["created_at", "2016-09-13 20:28:57.383925"], ["updated_at", "2017-08-21 15:19:43.384662"], ["id", 29]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "bookmarks" ("url", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["url", "aufderhar.biz"], ["topic_id", 2], ["created_at", "2017-08-21 15:19:43.388166"], ["updated_at", "2017-08-21 15:19:43.388166"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "bookmarks" SET "created_at" = ?, "updated_at" = ? WHERE "bookmarks"."id" = ?  [["created_at", "2017-02-20 10:39:55.391207"], ["updated_at", "2017-08-21 15:19:43.391939"], ["id", 30]]
+  [1m[36m (1.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "bookmarks" ("url", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["url", "hilll.org"], ["topic_id", 2], ["created_at", "2017-08-21 15:19:43.396569"], ["updated_at", "2017-08-21 15:19:43.396569"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "bookmarks" SET "created_at" = ?, "updated_at" = ? WHERE "bookmarks"."id" = ?  [["created_at", "2016-09-03 13:53:58.399170"], ["updated_at", "2017-08-21 15:19:43.399994"], ["id", 31]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "bookmarks" ("url", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["url", "mills.co"], ["topic_id", 1], ["created_at", "2017-08-21 15:19:43.403753"], ["updated_at", "2017-08-21 15:19:43.403753"]]
+  [1m[35m (1.3ms)[0m  commit transaction
+  [1m[36m (0.4ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "bookmarks" SET "created_at" = ?, "updated_at" = ? WHERE "bookmarks"."id" = ?  [["created_at", "2017-01-24 07:00:21.406751"], ["updated_at", "2017-08-21 15:19:43.407824"], ["id", 32]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (1.6ms)[0m  [1mINSERT INTO "bookmarks" ("url", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["url", "lemke.io"], ["topic_id", 4], ["created_at", "2017-08-21 15:19:43.411757"], ["updated_at", "2017-08-21 15:19:43.411757"]]
+  [1m[35m (1.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "bookmarks" SET "created_at" = ?, "updated_at" = ? WHERE "bookmarks"."id" = ?  [["created_at", "2017-04-25 16:52:30.416829"], ["updated_at", "2017-08-21 15:19:43.417974"], ["id", 33]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "bookmarks" ("url", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["url", "kerluke.biz"], ["topic_id", 3], ["created_at", "2017-08-21 15:19:43.422068"], ["updated_at", "2017-08-21 15:19:43.422068"]]
+  [1m[35m (1.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (2.1ms)[0m  UPDATE "bookmarks" SET "created_at" = ?, "updated_at" = ? WHERE "bookmarks"."id" = ?  [["created_at", "2017-05-17 11:46:39.425655"], ["updated_at", "2017-08-21 15:19:43.426736"], ["id", 34]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "bookmarks" ("url", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["url", "bode.info"], ["topic_id", 3], ["created_at", "2017-08-21 15:19:43.434101"], ["updated_at", "2017-08-21 15:19:43.434101"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "bookmarks" SET "created_at" = ?, "updated_at" = ? WHERE "bookmarks"."id" = ?  [["created_at", "2017-03-19 08:14:09.437122"], ["updated_at", "2017-08-21 15:19:43.437933"], ["id", 35]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "bookmarks" ("url", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["url", "boehm.com"], ["topic_id", 5], ["created_at", "2017-08-21 15:19:43.443537"], ["updated_at", "2017-08-21 15:19:43.443537"]]
+  [1m[35m (1.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "bookmarks" SET "created_at" = ?, "updated_at" = ? WHERE "bookmarks"."id" = ?  [["created_at", "2016-10-16 02:04:37.446967"], ["updated_at", "2017-08-21 15:19:43.447709"], ["id", 36]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "bookmarks" ("url", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["url", "jacobson.com"], ["topic_id", 4], ["created_at", "2017-08-21 15:19:43.451343"], ["updated_at", "2017-08-21 15:19:43.451343"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.3ms)[0m  UPDATE "bookmarks" SET "created_at" = ?, "updated_at" = ? WHERE "bookmarks"."id" = ?  [["created_at", "2017-06-18 18:24:08.453991"], ["updated_at", "2017-08-21 15:19:43.454706"], ["id", 37]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "bookmarks" ("url", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["url", "gutkowski.io"], ["topic_id", 3], ["created_at", "2017-08-21 15:19:43.459775"], ["updated_at", "2017-08-21 15:19:43.459775"]]
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  UPDATE "bookmarks" SET "created_at" = ?, "updated_at" = ? WHERE "bookmarks"."id" = ?  [["created_at", "2017-08-17 06:32:27.465139"], ["updated_at", "2017-08-21 15:19:43.465910"], ["id", 38]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "bookmarks" ("url", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["url", "rogahn.co"], ["topic_id", 5], ["created_at", "2017-08-21 15:19:43.469757"], ["updated_at", "2017-08-21 15:19:43.469757"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "bookmarks" SET "created_at" = ?, "updated_at" = ? WHERE "bookmarks"."id" = ?  [["created_at", "2016-11-29 17:17:20.472664"], ["updated_at", "2017-08-21 15:19:43.473571"], ["id", 39]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "bookmarks" ("url", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["url", "mcglynnschmidt.biz"], ["topic_id", 5], ["created_at", "2017-08-21 15:19:43.477885"], ["updated_at", "2017-08-21 15:19:43.477885"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "bookmarks" SET "created_at" = ?, "updated_at" = ? WHERE "bookmarks"."id" = ?  [["created_at", "2017-05-11 01:53:06.480653"], ["updated_at", "2017-08-21 15:19:43.481396"], ["id", 40]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "bookmarks" ("url", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["url", "dooley.io"], ["topic_id", 1], ["created_at", "2017-08-21 15:19:43.484865"], ["updated_at", "2017-08-21 15:19:43.484865"]]
+  [1m[35m (3.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "bookmarks" SET "created_at" = ?, "updated_at" = ? WHERE "bookmarks"."id" = ?  [["created_at", "2017-03-06 04:42:14.490192"], ["updated_at", "2017-08-21 15:19:43.490878"], ["id", 41]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "bookmarks" ("url", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["url", "blanda.biz"], ["topic_id", 1], ["created_at", "2017-08-21 15:19:43.494330"], ["updated_at", "2017-08-21 15:19:43.494330"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "bookmarks" SET "created_at" = ?, "updated_at" = ? WHERE "bookmarks"."id" = ?  [["created_at", "2017-03-15 13:36:41.496998"], ["updated_at", "2017-08-21 15:19:43.497731"], ["id", 42]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "bookmarks" ("url", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["url", "gottlieb.io"], ["topic_id", 5], ["created_at", "2017-08-21 15:19:43.501595"], ["updated_at", "2017-08-21 15:19:43.501595"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  UPDATE "bookmarks" SET "created_at" = ?, "updated_at" = ? WHERE "bookmarks"."id" = ?  [["created_at", "2016-10-05 13:03:21.504534"], ["updated_at", "2017-08-21 15:19:43.505280"], ["id", 43]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "bookmarks" ("url", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["url", "hammesbartell.info"], ["topic_id", 4], ["created_at", "2017-08-21 15:19:43.509354"], ["updated_at", "2017-08-21 15:19:43.509354"]]
+  [1m[35m (1.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  UPDATE "bookmarks" SET "created_at" = ?, "updated_at" = ? WHERE "bookmarks"."id" = ?  [["created_at", "2017-06-02 04:34:58.512364"], ["updated_at", "2017-08-21 15:19:43.513119"], ["id", 44]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "bookmarks" ("url", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["url", "schimmel.com"], ["topic_id", 4], ["created_at", "2017-08-21 15:19:43.517333"], ["updated_at", "2017-08-21 15:19:43.517333"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "bookmarks" SET "created_at" = ?, "updated_at" = ? WHERE "bookmarks"."id" = ?  [["created_at", "2016-11-14 21:35:02.520360"], ["updated_at", "2017-08-21 15:19:43.521090"], ["id", 45]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "bookmarks" ("url", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["url", "murazikstokes.net"], ["topic_id", 1], ["created_at", "2017-08-21 15:19:43.525473"], ["updated_at", "2017-08-21 15:19:43.525473"]]
+  [1m[35m (2.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "bookmarks" SET "created_at" = ?, "updated_at" = ? WHERE "bookmarks"."id" = ?  [["created_at", "2017-04-23 00:30:11.531113"], ["updated_at", "2017-08-21 15:19:43.531774"], ["id", 46]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "bookmarks" ("url", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["url", "orn.com"], ["topic_id", 1], ["created_at", "2017-08-21 15:19:43.536045"], ["updated_at", "2017-08-21 15:19:43.536045"]]
+  [1m[35m (1.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.6ms)[0m  UPDATE "bookmarks" SET "created_at" = ?, "updated_at" = ? WHERE "bookmarks"."id" = ?  [["created_at", "2016-11-18 17:43:36.539162"], ["updated_at", "2017-08-21 15:19:43.539914"], ["id", 47]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "bookmarks" ("url", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["url", "kilback.info"], ["topic_id", 2], ["created_at", "2017-08-21 15:19:43.546752"], ["updated_at", "2017-08-21 15:19:43.546752"]]
+  [1m[35m (2.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  UPDATE "bookmarks" SET "created_at" = ?, "updated_at" = ? WHERE "bookmarks"."id" = ?  [["created_at", "2016-09-23 02:09:16.551479"], ["updated_at", "2017-08-21 15:19:43.552312"], ["id", 48]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "bookmarks" ("url", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["url", "fritsch.co"], ["topic_id", 3], ["created_at", "2017-08-21 15:19:43.556903"], ["updated_at", "2017-08-21 15:19:43.556903"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (2.6ms)[0m  UPDATE "bookmarks" SET "created_at" = ?, "updated_at" = ? WHERE "bookmarks"."id" = ?  [["created_at", "2017-03-24 04:14:43.559438"], ["updated_at", "2017-08-21 15:19:43.560208"], ["id", 49]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "bookmarks" ("url", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["url", "hackett.com"], ["topic_id", 3], ["created_at", "2017-08-21 15:19:43.566536"], ["updated_at", "2017-08-21 15:19:43.566536"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "bookmarks" SET "created_at" = ?, "updated_at" = ? WHERE "bookmarks"."id" = ?  [["created_at", "2016-12-23 22:25:25.569393"], ["updated_at", "2017-08-21 15:19:43.570678"], ["id", 50]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "users"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "topics"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "bookmarks"
+
+
+Started GET "/" for ::1 at 2017-08-21 11:20:03 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by TopicsController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 6]]
+  [1m[36mTopic Load (0.3ms)[0m  [1mSELECT "topics".* FROM "topics"[0m
+  [1m[35mBookmark Load (0.3ms)[0m  SELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?  [["topic_id", 5]]
+  [1m[36mBookmark Load (0.2ms)[0m  [1mSELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?[0m  [["topic_id", 4]]
+  [1m[35mBookmark Load (0.3ms)[0m  SELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?  [["topic_id", 3]]
+  [1m[36mBookmark Load (0.2ms)[0m  [1mSELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?[0m  [["topic_id", 2]]
+  [1m[35mBookmark Load (0.6ms)[0m  SELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?  [["topic_id", 1]]
+  Rendered topics/index.html.erb within layouts/application (88.2ms)
+Completed 200 OK in 866ms (Views: 831.0ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2017-08-21 11:20:11 -0400
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.html.erb (10.6ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (1405.8ms)
+Completed 200 OK in 1505ms (Views: 1481.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2017-08-21 11:20:29 -0400
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DETr9vSJCBpaAMiYQW4KdvJOn78FnrdyI8KBFjJiG06l4y1kW5CTQRi0zd9gkoGA8MklsP6+y7pPWsz/mj3+8g==", "user"=>{"email"=>"mfroeh2@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'mfroeh2@gmail.com' LIMIT 1
+  [1m[36mSQL (2.3ms)[0m  [1mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "confirmation_token", "confirmation_sent_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["email", "mfroeh2@gmail.com"], ["encrypted_password", "$2a$11$cSqZPZ4q9UQo3kIwlE7sX.T0ELA0QxQDwfyJVa984q3/9gKvvGoeC"], ["created_at", "2017-08-21 15:20:30.182952"], ["updated_at", "2017-08-21 15:20:30.182952"], ["confirmation_token", "XJ_yaGhfceZbJyaunMnV"], ["confirmation_sent_at", "2017-08-21 15:20:30.183408"]]
+  [1m[35m (4.2ms)[0m  commit transaction
+  Rendered devise/mailer/confirmation_instructions.html.erb (8.5ms)
+
+Devise::Mailer#confirmation_instructions: processed outbound mail in 360.4ms
+
+Sent mail to mfroeh2@gmail.com (578.1ms)
+Date: Mon, 21 Aug 2017 11:20:30 -0400
+From: mfroeh2@gmail.com
+Reply-To: mfroeh2@gmail.com
+To: mfroeh2@gmail.com
+Message-ID: <599afa3e8d97f_2b153fc25c7ee38040738@Mark-Froehlichs-MacBook-Pro.local.mail>
+Subject: Confirmation instructions
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<p>Welcome mfroeh2@gmail.com!</p>
+
+<p>You can confirm your account email through the link below:</p>
+
+<p><a href="http://localhost:3000/users/confirmation?confirmation_token=XJ_yaGhfceZbJyaunMnV">Confirm my account</a></p>
+
+Redirected to http://localhost:3000/
+Completed 302 Found in 1229ms (ActiveRecord: 6.8ms)
+
+
+Started GET "/" for ::1 at 2017-08-21 11:20:31 -0400
+Processing by TopicsController#index as HTML
+  [1m[36mTopic Load (0.3ms)[0m  [1mSELECT "topics".* FROM "topics"[0m
+  [1m[35mBookmark Load (0.3ms)[0m  SELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?  [["topic_id", 5]]
+  [1m[36mBookmark Load (0.2ms)[0m  [1mSELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?[0m  [["topic_id", 4]]
+  [1m[35mBookmark Load (0.3ms)[0m  SELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?  [["topic_id", 3]]
+  [1m[36mBookmark Load (0.2ms)[0m  [1mSELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?[0m  [["topic_id", 2]]
+  [1m[35mBookmark Load (0.2ms)[0m  SELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?  [["topic_id", 1]]
+  Rendered topics/index.html.erb within layouts/application (15.7ms)
+Completed 200 OK in 82ms (Views: 79.4ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/users/confirmation?confirmation_token=XJ_yaGhfceZbJyaunMnV" for ::1 at 2017-08-21 11:22:01 -0400
+Processing by Devise::ConfirmationsController#show as HTML
+  Parameters: {"confirmation_token"=>"XJ_yaGhfceZbJyaunMnV"}
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."confirmation_token" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["confirmation_token", "XJ_yaGhfceZbJyaunMnV"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (1.2ms)[0m  [1mUPDATE "users" SET "confirmed_at" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["confirmed_at", "2017-08-21 15:22:01.843429"], ["updated_at", "2017-08-21 15:22:01.845756"], ["id", 6]]
+  [1m[35m (2.7ms)[0m  commit transaction
+Redirected to http://localhost:3000/users/sign_in
+Completed 302 Found in 41ms (ActiveRecord: 4.8ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2017-08-21 11:22:01 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (25.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (198.7ms)
+Completed 200 OK in 632ms (Views: 619.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-08-21 11:22:06 -0400
+Processing by TopicsController#index as HTML
+  [1m[36mTopic Load (0.3ms)[0m  [1mSELECT "topics".* FROM "topics"[0m
+  [1m[35mBookmark Load (0.2ms)[0m  SELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?  [["topic_id", 5]]
+  [1m[36mBookmark Load (2.1ms)[0m  [1mSELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?[0m  [["topic_id", 4]]
+  [1m[35mBookmark Load (0.3ms)[0m  SELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?  [["topic_id", 3]]
+  [1m[36mBookmark Load (0.2ms)[0m  [1mSELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?[0m  [["topic_id", 2]]
+  [1m[35mBookmark Load (0.3ms)[0m  SELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?  [["topic_id", 1]]
+  Rendered topics/index.html.erb within layouts/application (30.1ms)
+Completed 200 OK in 171ms (Views: 165.7ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2017-08-21 11:22:08 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (17.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (30.9ms)
+Completed 200 OK in 213ms (Views: 210.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2017-08-21 11:22:12 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.erb (9.9ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (26.3ms)
+Completed 200 OK in 100ms (Views: 98.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2017-08-21 11:22:15 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sosH7RvgOEyVZn/00OcNkDhoE+bkQeu8La8IDHCRLIAbLMF/tPmjF9fSerPxG4ZmOu+p6R9hl3RBN0Xl2M7JPA==", "user"=>{"email"=>"mfroeh2@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["email", "mfroeh2@gmail.com"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "last_sign_in_ip" = ?, "current_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["last_sign_in_at", "2017-08-21 15:22:15.787671"], ["current_sign_in_at", "2017-08-21 15:22:15.787671"], ["last_sign_in_ip", "::1"], ["current_sign_in_ip", "::1"], ["sign_in_count", 1], ["updated_at", "2017-08-21 15:22:15.788633"], ["id", 6]]
+  [1m[35m (2.2ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 201ms (ActiveRecord: 3.1ms)
+
+
+Started GET "/" for ::1 at 2017-08-21 11:22:15 -0400
+Processing by TopicsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 6]]
+  [1m[35mTopic Load (0.3ms)[0m  SELECT "topics".* FROM "topics"
+  [1m[36mBookmark Load (0.2ms)[0m  [1mSELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?[0m  [["topic_id", 5]]
+  [1m[35mBookmark Load (0.2ms)[0m  SELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?  [["topic_id", 4]]
+  [1m[36mBookmark Load (0.2ms)[0m  [1mSELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?[0m  [["topic_id", 3]]
+  [1m[35mBookmark Load (0.2ms)[0m  SELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?  [["topic_id", 2]]
+  [1m[36mBookmark Load (0.2ms)[0m  [1mSELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?[0m  [["topic_id", 1]]
+  Rendered topics/index.html.erb within layouts/application (18.3ms)
+Completed 200 OK in 71ms (Views: 69.0ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/topics" for ::1 at 2017-08-21 11:22:23 -0400
+Processing by TopicsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SvbzXHZTPrfjCpM5ZOOIWCXdkXB2P4OuSMefanmAVDdaXtl5ZDXtfpDbh4ui0gx2y2giVAPUlvwWwWAMV0AnAQ==", "topic"=>{"title"=>"DevTools"}, "commit"=>"Save"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 6]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "topics" ("title", "created_at", "updated_at") VALUES (?, ?, ?)  [["title", "DevTools"], ["created_at", "2017-08-21 15:22:23.123867"], ["updated_at", "2017-08-21 15:22:23.123867"]]
+  [1m[36m (2.5ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/topics/6
+Completed 302 Found in 11ms (ActiveRecord: 3.3ms)
+
+
+Started GET "/topics/6" for ::1 at 2017-08-21 11:22:23 -0400
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mTopic Load (0.3ms)[0m  SELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mBookmark Load (0.1ms)[0m  [1mSELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?[0m  [["topic_id", 6]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 6]]
+  Rendered topics/show.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 60ms (Views: 57.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/topics/6/bookmarks/new" for ::1 at 2017-08-21 11:22:25 -0400
+Processing by BookmarksController#new as HTML
+  Parameters: {"topic_id"=>"6"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 6]]
+  [1m[35mTopic Load (0.1ms)[0m  SELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1  [["id", 6]]
+  Rendered bookmarks/new.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 87ms (Views: 83.9ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/topics/6/bookmarks" for ::1 at 2017-08-21 11:22:27 -0400
+Processing by BookmarksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"viNZ6n1q8zioeFeP2blggFoI8KtlWmEyvGFiLahS2Kiui3PPbwwg8dupQz0fiOSutL1DjxCxdGDiZ51LhpKrng==", "bookmark"=>{"url"=>"bloc.io"}, "commit"=>"Save", "topic_id"=>"6"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 6]]
+  [1m[35mTopic Load (0.1ms)[0m  SELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "bookmarks" ("url", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["url", "bloc.io"], ["topic_id", 6], ["created_at", "2017-08-21 15:22:27.880098"], ["updated_at", "2017-08-21 15:22:27.880098"]]
+  [1m[36m (3.2ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/topics/6
+Completed 302 Found in 11ms (ActiveRecord: 4.1ms)
+
+
+Started GET "/topics/6" for ::1 at 2017-08-21 11:22:27 -0400
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mTopic Load (0.2ms)[0m  SELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mBookmark Load (0.2ms)[0m  [1mSELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?[0m  [["topic_id", 6]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 6]]
+  Rendered topics/show.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 63ms (Views: 61.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/topics/6/bookmarks/new" for ::1 at 2017-08-21 11:22:29 -0400
+Processing by BookmarksController#new as HTML
+  Parameters: {"topic_id"=>"6"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 6]]
+  [1m[35mTopic Load (0.2ms)[0m  SELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1  [["id", 6]]
+  Rendered bookmarks/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 106ms (Views: 102.0ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/topics/6/bookmarks" for ::1 at 2017-08-21 11:22:37 -0400
+Processing by BookmarksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kCoR2z3FtVk3hCggZnWzbj2xe/jjsZBPcdCZnetTa8iAgjv+L6NmkERVPJKgRDdA0wTI3JZahR0v1mb7xZMY/g==", "bookmark"=>{"url"=>"repl.it"}, "commit"=>"Save", "topic_id"=>"6"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 6]]
+  [1m[35mTopic Load (0.1ms)[0m  SELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "bookmarks" ("url", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["url", "repl.it"], ["topic_id", 6], ["created_at", "2017-08-21 15:22:37.162787"], ["updated_at", "2017-08-21 15:22:37.162787"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/topics/6
+Completed 302 Found in 8ms (ActiveRecord: 1.9ms)
+
+
+Started GET "/topics/6" for ::1 at 2017-08-21 11:22:37 -0400
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mTopic Load (0.2ms)[0m  SELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mBookmark Load (0.2ms)[0m  [1mSELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?[0m  [["topic_id", 6]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 6]]
+  Rendered topics/show.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 61ms (Views: 59.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/topics/6/bookmarks/new" for ::1 at 2017-08-21 11:22:39 -0400
+Processing by BookmarksController#new as HTML
+  Parameters: {"topic_id"=>"6"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 6]]
+  [1m[35mTopic Load (0.1ms)[0m  SELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1  [["id", 6]]
+  Rendered bookmarks/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 117ms (Views: 114.3ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/topics/6/bookmarks" for ::1 at 2017-08-21 11:22:42 -0400
+Processing by BookmarksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nPc45HMCBTD87pCxX/rgG3QzSiMdOIyV6Twz+vZ+CveMXxLBYWTW+Y8/hAOZy2Q1mob5B2jTmce3Osyc2L55wQ==", "bookmark"=>{"url"=>"fontsquirrel.com"}, "commit"=>"Save", "topic_id"=>"6"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 6]]
+  [1m[35mTopic Load (0.1ms)[0m  SELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.1ms)[0m  INSERT INTO "bookmarks" ("url", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["url", "fontsquirrel.com"], ["topic_id", 6], ["created_at", "2017-08-21 15:22:42.973724"], ["updated_at", "2017-08-21 15:22:42.973724"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/topics/6
+Completed 302 Found in 12ms (ActiveRecord: 2.3ms)
+
+
+Started GET "/topics/6" for ::1 at 2017-08-21 11:22:42 -0400
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mTopic Load (0.2ms)[0m  SELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mBookmark Load (0.1ms)[0m  [1mSELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?[0m  [["topic_id", 6]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 6]]
+  Rendered topics/show.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 76ms (Views: 74.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/topics/6/bookmarks/new" for ::1 at 2017-08-21 11:22:45 -0400
+Processing by BookmarksController#new as HTML
+  Parameters: {"topic_id"=>"6"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 6]]
+  [1m[35mTopic Load (0.1ms)[0m  SELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1  [["id", 6]]
+  Rendered bookmarks/new.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 118ms (Views: 114.8ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/topics/6/bookmarks" for ::1 at 2017-08-21 11:22:48 -0400
+Processing by BookmarksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Qheaq9rBEvmZZM7C56B+frQW3LTK/Ds/Ju64FcjvL55Sv7COyKfBMOq12nAhkfpQWqNvkL8XLm146Edz5i9cqA==", "bookmark"=>{"url"=>"coolors.co"}, "commit"=>"Save", "topic_id"=>"6"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 6]]
+  [1m[35mTopic Load (0.1ms)[0m  SELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "bookmarks" ("url", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["url", "coolors.co"], ["topic_id", 6], ["created_at", "2017-08-21 15:22:48.515967"], ["updated_at", "2017-08-21 15:22:48.515967"]]
+  [1m[36m (3.7ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/topics/6
+Completed 302 Found in 11ms (ActiveRecord: 4.4ms)
+
+
+Started GET "/topics/6" for ::1 at 2017-08-21 11:22:48 -0400
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mTopic Load (0.2ms)[0m  SELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mBookmark Load (0.7ms)[0m  [1mSELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?[0m  [["topic_id", 6]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 6]]
+  Rendered topics/show.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 72ms (Views: 69.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/topics/6/bookmarks/new" for ::1 at 2017-08-21 11:22:52 -0400
+Processing by BookmarksController#new as HTML
+  Parameters: {"topic_id"=>"6"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 6]]
+  [1m[35mTopic Load (0.1ms)[0m  SELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1  [["id", 6]]
+  Rendered bookmarks/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 123ms (Views: 120.5ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/topics/6/bookmarks" for ::1 at 2017-08-21 11:22:58 -0400
+Processing by BookmarksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"CNhOKJ+UM7oWpvSymQNAM0oxQ+u6XZ5NYDfyBSUQ7rwYcGQNjfLgc2V34ABfMsQdpITwz8+2ix8+MQ1jC9Cdig==", "bookmark"=>{"url"=>"guides.rubyonrails.org"}, "commit"=>"Save", "topic_id"=>"6"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 6]]
+  [1m[35mTopic Load (0.2ms)[0m  SELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "bookmarks" ("url", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["url", "guides.rubyonrails.org"], ["topic_id", 6], ["created_at", "2017-08-21 15:22:58.800967"], ["updated_at", "2017-08-21 15:22:58.800967"]]
+  [1m[36m (1.7ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/topics/6
+Completed 302 Found in 14ms (ActiveRecord: 2.7ms)
+
+
+Started GET "/topics/6" for ::1 at 2017-08-21 11:22:58 -0400
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mTopic Load (0.2ms)[0m  SELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mBookmark Load (0.2ms)[0m  [1mSELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?[0m  [["topic_id", 6]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 6]]
+  Rendered topics/show.html.erb within layouts/application (8.2ms)
+Completed 200 OK in 90ms (Views: 88.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/topics/6/bookmarks/new" for ::1 at 2017-08-21 11:23:04 -0400
+Processing by BookmarksController#new as HTML
+  Parameters: {"topic_id"=>"6"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 6]]
+  [1m[35mTopic Load (0.1ms)[0m  SELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1  [["id", 6]]
+  Rendered bookmarks/new.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 92ms (Views: 88.6ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/topics/6/bookmarks" for ::1 at 2017-08-21 11:23:07 -0400
+Processing by BookmarksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PsIzlpe5+nEW6OwNpfHs8NyzmgSH63gbWddITpTrIv0uahmzhd8puGU5+L9jwGjeMgYpIPIAbUkH0bcouitRyw==", "bookmark"=>{"url"=>"github.com"}, "commit"=>"Save", "topic_id"=>"6"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 6]]
+  [1m[35mTopic Load (0.1ms)[0m  SELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "bookmarks" ("url", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["url", "github.com"], ["topic_id", 6], ["created_at", "2017-08-21 15:23:07.908249"], ["updated_at", "2017-08-21 15:23:07.908249"]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/topics/6
+Completed 302 Found in 16ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/topics/6" for ::1 at 2017-08-21 11:23:07 -0400
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mTopic Load (0.2ms)[0m  SELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mBookmark Load (0.2ms)[0m  [1mSELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?[0m  [["topic_id", 6]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 6]]
+  Rendered topics/show.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 72ms (Views: 70.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/topics/6/bookmarks/new" for ::1 at 2017-08-21 11:23:12 -0400
+Processing by BookmarksController#new as HTML
+  Parameters: {"topic_id"=>"6"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 6]]
+  [1m[35mTopic Load (0.1ms)[0m  SELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1  [["id", 6]]
+  Rendered bookmarks/new.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 96ms (Views: 92.6ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/topics/6/bookmarks" for ::1 at 2017-08-21 11:23:15 -0400
+Processing by BookmarksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vrbl90ssn7DwUM9GLYFjgH7RZ1iHTEE7PSLBUXwAOcquHs/SWUpMeYOB2/TrsOeukGTUfPKnVGljJD43UsBK/A==", "bookmark"=>{"url"=>"unsplash.com"}, "commit"=>"Save", "topic_id"=>"6"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 6]]
+  [1m[35mTopic Load (0.1ms)[0m  SELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "bookmarks" ("url", "topic_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["url", "unsplash.com"], ["topic_id", 6], ["created_at", "2017-08-21 15:23:15.993988"], ["updated_at", "2017-08-21 15:23:15.993988"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/topics/6
+Completed 302 Found in 8ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/topics/6" for ::1 at 2017-08-21 11:23:16 -0400
+Processing by TopicsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mTopic Load (0.2ms)[0m  SELECT  "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mBookmark Load (0.2ms)[0m  [1mSELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?[0m  [["topic_id", 6]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 6]]
+  Rendered topics/show.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 70ms (Views: 67.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2017-08-21 11:23:20 -0400
+Processing by TopicsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 6]]
+  [1m[35mTopic Load (0.6ms)[0m  SELECT "topics".* FROM "topics"
+  [1m[36mBookmark Load (0.2ms)[0m  [1mSELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?[0m  [["topic_id", 6]]
+  [1m[35mBookmark Load (0.2ms)[0m  SELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?  [["topic_id", 5]]
+  [1m[36mBookmark Load (0.2ms)[0m  [1mSELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?[0m  [["topic_id", 4]]
+  [1m[35mBookmark Load (0.2ms)[0m  SELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?  [["topic_id", 3]]
+  [1m[36mBookmark Load (0.2ms)[0m  [1mSELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?[0m  [["topic_id", 2]]
+  [1m[35mBookmark Load (0.2ms)[0m  SELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."topic_id" = ?  [["topic_id", 1]]
+  Rendered topics/index.html.erb within layouts/application (24.7ms)
+Completed 200 OK in 119ms (Views: 97.4ms | ActiveRecord: 1.9ms)

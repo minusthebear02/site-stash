@@ -25,7 +25,7 @@ class BookmarksController < ApplicationController
     @bookmark.assign_attributes(params.require(:bookmark).permit(:url))
 
     if @bookmark.save
-      flash[:notice] = "Post was updated."
+      flash[:notice] = "Site was updated."
       redirect_to @bookmark.topic
     else
       flash.now[:alert] = "There was an error saving the site. Please try again."
