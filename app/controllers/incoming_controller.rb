@@ -6,7 +6,7 @@ class IncomingController < ApplicationController
     user = User.find_by(email: params[:sender])
     if user
       topic = user.topics.find_or_create_by(title: params[:subject])
-      bookmark = topic.find_or_create_by(url: params['stripped-text'])
+      bookmark = topic.bookmarks.find_or_create_by(url: params[:stripped-text])
       head 200
     else
       head 401
