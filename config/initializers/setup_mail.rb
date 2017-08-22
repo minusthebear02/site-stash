@@ -1,6 +1,6 @@
 ActionMailer::Base.delivery_method = :smtp
 ActionMailer::Base.smtp_settings = {
-  address: 'smtp.mailgun.org',
+  address: 'smtp.sendgrid.org',
   port: '587',
   authentication: :plain,
   user_name: ENV["ACTION_MAILER_USERNAME"],
