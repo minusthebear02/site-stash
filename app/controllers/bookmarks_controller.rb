@@ -1,5 +1,6 @@
 class BookmarksController < ApplicationController
   before_action :set_bookmark, only: [:edit, :update, :destroy]
+
   def new
     @topic = Topic.find(params[:topic_id])
     @bookmark = Bookmark.new
@@ -22,6 +23,7 @@ class BookmarksController < ApplicationController
   end
 
   def update
+
     @bookmark.assign_attributes(params.require(:bookmark).permit(:url))
 
     if @bookmark.save
@@ -34,6 +36,7 @@ class BookmarksController < ApplicationController
   end
 
   def destroy
+
     if @bookmark.destroy
       flash[:notice] = "\"#{@bookmark.url}\" was deleted successfully."
       redirect_to @bookmark.topic

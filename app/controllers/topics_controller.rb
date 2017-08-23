@@ -6,17 +6,23 @@ class TopicsController < ApplicationController
   def index
     @topics = Topic.all
     @topic = Topic.new
+
   end
 
   def show
+    authorize @topic
   end
 
   def new
     @topic = Topic.new
+
+    authorize @topic
   end
 
   def create
-    @topic = Topic.new(topic_params)
+    @topic = current_user.topics.new(topic_params)
+
+    authorize @topic
 
     if @topic.save
       redirect_to @topic, notice: "Topic saved successfully."
@@ -27,13 +33,15 @@ class TopicsController < ApplicationController
   end
 
   def edit
+    authorize @topic
   end
 
   def update
+    authorize @topic
   end
 
   def destroy
-
+    authorize @topic
     if @topic.destroy
       flash[:notice] = "#{@topic.title} was deleted successfully."
       redirect_to topics_path
