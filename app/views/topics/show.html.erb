@@ -13,6 +13,9 @@
             <%= link_to image_tag("https://www.google.com/s2/favicons?domain=" + bookmark.url) + " " + bookmark.url, "http://#{bookmark.url}", class: "favicon" %>
           </h4>
           <div class="bookmark_links">
+            <% if policy(Like.new).create? %>
+              <%= render partial: 'likes/like', locals: { bookmark: bookmark } %>
+            <% end %>
             <% if policy(@topic).update? %>
               <%= link_to "Edit", edit_topic_bookmark_path(@topic, bookmark), class: 'btn btn-primary' %>
               <%= link_to "Delete", [bookmark.topic, bookmark], method: :delete, class: 'btn btn-danger', data: {confirm: "Are you sure you want to remove this site?"} %>
