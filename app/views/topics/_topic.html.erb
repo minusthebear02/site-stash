@@ -1,0 +1,7 @@
+<div class="row">
+  <div class="col-md-10 col-md-offset-1">
+    <h3 class="topic_title"><%= link_to "#" + topic.title, topic %></h3>
+    <br />
+    <%= render topic.bookmarks.sample(4) %>
+  </div>
+</div>

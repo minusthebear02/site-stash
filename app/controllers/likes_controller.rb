@@ -24,10 +24,10 @@ class LikesController < ApplicationController
     authorize like
 
     if like.destroy
-      redirect_to @bookmark.topic, notice: "Site was unliked."
+      redirect_to request.referrer, notice: "Site was unliked."
     else
       flash.now[:alert] = "There was a problem unliking the site. Please try again."
-      redirect_to @bookmark.topic
+      redirect_to request.referrer
     end
   end
 end

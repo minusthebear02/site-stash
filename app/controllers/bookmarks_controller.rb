@@ -1,13 +1,12 @@
 class BookmarksController < ApplicationController
+  before_action :set_topic
   before_action :set_bookmark, only: [:edit, :update, :destroy]
 
   def new
-    @topic = Topic.find(params[:topic_id])
     @bookmark = Bookmark.new
   end
 
   def create
-    @topic = Topic.find(params[:topic_id])
     @bookmark = @topic.bookmarks.build(params.require(:bookmark).permit(:url))
 
     if @bookmark.save
@@ -47,6 +46,10 @@ class BookmarksController < ApplicationController
   end
 
   private
+
+  def set_topic
+    @topic = Topic.find(params[:topic_id])
+  end
 
   def set_bookmark
     @bookmark = Bookmark.find(params[:id])

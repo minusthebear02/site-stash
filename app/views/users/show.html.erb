@@ -1,0 +1,23 @@
+<div class="my_topics_index">
+  <h1>My Stash</h1>
+
+  <% @topics.reverse.each do |topic| %>
+    <div class="row">
+      <div class="col-md-10 col-md-offset-1">
+        <h3 class="topic_title"><%= link_to "#" + topic.title, topic %></h3>
+        <br />
+        <%= render topic.bookmarks.sample(4) %>
+      </div>
+    </div>
+  <% end %>
+
+</div>
+
+<div class="liked_bookmarks">
+  <h1>My Liked Bookmarks</h1>
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <%= render @liked_bookmarks %>
+    </div>
+  </div>
+</div>
