@@ -8,7 +8,7 @@ Welcome to SiteStash. A Ruby on Rails web application for creating and organizin
 
 * Users can sign up for free accounts by providing a username, password and email
 * Users can sign in and out of SiteStash
-* Users can email a URL to Blocmarks and have it saved in the Blocmarks database
+* Users can email a URL to SiteStash and have it saved in the SiteStash database
 * Users can see all topics and their bookmarks
 * Users can create, read, update and delete bookmarks
 * Users are the only ones allowed to delete or update the bookmarks they create
